@@ -1,16 +1,16 @@
-import { DiscordPrimary, InstaPrimary, TwitterPrimary } from "assets/icons";
+import { DiscordSecondary, InstaSecondary, TwitterSecondary } from "assets/icons";
 
 export const socialLinks = [
   {
-    image: <InstaPrimary />,
+    image: <InstaSecondary />,
     href: 'https://www.instagram.com'
   },
   {
-    image: <DiscordPrimary />,
+    image: <DiscordSecondary />,
     href: 'https://www.discord.com'
   },
   {
-    image: <TwitterPrimary />,
+    image: <TwitterSecondary />,
     href: 'https://www.twitter.com'
   },
 ]
