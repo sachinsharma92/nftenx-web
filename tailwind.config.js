@@ -26,6 +26,9 @@ module.exports = {
         accent: '#4B1C56',
         teal: '#1C4856'
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
     },
   },
   plugins: [],
