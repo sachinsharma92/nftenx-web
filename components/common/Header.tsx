@@ -51,7 +51,7 @@ export const Header = () => {
         </ul>
       </nav>
 
-      <ul className="hidden lg:block list-none flex flex-row gap-2 z-[1]">
+      <ul className="hidden lg:flex list-none flex-row gap-2 z-[1]">
         {extraLinks.map((element, index) => {
           return (
             <li key={index} className="inline-block">
