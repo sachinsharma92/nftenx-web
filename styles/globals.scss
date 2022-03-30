@@ -20,6 +20,47 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.p-section {
+  padding: 24px;
+
+  @screen md {
+    padding: 24px 48px;
+  }
+
+  @screen lg {
+    padding: 48px 96px;
+  }
+
+  @screen xl {
+    padding: 48px 108px;
+  }
+
+  @screen 2xl {
+    padding: 48px 124px;
+  }
+}
+
+.px-section {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @screen md {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @screen lg {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+
+  @screen xl {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+
+  @screen 2xl {
+    padding-left: 124px;
+    padding-right: 124px;
+  }
 }
