@@ -1,7 +1,10 @@
 import { A, Seo } from "components/atoms";
 import { Header, WithSidebar } from "components/common";
-import { HeadingsLinkBgImageHero } from "components/molecules";
-import { section1 } from "constants/landing";
+import {
+  HeadingDescriptionLinkImgSection,
+  HeadingsLinkBgImageHero,
+} from "components/molecules";
+import { section1, section2 } from "constants/landing";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -13,6 +16,15 @@ const Home: NextPage = () => {
         <HeadingsLinkBgImageHero
           headings={section1.headings}
           image={section1.image}
+          linkTitle={section1.linkTitle}
+          href={section1.href}
+        />
+        <HeadingDescriptionLinkImgSection
+          heading={section2.heading}
+          description={section2.description}
+          image={section2.image}
+          linkTitle={section2.linkTitle}
+          href={section2.href}
         />
       </WithSidebar>
     </main>

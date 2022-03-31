@@ -25,13 +25,8 @@ export const HeadingsLinkBgImageHero = (props: Props) => {
           );
         })}
         <div className="mt-8">
-          <A href="/join" className="px-8 py-3">
-            <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
-              Join the Waitlist
-              <span role="img" className="transition-all pl-2 group-hover:pl-5">
-                <RightArrowSecondary className="h-10 w-auto" />
-              </span>
-            </span>
+          <A href={props.href ?? 'javascript.void(0)'} className="px-8 py-3">
+            {props.linkTitle}
           </A>
         </div>
       </div>
