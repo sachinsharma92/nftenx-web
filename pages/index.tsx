@@ -23,6 +23,7 @@ const Home: NextPage = () => {
           heading={section2.heading}
           description={section2.description}
           image={section2.image}
+          bgImage={section2.bgImage}
           linkTitle={section2.linkTitle}
           href={section2.href}
         />

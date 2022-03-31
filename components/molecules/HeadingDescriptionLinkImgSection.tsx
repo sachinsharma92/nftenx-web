@@ -6,6 +6,7 @@ type PropTypes = {
   heading?: JSX.Element | string;
   description?: JSX.Element | string;
   image?: string;
+  bgImage?: string;
   linkTitle?: JSX.Element | string;
   href?: string;
 };
@@ -18,10 +19,14 @@ export const HeadingDescriptionLinkImgSection = (props: PropTypes) => {
         <p className="font-mono text-tertiary-3 leading-8 text-lg">
           {props.description}
         </p>
-        <A href={props.href ?? 'javascript.void(0)'} className="px-8 py-3 w-fit">
-            {props.linkTitle}
-          </A>
+        <A
+          href={props.href ?? "javascript.void(0)"}
+          className="px-8 py-3 w-fit"
+        >
+          {props.linkTitle}
+        </A>
       </div>
+      {props.bgImage && <img className="absolute h-full left-0 top-0 opacity-70" src={props.bgImage} alt="bg image" />}
       <img
         className="w-[60%] absolute top-[50%] right-0 -translate-y-[50%]"
         src={props.image}
