@@ -1,0 +1,58 @@
+@layer base {
+  @font-face {
+    font-family: "Recife";
+    font-weight: 200;
+    font-style: "normal";
+    src: url("../assets/fonts/Recife/otf/Light.otf") format("opentype"),
+      url("../assets/fonts/Recife/woff/Light.woff") format("woff"),
+      url("../assets/fonts/Recife/woff/Light.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Recife";
+    font-weight: 300;
+    font-style: "normal";
+    src: url("../assets/fonts/Recife/otf/Book.otf") format("opentype"),
+      url("../assets/fonts/Recife/woff/Book.woff") format("woff"),
+      url("../assets/fonts/Recife/woff/Book.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Recife";
+    font-weight: "normal";
+    font-style: "normal";
+    src: url("../assets/fonts/Recife/otf/Regular.otf") format("opentype"),
+      url("../assets/fonts/Recife/woff/Regular.woff") format("woff"),
+      url("../assets/fonts/Recife/woff/Regular.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Recife";
+    font-weight: 500;
+    font-style: "normal";
+    src: url("../assets/fonts/Recife/otf/Medium.otf") format("opentype"),
+      url("../assets/fonts/Recife/woff/Medium.woff") format("woff"),
+      url("../assets/fonts/Recife/woff/Medium.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Recife";
+    font-weight: 600;
+    font-style: "normal";
+    src: url("../assets/fonts/Recife/otf/SemiBold.otf") format("opentype"),
+      url("../assets/fonts/Recife/woff/SemiBold.woff") format("woff"),
+      url("../assets/fonts/Recife/woff/SemiBold.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Recife";
+    font-weight: 700;
+    font-style: "normal";
+    src: url("../assets/fonts/Recife/otf/Bold.otf") format("opentype"),
+      url("../assets/fonts/Recife/woff/Bold.woff") format("woff"),
+      url("../assets/fonts/Recife/woff/Bold.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Recife";
+    font-weight: 800;
+    font-style: "normal";
+    src: url("../assets/fonts/Recife/otf/Black.otf") format("opentype"),
+      url("../assets/fonts/Recife/woff/Black.woff") format("woff"),
+      url("../assets/fonts/Recife/woff/Black.woff2") format("woff2");
+  }
+}

@@ -47,7 +47,7 @@ export const Logo = (props: IconProps) => {
   );
 };
 
-export const DiscordPrimary = (props: IconProps) => {
+export const DiscordSecondary = (props: IconProps) => {
   return (
     <svg
       className={props.className}
@@ -66,7 +66,7 @@ export const DiscordPrimary = (props: IconProps) => {
   );
 };
 
-export const OpenSeaPrimary = (props: IconProps) => {
+export const OpenSeaSecondary = (props: IconProps) => {
   return (
     <svg
       className={props.className}
@@ -87,7 +87,7 @@ export const OpenSeaPrimary = (props: IconProps) => {
   );
 };
 
-export const InstaPrimary = (props: IconProps) => {
+export const InstaSecondary = (props: IconProps) => {
   return (
     <svg
       className={props.className}
@@ -110,7 +110,28 @@ export const InstaPrimary = (props: IconProps) => {
   );
 };
 
-export const TwitterPrimary = (props: IconProps) => {
+export const RightArrowSecondary = (props: IconProps) => {
+  return (
+    <svg
+      className={props.className}
+      style={props.style}
+      width="26"
+      height="26"
+      viewBox="0 0 26 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M13.2223 6.20996L19.3052 12.2929L19.9945 12.9881L20.0005 12.9881L19.3052 13.7071L13.2223 19.79L12.5152 19.0829L18.0884 13.5098L5.99958 13.5098L5.99958 12.5098L18.1079 12.5098L12.5152 6.91707L13.2223 6.20996Z"
+        fill="#CEB2A5"
+      />
+    </svg>
+  );
+};
+
+export const TwitterSecondary = (props: IconProps) => {
   return (
     <svg
       className={props.className}
@@ -129,7 +150,7 @@ export const TwitterPrimary = (props: IconProps) => {
   );
 };
 
-export const Menu = (props: IconProps) => {
+export const MenuSecondary = (props: IconProps) => {
   return (
     <svg
       className={props.className}
