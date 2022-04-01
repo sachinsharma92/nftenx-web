@@ -13,7 +13,7 @@ type PropTypes = {
 
 export const HeadingDescriptionLinkImgSection = (props: PropTypes) => {
   return (
-    <article className="relative px-ws-section w-full min-h-screen grid lg:grid-flow-row content-center">
+    <article className="relative p-section w-full min-h-screen grid lg:grid-flow-row content-center">
       <img
         className="z-[1] max-w-none w-screen lg:z-auto h-auto lg:w-[60%] -mx-8 lg:m-0 lg:absolute lg:top-[50%] lg:right-0 lg:-translate-y-[50%]"
         src={props.image}
