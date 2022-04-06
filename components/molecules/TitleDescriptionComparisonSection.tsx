@@ -1,7 +1,7 @@
 import { ElegantSeperator } from "assets/icons";
 import { INSPECT_MAX_BYTES } from "buffer";
 import { H1, H2, H3 } from "components/atoms";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 type PropType = {
   title?: string | JSX.Element;
@@ -37,18 +37,16 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
       <div className="flex w-full flex-col lg:flex-row lg:mt-8 gap-4 justify-around align-center">
         {props.items.map((element, index) => {
           return (
-            <>
+            <React.Fragment key={index}>
               <div
-                key={index}
                 className={`select-none lg:max-w-md transition-all lg:opacity-50 lg:hover:opacity-100
                 ${index % 2 == 0 ? "text-left" : "text-right"}
-                ${
-                  index === 0
+                ${index === 0
                     ? "lg:text-left"
                     : index === props.items.length - 1
-                    ? "lg:text-right"
-                    : "lg:text-center"
-                }
+                      ? "lg:text-right"
+                      : "lg:text-center"
+                  }
               `}
               >
                 {element.title && <H2>{element.title}</H2>}
@@ -59,7 +57,7 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
               {index != props.items.length - 1 && (
                 <ElegantSeperator className="hidden lg:block" />
               )}
-            </>
+            </React.Fragment>
           );
         })}
       </div>
