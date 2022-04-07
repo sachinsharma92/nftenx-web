@@ -11,7 +11,7 @@ type Props = {
 
 export const HeadingsLinkBgImageHero = (props: Props) => {
   return (
-    <article className="relative px-ws-section w-full h-screen grid content-end pb-[8%] after:absolute after:w-full after:bottom-0 after:left-0 after:h-[100%] lg:after:h-20 after:bg-gradient-to-t after:from-primary-1 after:via-primary-2 lg:after:via-transparent after:to-transparent">
+    <article className="relative p-section w-full h-screen grid content-end pb-[8%] after:absolute after:w-full after:bottom-0 after:left-0 after:h-[100%] lg:after:h-20 after:bg-gradient-to-t after:from-primary-1 after:via-primary-2 lg:after:via-transparent after:to-transparent">
       {props.image && (
         <img
           src={props.image}
@@ -19,7 +19,7 @@ export const HeadingsLinkBgImageHero = (props: Props) => {
           alt="NF10X"
         />
       )}
-      <div className="z-[1] relative grid grid-flow-row-dense content-center gap-6 w-full lg:w-[90%] xl:w-[60%] 2xl:w-[60%]">
+      <div className="z-[1] relative grid grid-flow-row-dense content-center gap-6 w-full lg:w-[90%] xl:w-[70%] 2xl:w-[70%]">
         {props.headings?.map((element, index) => {
           return (
             <H1

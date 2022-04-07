@@ -167,3 +167,26 @@ export const MenuSecondary = (props: IconProps) => {
     </svg>
   );
 };
+
+export const ElegantSeperator = (props: IconProps) => {
+  return (
+    <svg
+      className={props.className}
+      style={props.style}
+      width="19"
+      height="140"
+      viewBox="0 0 19 140"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M9.99854 0.633301L9.99853 50.6333" stroke="#D6C1B8" />
+      <path d="M9.99854 89.3667L9.99853 139.367" stroke="#D6C1B8" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2.24788e-05 69.9997C5.1666 69.981 9.34911 65.7947 9.34911 60.6333C9.34911 65.8062 13.5504 69.9997 18.7329 69.9997C13.5663 70.0184 9.38382 74.2048 9.38382 79.3662C9.38382 74.1932 5.1825 69.9997 2.24788e-05 69.9997Z"
+        fill="#D6C1B8"
+      />
+    </svg>
+  );
+};
