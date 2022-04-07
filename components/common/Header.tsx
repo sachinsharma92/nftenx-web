@@ -70,7 +70,7 @@ export const Header = () => {
           );
         })}
       </ul>
-      <button onClick={connectWalletHandler} >
+      <button onClick={connectWalletHandler} className="px-4 py-2 xl:px-6 xl:py-3 text-secondary-1 bg-secondary-3 bg-opacity-10 rounded-full inline-block backdrop-blur-md font-mono">
       Connect Wallet
       </button>
       <WalletConnectModal setShowModal={setShowWalletConnectModal} showModal={showWalletConnectModal}  />
