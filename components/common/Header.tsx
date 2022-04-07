@@ -1,12 +1,18 @@
 import { Logo, MenuSecondary } from "assets/icons";
+import { WalletConnectModal } from "components/walletConnectModal/walletConnectModal";
 import { extraLinks, navLinks } from "constants/header";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { Button } from "reactstrap";
+import { useState } from 'react'
 
 export const Header = () => {
   const router = useRouter();
   const activeRoute = router.pathname.split("/")[1];
-
+  const [showWalletConnectModal, setShowWalletConnectModal] = useState<Boolean | undefined>(false)
+  const connectWalletHandler = ()=>{
+    setShowWalletConnectModal(true)
+  }
   // const headerBg = useRef<HTMLDivElement>(null);
 
   // useEffect(() => {
@@ -65,6 +71,10 @@ export const Header = () => {
           );
         })}
       </ul>
+      <Button onClick={connectWalletHandler} >
+      Connect Wallet
+      </Button>
+      <WalletConnectModal setShowModal={setShowWalletConnectModal} showModal={showWalletConnectModal}  />
     </header>
   );
 };
