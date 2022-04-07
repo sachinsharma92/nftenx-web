@@ -3,7 +3,6 @@ import { WalletConnectModal } from "components/walletConnectModal/walletConnectM
 import { extraLinks, navLinks } from "constants/header";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Button } from "reactstrap";
 import { useState } from 'react'
 
 export const Header = () => {
@@ -71,9 +70,9 @@ export const Header = () => {
           );
         })}
       </ul>
-      <Button onClick={connectWalletHandler} >
+      <button onClick={connectWalletHandler} >
       Connect Wallet
-      </Button>
+      </button>
       <WalletConnectModal setShowModal={setShowWalletConnectModal} showModal={showWalletConnectModal}  />
     </header>
   );
