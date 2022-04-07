@@ -2,6 +2,10 @@ import { RightArrowSecondary } from "assets/icons";
 import coinBgImage from "../assets/images/coins-bg.png";
 import peopleConected from "../assets/images/people-connected.png";
 import gridGradient from "../assets/images/grid-gradient-bg.png";
+import infiniteHexagon from '/assets/images/infinite-hexagon.svg';
+import infinitePentagon from '/assets/images/infinite-pentagon.svg';
+import infiniteSquare from '/assets/images/infinite-square.svg';
+import logo3d from '/assets/images/nf10x-logo-3d.png';
 
 export const section1 = {
   headings: [
@@ -35,4 +39,52 @@ export const section2 = {
     </span>
   ),
   href: "/more",
+};
+
+export const section3 = {
+  title: "Who is NF10X For?",
+  description: "Web3 isn’t the next frontier. It’s a new paradigm.",
+  items: [
+    {
+      title: "Disruptors",
+      description:
+        "Entrepreneurs and leaders actively building in Web3 that want to learn with and from a productive, insight-filled community",
+    },
+    {
+      title: "Catalysts",
+      description:
+        "Entrepreneurs and leaders actively building in Web3 that want to learn with and from a productive, insight-filled community",
+    },
+  ],
+};
+
+export const section4 = {
+  title: (
+    <>
+      Why Join <b className="font-serif">NF10X</b>
+    </>
+  ),
+  description:
+    "NF10X will arm you with the knowledge and network needed to intelligently navigate, invest and build in Web3.",
+  image: logo3d.src,
+  items: [
+    {
+      title: "Insights",
+      description:
+        "Live and on-demand modules to get you up to speed on Web3.Tactical discussions about operating a business in Web3 Weekly roundups of Web3’s biggest headlines, stories, and projects",
+      image: infiniteHexagon.src,
+    },
+    {
+      title: "Access",
+      description:
+        "Connect with our mentors - Leaders, Investors, and Builders in Web3 Attend members-only sessions with Web3’s trailblazers",
+      image: infinitePentagon.src,
+    },
+    {
+      title: "Immersion",
+      description:
+        "Join a cohort of other Founders and Operators exploring opportunities in Web3 Connect with the community in our private Discord server",
+      image: infiniteSquare.src,
+    },
+  ],
 };

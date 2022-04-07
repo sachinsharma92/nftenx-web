@@ -12,29 +12,30 @@ type PropType = {
 export const TitleDescriptionComparisonSection = (props: PropType) => {
   const customCursorRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (window) {
-      window.addEventListener("mousemove", (data) => {
-        requestAnimationFrame(() => {
-          customCursorRef.current!.style.top = `${data.clientY - 160}px`;
-          customCursorRef.current!.style.left = `${data.clientX - 160}px`;
-        });
-      });
-    }
-  }, []);
+  // Un Comment bellow for mouse move animation
+  // useEffect(() => {
+  //   if (window) {
+  //     window.addEventListener("mousemove", (data) => {
+  //       requestAnimationFrame(() => {
+  //         customCursorRef.current!.style.top = `${data.clientY - 160}px`;
+  //         customCursorRef.current!.style.left = `${data.clientX - 160}px`;
+  //       });
+  //     });
+  //   }
+  // }, []);
 
   return (
-    <article className="relative p-section py-14 text-secondary-1 flex flex-col gap-8 justify-center h-screen overflow-x-hidden">
+    <article className="relative p-section py-14 text-secondary-1 flex flex-col gap-8 justify-center min-h-screen overflow-x-hidden">
       <div
         ref={customCursorRef}
-        className="absolute transition-all bg-secondary-2 opacity-40 h-80 w-80 rounded-full blur-[200px]"
+        className="absolute transition-all bg-secondary-2 opacity-40 h-60 w-60 rounded-full blur-[170px]"
       ></div>
 
       {props.title && <H1 className="text-center">{props.title}</H1>}
       {props.description && (
         <p className="text-center font-mono">{props.description}</p>
       )}
-      <div className="flex w-full flex-col lg:flex-row lg:mt-8 gap-4 justify-around align-center">
+      <div className="flex w-full flex-col lg:flex-row mt-36 lg:mt-8 gap-4 justify-around align-center">
         {props.items.map((element, index) => {
           return (
             <React.Fragment key={index}>
@@ -47,7 +48,8 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
                       ? "lg:text-right"
                       : "lg:text-center"
                   }
-              `}
+                  mb-9 lg:mb-0
+                `}
               >
                 {element.title && <H2>{element.title}</H2>}
                 {element.description && (
