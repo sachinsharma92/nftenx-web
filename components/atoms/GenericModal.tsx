@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 
 export const GenericModal = (props: any)=>{
-    console.log(props)
     return (
         <>
             {props.showModal ? (

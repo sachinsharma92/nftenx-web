@@ -41,7 +41,7 @@ export function Accounts({
   const balances = useBalances(provider, accounts)
 
   if (accounts === undefined) return null
-
+  localStorage.setItem("address",accounts?.[0])
   return (
     <div>
       Accounts:{' '}
