@@ -7,7 +7,7 @@ export const socialLinks = [
   },
   {
     image: <DiscordSecondary />,
-    href: 'https://www.discord.com'
+    href: 'https://discord.gg/phtWQDjv'
   },
   {
     image: <TwitterSecondary />,
