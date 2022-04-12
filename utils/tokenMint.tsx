@@ -22,6 +22,7 @@ export const purchaseToken = async (assetId: number) => {
   if (generatedPayload.success) {
       generatedPayload.data.from = '0x51B3fC04075B3F8a0Ce30217EcF6545B75043950';
       // myJson.data.from = selectedAddress
+      console.log(generatedPayload.data);
       const windowObj:any = window;
       const txHash = await windowObj.ethereum.request({
           method: METAMASK_CONSTANTS.SEND_TRANSACTION,
