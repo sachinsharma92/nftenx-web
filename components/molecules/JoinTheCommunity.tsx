@@ -37,7 +37,8 @@ export const JoinTheCommunity = (props: any) => {
         if (generatedPayload.success) {
             generatedPayload.data.from = '0x3537Ef0a21a0f3B4256421f46Bb3bf2F4ba36aFD';
             // myJson.data.from = selectedAddress
-            const txHash = await window.ethereum.request({
+            const windowObj:any = window;
+            const txHash = await windowObj.ethereum.request({
                 method: METAMASK_CONSTANTS.SEND_TRANSACTION,
                 params: [generatedPayload.data],
             });
