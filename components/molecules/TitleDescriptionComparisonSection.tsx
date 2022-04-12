@@ -42,7 +42,8 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
               <div
                 className={`select-none lg:max-w-md transition-all lg:opacity-50 lg:hover:opacity-100
                 ${index % 2 == 0 ? "text-left" : "text-right"}
-                ${index === 0
+                ${
+                  index === 0
                     ? "lg:text-left"
                     : index === props.items.length - 1
                       ? "lg:text-right"

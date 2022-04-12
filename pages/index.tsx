@@ -5,6 +5,7 @@ import {
   HeadingsLinkBgImageHero,
   MultipleImgTitleDescriptionSection,
   TitleDescriptionComparisonSection,
+  JoinTheCommunity
 } from "components/molecules";
 import { section1, section2, section3, section4 } from "constants/landing";
 import type { NextPage } from "next";
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
           description={section3.description}
           items={section3.items}
         />
+        <JoinTheCommunity />
         <MultipleImgTitleDescriptionSection
           mainSection={{
             title: section4.title,

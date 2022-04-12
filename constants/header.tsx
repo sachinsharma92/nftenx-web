@@ -26,8 +26,4 @@ export const extraLinks = [
     title: "Join the Community",
     href: "/join",
   },
-  {
-    title: "Connect Wallet",
-    href: "/connect",
-  },
 ];
