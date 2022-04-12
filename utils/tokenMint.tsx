@@ -20,7 +20,7 @@ export const purchaseToken = async (assetId: number) => {
   }
   const generatedPayload = await Api.getContractData(payload);
   if (generatedPayload.success) {
-      generatedPayload.data.from = '0x3537Ef0a21a0f3B4256421f46Bb3bf2F4ba36aFD';
+      generatedPayload.data.from = '0x51B3fC04075B3F8a0Ce30217EcF6545B75043950';
       // myJson.data.from = selectedAddress
       const windowObj:any = window;
       const txHash = await windowObj.ethereum.request({
