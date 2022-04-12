@@ -3,7 +3,7 @@ import { METAMASK_CONSTANTS } from 'constants/globalConstants'
 import { Connectors } from 'web3-react'
 import { storage } from './storage'
 const { InjectedConnector, NetworkOnlyConnector } = Connectors
-const MetaMask = new InjectedConnector({ supportedNetworks: Object.keys(CHAINS) })
+const MetaMask = new InjectedConnector({ supportedNetworks: Object.keys(CHAINS) as any })
 
 
 const getChainId=()=>{
@@ -14,7 +14,7 @@ const getChainId=()=>{
 }
 
 const Infura = new NetworkOnlyConnector({
-    providerURL: CHAINS[parseInt(getChainId())]
+    providerURL: CHAINS[parseInt(getChainId())] as any
 })
 
 const connectors = { MetaMask, Infura }

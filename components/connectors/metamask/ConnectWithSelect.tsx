@@ -12,7 +12,7 @@ function Select({
   chainIds,
 }: {
   chainId: number
-  switchChain: (chainId: number) => void | undefined
+  switchChain: (chainId: number) => void | undefined | any
   displayDefault: boolean
   chainIds: number[]
 }) {
@@ -42,7 +42,7 @@ export function ConnectWithSelect({
   isActive,
 }: {
   connector: MetaMask | WalletConnect  | Network
-  chainId: ReturnType<Web3ReactHooks['useChainId']>
+  chainId: ReturnType<Web3ReactHooks['useChainId']> | any
   isActivating: ReturnType<Web3ReactHooks['useIsActivating']>
   error: ReturnType<Web3ReactHooks['useError']>
   isActive: ReturnType<Web3ReactHooks['useIsActive']>
@@ -53,7 +53,7 @@ export function ConnectWithSelect({
 
   const [desiredChainId, setDesiredChainId] = useState<number>(isNetwork ? 1 : -1)
 
-  const switchChain = useCallback(
+  const switchChain: any = useCallback(
     async (desiredChainId: number) => {
       setDesiredChainId(desiredChainId)
       // if we're already connected to the desired chain, return

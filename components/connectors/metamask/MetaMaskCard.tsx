@@ -5,7 +5,7 @@ import { Card } from './Card'
 import { Chain } from './Chain'
 import { ConnectWithSelect } from './ConnectWithSelect'
 import { Status } from './Status'
-import { useWeb3Context, } from 'web3-react'
+import { useWeb3Context } from 'web3-react'
 
 
 const { useChainId, useAccounts, useError, useIsActivating, useIsActive, useProvider, useENSNames } = hooks
@@ -29,10 +29,6 @@ export default function MetaMaskCard() {
     context.setFirstValidConnector(['MetaMask', 'Infura'])
   }, [])
 
-  function invokeContract(){
-    window.web3 = new Web3(window.ethereum);
-  }
-
   return (
     <Card>
       <div>
@@ -50,9 +46,6 @@ export default function MetaMaskCard() {
         error={error}
         isActive={isActive}
       />
-      <button onClick={invokeContract}>
-      Do transaction
-      </button>
     </Card>
   )
 }
