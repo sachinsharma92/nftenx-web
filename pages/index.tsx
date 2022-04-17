@@ -7,7 +7,7 @@ import {
   TitleDescriptionComparisonSection,
   JoinTheCommunity
 } from "components/molecules";
-import { section1, section2, section3, section4 } from "constants/landing";
+import { section1, section2, section3, section4, section6 } from "constants/landing";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -31,18 +31,27 @@ const Home: NextPage = () => {
           href={section2.href}
         />
         <TitleDescriptionComparisonSection
+          image={section3.image}
+          imageSide="right"
           title={section3.title}
           description={section3.description}
           items={section3.items}
         />
+        <TitleDescriptionComparisonSection
+          image={section4.image}
+          imageSide="left"
+          title={section4.title}
+          description={section4.description}
+          items={section4.items}
+        />
         <JoinTheCommunity />
         <MultipleImgTitleDescriptionSection
           mainSection={{
-            title: section4.title,
-            description: section4.description,
-            image: section4.image,
+            title: section6.title,
+            description: section6.description,
+            image: section6.image,
           }}
-          items={section4.items}
+          items={section6.items}
         />
 
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
