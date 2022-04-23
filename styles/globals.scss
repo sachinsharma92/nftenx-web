@@ -66,6 +66,33 @@ a {
   }
 }
 
+.-px-section {
+  margin-left: -24px;
+  margin-right: -24px;
+
+  @screen md {
+    margin-left: -48px;
+    margin-right: -48px;
+  }
+
+  @screen lg {
+    margin-left: -96px;
+    margin-right: -96px;
+  }
+
+  @screen xl {
+    margin-left: -108px;
+    margin-right: -108px;
+  }
+
+  @screen 2xl {
+    margin-left: -124px;
+    margin-right: -124px;
+  }
+}
+
+
+
 // Section paddings when side bar is there!
 .px-ws-section {
   padding-left: 24px;

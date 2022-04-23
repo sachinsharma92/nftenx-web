@@ -5,9 +5,10 @@ import {
   HeadingsLinkBgImageHero,
   MultipleImgTitleDescriptionSection,
   TitleDescriptionComparisonSection,
-  JoinTheCommunity
+  JoinTheCommunity,
+  TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal
 } from "components/molecules";
-import { section1, section2, section3, section4, section6 } from "constants/landing";
+import { section1, section2, section3, section4, section6, section7 } from "constants/landing";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -53,15 +54,22 @@ const Home: NextPage = () => {
           }}
           items={section6.items}
         />
+        <TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal
+          title={section7.title}
+          description={section7.description}
+          linkTitle={section7.linkTitle}
+          linkHref={section7.linkHref}
+          items={section7.items}
+        />
 
+        {/* <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
+        <section className="grid place-items-center p-40 text-tertiary-2">Section</section> */}
       </WithSidebar>
     </main>
   );

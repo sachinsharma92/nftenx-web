@@ -1,4 +1,4 @@
-import { RightArrowSecondary } from "assets/icons";
+import { RightArrowSecondary, TwitterSecondary } from "assets/icons";
 import coinBgImage from "../assets/images/coins-bg.png";
 import peopleConected from "../assets/images/people-connected.png";
 import gridGradient from "../assets/images/grid-gradient-bg.png";
@@ -100,9 +100,12 @@ export const section6 = {
           Web3&apos;s biggest headlines, stories, and projects
           <br />
           <ul className="list-inside">
-            <li className="list-item">Tactical discussions about operating a business in Web3</li>
             <li className="list-item">
-              Weekly roundups of Web3&apos;s biggest headlines, stories, and projects
+              Tactical discussions about operating a business in Web3
+            </li>
+            <li className="list-item">
+              Weekly roundups of Web3&apos;s biggest headlines, stories, and
+              projects
             </li>
           </ul>
         </>
@@ -120,6 +123,140 @@ export const section6 = {
       description:
         "Join a cohort of other Founders and Operators exploring opportunities in Web3 Connect with the community in our private Discord server",
       image: immersionImg.src,
+    },
+  ],
+};
+
+export const section7 = {
+  title: "Meet the Mentors",
+  description:
+    "We recruited X Leaders, Investors, and Builders in Web3 to share their knowledge and act as resources for the community",
+  linkTitle: (
+    <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
+      Join the Community
+      <span role="img" className="transition-all pl-2 group-hover:pl-5">
+        <RightArrowSecondary className="h-10 w-auto" />
+      </span>
+    </span>
+  ),
+  linkHref: "/join",
+  items: [
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      title: "Marilyn Botosh",
+      description:
+        "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
+      links: [
+        {
+          title: <TwitterSecondary />,
+          href: "https://www.twitter.com",
+        },
+      ],
     },
   ],
 };
