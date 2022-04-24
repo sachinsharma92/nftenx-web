@@ -67,9 +67,11 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                 </H2>
               )}
               {element.description && (
-                <p className="z-[1] hidden lg:block text-mono opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
+                <div className="z-[1] hidden lg:block text-mono opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
+                  <p className="opacity-70 transition-all">
                   {element.description as string}
-                </p>
+                  </p>
+                </div>
               )}
               <div className="mt-2 flex-flex-row justify-start gap-2 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
                 {(
