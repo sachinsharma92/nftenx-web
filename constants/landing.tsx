@@ -260,3 +260,67 @@ export const section7 = {
     },
   ],
 };
+
+export const section8 = [
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    AMAS
+  </span>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    Web3 deep dives
+  </span>,
+  <i key={0} className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    Product teardowns
+  </span>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    Fireside chats
+  </span>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    AMAS
+  </span>,
+  <i key={0} className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    Web3 deep dives
+  </span>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    Product teardowns
+  </span>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    AMAS
+  </span>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    Web3 deep dives
+  </span>,
+  <i key={0} className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"></i>,
+  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+    Product teardowns
+  </span>,
+];

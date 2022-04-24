@@ -6,9 +6,10 @@ import {
   MultipleImgTitleDescriptionSection,
   TitleDescriptionComparisonSection,
   JoinTheCommunity,
-  TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal
+  TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal,
+  InfiniteScroller
 } from "components/molecules";
-import { section1, section2, section3, section4, section6, section7 } from "constants/landing";
+import { section1, section2, section3, section4, section6, section7, section8 } from "constants/landing";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -61,6 +62,7 @@ const Home: NextPage = () => {
           linkHref={section7.linkHref}
           items={section7.items}
         />
+        <InfiniteScroller items={section8} />
 
         {/* <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>

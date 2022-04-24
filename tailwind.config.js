@@ -30,6 +30,7 @@ module.exports = {
         "spin-slow": "spin 3s linear infinite",
         levitate: "levitate 6s cubic-bezier(0.37, 0, 0.63, 1) infinite",
         'levitate-slow': "levitate 12s cubic-bezier(0.37, 0, 0.63, 1) infinite",
+        'infinite-scroll-left': 'infiniteScrollLeft 15s linear infinite'
       },
       keyframes: {
         levitate: {
@@ -44,6 +45,9 @@ module.exports = {
           "80%": { transform: "translate(-8px, -8px)" },
           "90%": { transform: "translate(8px, -8px)" },
           "100%": { transform: "translate(0)" },
+        },
+        infiniteScrollLeft: {
+          '100%': {transform: 'translateX(-50%)'},
         },
       },
       fontFamily: {
