@@ -276,7 +276,10 @@ export const section8 = [
   <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
     Web3 deep dives
   </span>,
-  <i key={0} className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"></i>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
   <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
     Product teardowns
   </span>,
@@ -294,7 +297,10 @@ export const section8 = [
   <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
     AMAS
   </span>,
-  <i key={0} className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"></i>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
   <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
     Web3 deep dives
   </span>,
@@ -319,8 +325,41 @@ export const section8 = [
   <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
     Web3 deep dives
   </span>,
-  <i key={0} className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"></i>,
+  <i
+    key={0}
+    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+  ></i>,
   <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
     Product teardowns
   </span>,
 ];
+
+export const section9 = {
+  title: "Download Schedule",
+  description:
+    "NF10X will host regular programming for the community. These sessions include Web3 Foundations, Project Debriefs, Tactical Talks, and Trend/Sector Reports.",
+  items: [1, 2, 3, 4, 5, 6].map((element, index) => {
+    return (
+      <div
+        key={index}
+        className="w-full lg:w-72 3xl:w-96 rounded-3xl bg-tertiary-3 bg-opacity-[0.05] p-5 border-secondary-1 border-opacity-10 border-[1px]"
+      >
+        Hello World! {element}
+        <br />
+        <br />
+        Lorem Ispum Dolor Sit...
+        <br />
+        <br />
+        Lorem Ispum Dolor Sit...
+        <br />
+        Lorem Ispum Dolor Sit...
+        <br />
+        <br />
+        <br />
+        Lorem Ispum Dolor Sit...
+        <br />
+        Lorem Ispum Dolor Sit...
+      </div>
+    );
+  }),
+};
