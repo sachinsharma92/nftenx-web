@@ -39,7 +39,7 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
   };
 
   return (
-    <article className="relative p-section py-14 text-secondary-1 flex flex-col gap-8 justify-center min-h-screen overflow-x-hidden">
+    <article className="relative p-section py-14 text-secondary-2 flex flex-col gap-8 justify-center min-h-screen overflow-x-hidden">
       {props.image && (
         <div
           className={`absolute z-0 top-[30%] lg:top-[50%] lg:-translate-y-[80%] w-1/2 lg:w-2/6 ${
@@ -79,9 +79,10 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
                     : "lg:text-center"
                 }
                   mb-9 lg:mb-0
+                  text-secondary-2
                 `}
               >
-                {element.title && <H2 className="shadow-primary-1 drop-shadow-2xl">{element.title}</H2>}
+                {element.title && <H2 className="shadow-primary-1 drop-shadow-2xl text-secondary-1">{element.title}</H2>}
                 {element.description && (
                   <p className="font-mono text-lg">{element.description}</p>
                 )}

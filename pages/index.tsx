@@ -72,7 +72,6 @@ const Home: NextPage = () => {
           items={section7.items}
         />
         <InfiniteScroller items={section8} />
-
         <TitleDescription_ImageTitleDescriptionBtnCards
           title={section9.title}
           description={section9.description}

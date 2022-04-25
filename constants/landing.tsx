@@ -11,6 +11,8 @@ import logo3d from "/assets/images/nf10x-logo-3d.png";
 import square3dTranslucent from "/assets/images/sqiares-3d-translucent.png";
 import sphereSqTranslucent from "/assets/images/shperes-square-translucent.png";
 
+import eventLogo1 from "/assets/images/event-logo-1.png";
+
 export const section1 = {
   headings: [
     "The Web3 Community for Founders and Operators",
@@ -35,7 +37,7 @@ export const section2 = {
   image: peopleConected.src,
   bgImage: gridGradient.src,
   linkTitle: (
-    <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
+    <span className="group text-secondary-2 text-mono whitespace-nowrap flex items-center text-lg">
       Know More
       <span role="img" className="transition-all pl-2 group-hover:pl-5">
         <RightArrowSecondary className="h-10 w-auto" />
@@ -132,7 +134,7 @@ export const section7 = {
   description:
     "We recruited X Leaders, Investors, and Builders in Web3 to share their knowledge and act as resources for the community",
   linkTitle: (
-    <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
+    <span className="group text-secondary-2 text-mono whitespace-nowrap flex items-center text-lg">
       Join the Community
       <span role="img" className="transition-all pl-2 group-hover:pl-5">
         <RightArrowSecondary className="h-10 w-auto" />
@@ -266,70 +268,70 @@ export const section8 = [
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     AMAS
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     Web3 deep dives
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     Product teardowns
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     Fireside chats
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     AMAS
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     Web3 deep dives
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     Product teardowns
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     AMAS
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     Web3 deep dives
   </span>,
   <i
     key={0}
     className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-1 font-mono text-3xl">
+  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
     Product teardowns
   </span>,
 ];
@@ -338,28 +340,90 @@ export const section9 = {
   title: "Download Schedule",
   description:
     "NF10X will host regular programming for the community. These sessions include Web3 Foundations, Project Debriefs, Tactical Talks, and Trend/Sector Reports.",
-  items: [1, 2, 3, 4, 5, 6].map((element, index) => {
-    return (
-      <div
-        key={index}
-        className="w-full lg:w-72 3xl:w-96 rounded-3xl bg-tertiary-3 bg-opacity-[0.05] p-5 border-secondary-1 border-opacity-10 border-[1px]"
-      >
-        Hello World! {element}
-        <br />
-        <br />
-        Lorem Ispum Dolor Sit...
-        <br />
-        <br />
-        Lorem Ispum Dolor Sit...
-        <br />
-        Lorem Ispum Dolor Sit...
-        <br />
-        <br />
-        <br />
-        Lorem Ispum Dolor Sit...
-        <br />
-        Lorem Ispum Dolor Sit...
-      </div>
-    );
-  }),
+  items: [
+    {
+      image: eventLogo1.src,
+      description: (
+        <>
+          DeFi Fundamentals by
+          <br />
+          Emma-Jane MacKinnon-Lee
+          <br />
+          25th MAR
+        </>
+      ),
+      buttonTitle: "RSVP",
+      buttonAction: () => console.log("RSVPd"),
+    },
+    {
+      image: eventLogo1.src,
+      description: (
+        <>
+          DeFi Fundamentals by
+          <br />
+          Emma-Jane MacKinnon-Lee
+          <br />
+          25th MAR
+        </>
+      ),
+      buttonTitle: "RSVP",
+      buttonAction: () => console.log("RSVPd"),
+    },
+    {
+      image: eventLogo1.src,
+      description: (
+        <>
+          DeFi Fundamentals by
+          <br />
+          Emma-Jane MacKinnon-Lee
+          <br />
+          25th MAR
+        </>
+      ),
+      buttonTitle: "RSVP",
+      buttonAction: () => console.log("RSVPd"),
+    },
+    {
+      image: eventLogo1.src,
+      description: (
+        <>
+          DeFi Fundamentals by
+          <br />
+          Emma-Jane MacKinnon-Lee
+          <br />
+          25th MAR
+        </>
+      ),
+      buttonTitle: "RSVP",
+      buttonAction: () => console.log("RSVPd"),
+    },
+    {
+      image: eventLogo1.src,
+      description: (
+        <>
+          DeFi Fundamentals by
+          <br />
+          Emma-Jane MacKinnon-Lee
+          <br />
+          25th MAR
+        </>
+      ),
+      buttonTitle: "RSVP",
+      buttonAction: () => console.log("RSVPd"),
+    },
+    {
+      image: eventLogo1.src,
+      description: (
+        <>
+          DeFi Fundamentals by
+          <br />
+          Emma-Jane MacKinnon-Lee
+          <br />
+          25th MAR
+        </>
+      ),
+      buttonTitle: "RSVP",
+      buttonAction: () => console.log("RSVPd"),
+    },
+  ],
 };

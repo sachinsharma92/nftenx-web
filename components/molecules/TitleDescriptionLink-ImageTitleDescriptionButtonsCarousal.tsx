@@ -46,7 +46,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                 <img
                   src={element.image as string}
                   alt={element.title as string}
-                  className="hidden lg:block blur-2xl absolute top-1/2 -translate-y-1/2 z-[0] w-11/12 lg:max-h-72 object-cover object-center opacity-0 lg:group-hover:opacity-50 transition-all"
+                  className="hidden lg:block blur-3xl absolute top-1/2 -translate-y-1/2 z-[0] w-11/12 lg:max-h-72 object-cover object-center opacity-0 lg:group-hover:opacity-50 transition-all"
                 />
               )}
               {element.image && (
@@ -57,7 +57,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                 />
               )}
               {element.title && (
-                <H4 className="z-[1] lg:group-hover:opacity-0 transition-all lg:group-hover:-translate-y-9">
+                <H4 className="z-[1] lg:group-hover:opacity-0 transition-all lg:group-hover:-translate-y-9 text-secondary-2">
                   {element.title as string}
                 </H4>
               )}
@@ -68,7 +68,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
               )}
               {element.description && (
                 <div className="z-[1] hidden lg:block text-mono opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
-                  <p className="opacity-70 transition-all">
+                  <p className="opacity-70 transition-all text-secondary-2">
                   {element.description as string}
                   </p>
                 </div>

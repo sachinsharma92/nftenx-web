@@ -10,12 +10,12 @@ module.exports = {
         // secondary: "#FFFCED",
         // tertiary: '#714436'
         primary: {
-          1: "#1A1616",
-          2: "#100D0E",
+          1: "#101118",
+          2: "#38265D",
         },
         secondary: {
           1: "#FFFCED",
-          2: "#FFCD4D",
+          2: "#8E8861",
           3: "#E5833C",
         },
         tertiary: {
