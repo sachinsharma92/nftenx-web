@@ -4,3 +4,6 @@ export * from './TitleDescriptionComparisonSection';
 export * from './JoinTheCommunity';
 export * from './ButtonWithDescription';
 export * from './MultipleImgTitleDescriptionSection';
+export * from './TitleDescriptionLink-ImageTitleDescriptionButtonsCarousal';
+export * from './InfiniteScroller';
+export * from './TitleDescription-ImageTitleDescriptionBtnCards';

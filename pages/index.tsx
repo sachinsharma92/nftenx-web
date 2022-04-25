@@ -5,9 +5,21 @@ import {
   HeadingsLinkBgImageHero,
   MultipleImgTitleDescriptionSection,
   TitleDescriptionComparisonSection,
-  JoinTheCommunity
+  JoinTheCommunity,
+  TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal,
+  InfiniteScroller,
+  TitleDescription_ImageTitleDescriptionBtnCards,
 } from "components/molecules";
-import { section1, section2, section3, section4, section6 } from "constants/landing";
+import {
+  section1,
+  section2,
+  section3,
+  section4,
+  section6,
+  section7,
+  section8,
+  section9,
+} from "constants/landing";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -44,7 +56,6 @@ const Home: NextPage = () => {
           description={section4.description}
           items={section4.items}
         />
-        <JoinTheCommunity />
         <MultipleImgTitleDescriptionSection
           mainSection={{
             title: section6.title,
@@ -53,15 +64,29 @@ const Home: NextPage = () => {
           }}
           items={section6.items}
         />
+        <TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal
+          title={section7.title}
+          description={section7.description}
+          linkTitle={section7.linkTitle}
+          linkHref={section7.linkHref}
+          items={section7.items}
+        />
+        <InfiniteScroller items={section8} />
+        <TitleDescription_ImageTitleDescriptionBtnCards
+          title={section9.title}
+          description={section9.description}
+          items={section9.items}
+        />
 
+        <JoinTheCommunity />
+        {/* <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
+        <section className="grid place-items-center p-40 text-tertiary-2">Section</section> */}
       </WithSidebar>
     </main>
   );
