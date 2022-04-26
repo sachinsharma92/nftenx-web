@@ -17,8 +17,8 @@ export const ButtonWithDescription = ({src, onClick, title, subTitle}: Props) =>
             {/* <A href={href}>
             </A> */}
             <div className="flex flex-col gap-3">
-                <P className="text-tertiary-3">{title}</P>
-                <P className="">{subTitle}</P>
+                <P className="text-secondary-2 font-heading-serif text-xl">{title}</P>
+                <P className="text-secondary-2 text-xs leading-relaxed">{subTitle}</P>
             </div>
         </div>
   );

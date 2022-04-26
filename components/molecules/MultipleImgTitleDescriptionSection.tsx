@@ -24,7 +24,7 @@ export const MultipleImgTitleDescriptionSection = (props: PropType) => {
           )}
           <div className="-mt-32 lg:pl-32">
             {props.mainSection?.title && (
-              <H1 className="text-center lg:text-left whitespace-nowrap">
+              <H1 className="text-center lg:text-left">
                 {props.mainSection?.title}
               </H1>
             )}
