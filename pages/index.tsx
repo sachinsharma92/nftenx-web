@@ -10,6 +10,7 @@ import {
   InfiniteScroller,
   TitleDescription_ImageTitleDescriptionBtnCards,
 } from "components/molecules";
+import TitlesButtonHero from "components/molecules/TitlesDescriptionButtonHero";
 import {
   section1,
   section2,
@@ -77,7 +78,7 @@ const Home: NextPage = () => {
           description={section9.description}
           items={section9.items}
         />
-
+        <TitlesButtonHero title="Join the waitlist Now!" subtitle="All waitlisted members get free access to the first three events." linkTitle={'Join the Community'} linkHref={'/join'} />
         <JoinTheCommunity />
         {/* <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
         <section className="grid place-items-center p-40 text-tertiary-2">Section</section>

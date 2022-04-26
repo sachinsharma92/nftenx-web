@@ -5,6 +5,7 @@ interface AProps extends LinkProps {
   className?: string;
   transparent?: boolean;
   noPadding?: boolean;
+  gradientType?: boolean;
 }
 
 export const A = (props: AProps) => {
