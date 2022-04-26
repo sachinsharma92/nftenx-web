@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import { Logo } from "assets/icons";
 import { A } from "components/atoms";
 import { socialLinks } from "constants/sidebar";
 import Link from "next/link";
+import nf10XTextLogo from "/assets/images/NF10X-text-vertical.svg";
 
 type WithSidebarProps = {
   children?: JSX.Element | JSX.Element[] | string;
@@ -21,6 +23,7 @@ export const WithSidebar = (props: WithSidebarProps) => {
             <Logo className="h-10 w-auto" />
           </a>
         </Link>
+        <img className="w-6" src={nf10XTextLogo.src} alt="NF10X" />
         <div className="flex flex-col gap-3 justify-center items-center">
           {socialLinks.map((element, index) => {
             return (

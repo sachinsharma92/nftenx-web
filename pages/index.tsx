@@ -1,3 +1,4 @@
+import { RightArrowSecondary } from "assets/icons";
 import { A, Seo } from "components/atoms";
 import { Header, WithSidebar } from "components/common";
 import {
@@ -9,9 +10,15 @@ import {
   TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal,
   InfiniteScroller,
   TitleDescription_ImageTitleDescriptionBtnCards,
+  ImageTitleDescriptionLinkHero,
+  FAQSection,
 } from "components/molecules";
+import TitlesButtonHero from "components/molecules/TitlesDescriptionButtonHero";
 import {
   section1,
+  section10,
+  section11,
+  section12,
   section2,
   section3,
   section4,
@@ -77,16 +84,30 @@ const Home: NextPage = () => {
           description={section9.description}
           items={section9.items}
         />
-
+        <TitlesButtonHero
+          title={section10.title}
+          subtitle={section10.subtitle}
+          linkTitle={section10.linkTitle}
+          linkHref={section10.linkHref}
+        />
         <JoinTheCommunity />
-        {/* <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section> */}
+        <FAQSection
+          title={section11.title}
+          items={section11.items}
+        />
+        <ImageTitleDescriptionLinkHero
+          title={section12.title}
+          description={section12.description}
+          linkHref={section12.linkHref}
+          linkTitle={
+            <span className="group text-secondary-2 text-mono whitespace-nowrap flex items-center text-lg">
+              Join the Community
+              <span role="img" className="transition-all pl-2 group-hover:pl-5">
+                <RightArrowSecondary className="h-10 w-auto" />
+              </span>
+            </span>
+          }
+        />
       </WithSidebar>
     </main>
   );

@@ -7,3 +7,6 @@ export * from './MultipleImgTitleDescriptionSection';
 export * from './TitleDescriptionLink-ImageTitleDescriptionButtonsCarousal';
 export * from './InfiniteScroller';
 export * from './TitleDescription-ImageTitleDescriptionBtnCards';
+export * from './TitlesDescriptionButtonHero';
+export * from './ImageTitleDescriptionLinkHero';
+export * from './FAQSection';
