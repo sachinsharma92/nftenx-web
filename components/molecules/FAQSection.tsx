@@ -15,7 +15,7 @@ export const FAQSection = (props: PropTypes) => {
   };
 
   return (
-    <article className="relative p-section py-16 lg:py-32 w-full text-secondary-1 flex flex-col lg:flex-row gap-10 lg:gap-4">
+    <article className="relative p-section lg:py-32 w-full text-secondary-1 flex flex-col lg:flex-row gap-10 lg:gap-4">
       {props.title && (
         <div className="lg:w-2/5 shrink-0">
           <H1>{props.title}</H1>
