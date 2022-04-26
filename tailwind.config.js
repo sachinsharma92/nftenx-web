@@ -13,6 +13,7 @@ module.exports = {
           1: "#101118",
           2: "#38265D",
           3: '#493D5E',
+          4: '#08090d',
         },
         secondary: {
           1: "#FFFCED",

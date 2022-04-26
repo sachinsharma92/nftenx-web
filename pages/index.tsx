@@ -1,3 +1,4 @@
+import { RightArrowSecondary } from "assets/icons";
 import { A, Seo } from "components/atoms";
 import { Header, WithSidebar } from "components/common";
 import {
@@ -9,6 +10,7 @@ import {
   TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal,
   InfiniteScroller,
   TitleDescription_ImageTitleDescriptionBtnCards,
+  ImageTitleDescriptionLinkHero,
 } from "components/molecules";
 import TitlesButtonHero from "components/molecules/TitlesDescriptionButtonHero";
 import {
@@ -78,16 +80,26 @@ const Home: NextPage = () => {
           description={section9.description}
           items={section9.items}
         />
-        <TitlesButtonHero title="Join the waitlist Now!" subtitle="All waitlisted members get free access to the first three events." linkTitle={'Join the Community'} linkHref={'/join'} />
+        <TitlesButtonHero
+          title="Join the waitlist Now!"
+          subtitle="All waitlisted members get free access to the first three events."
+          linkTitle={"Join the Community"}
+          linkHref={"/join"}
+        />
         <JoinTheCommunity />
-        {/* <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section> */}
+        <ImageTitleDescriptionLinkHero
+          title="Join the next wave of web3"
+          description="Subsribe to our newsletter to receive weekly updates. We usually start with some updates from the community, what has been going on the inside."
+          linkHref="/join"
+          linkTitle={
+            <span className="group text-secondary-2 text-mono whitespace-nowrap flex items-center text-lg">
+              Join the Community
+              <span role="img" className="transition-all pl-2 group-hover:pl-5">
+                <RightArrowSecondary className="h-10 w-auto" />
+              </span>
+            </span>
+          }
+        />
       </WithSidebar>
     </main>
   );
