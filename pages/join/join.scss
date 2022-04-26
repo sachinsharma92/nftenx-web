@@ -1,0 +1,140 @@
+.join-page-style {
+  min-height: 100vh;
+}
+
+// Join Hero Section
+.join-hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .btn-join {
+    margin-left: 20px;
+    white-space: nowrap;
+  }
+
+  .flex-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .logo-section {
+    position: absolute;
+    width: 100%;
+    height: 353px;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    margin-top: 0px;
+
+    .logo-img {
+      position: relative;
+      height: 55px;
+      width: 55px;
+    }
+
+    .logo-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 168px;
+      height: 168px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        content: '';
+        background: rgba(127, 100, 159, 0.3);
+        width: 168px;
+        height: 168px;
+        border-radius: 100%;
+        filter: blur(50px);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: linear-gradient(180deg, #352645 0%, rgba(53, 38, 69, 0) 100%);
+    }
+  }
+
+  .image-style {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    background: url('../../assets/images/illustrations/illustration.svg');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      content: '';
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.45) 23.91%, #101118 41.28%);
+    }
+  }
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    .title1 {
+      color: $textPrimary;
+    }
+
+    .text-white {
+      color: $white;
+    }
+
+    .description {
+      color: $textPrimary;
+    }
+  }
+}
+
+.upcoming-section {
+  min-height: 100vh;
+
+  .title1 {
+    color: $white;
+  }
+
+  .text-white {
+    color: $white;
+  }
+
+  .description {
+    color: $textPrimary;
+    max-width: 60%;
+    opacity: 0.7;
+  }
+}

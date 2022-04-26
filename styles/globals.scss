@@ -3,6 +3,13 @@
 @tailwind utilities;
 @import './fonts.scss';
 
+// variables
+@import "./variables/colors";
+@import "./variables/mixins";
+
+// Pages Style here
+@import '../pages/join/join';
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -16,9 +23,44 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.main-bg {
+  background: $bgColor;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+// titles here
+.title1,
+.title2,
+.title3,
+.title4,
+.title5 {
+  font-family: "Recife";
+}
+
+.title1 {
+  font-size: 65px;
+  line-height: 80px;
+  letter-spacing: 0.98px;
+}
+
+.title2 {}
+
+.title3 {}
+
+.title4 {}
+
+.title5 {}
+
+.title6 {}
+
+.description {
+  font-size: 16px;
+  line-height: 24.8px;
+  letter-spacing: -2%;
 }
 
 .p-section {
@@ -90,4 +132,59 @@ a {
     padding-left: 140px;
     padding-right: 124px;
   }
+}
+
+// Input Main Style
+.input-main-style {
+  width: 100%;
+
+  .input-style {
+    border-radius: 50px;
+    border: 1px solid #8E8861;
+    height: 50px;
+    width: 100%;
+    background: transparent;
+    color: #8E8861;
+    padding: 0 20px;
+
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #302F2A;
+      opacity: 1; /* Firefox */
+    }
+    
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #302F2A;
+    }
+    
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: #302F2A;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+// button-outline
+.button-outline {
+  background: rgba(142, 136, 97, 0.1);
+  border: 1px solid rgba(142, 136, 97, 0.31);
+  height: 50px;
+  padding: 0 30px;
+  border-radius: 50px;
+  color: #8E8861;
+  transition: all 0.5s ease-in;
+
+  &:hover {
+    background: rgba(142, 136, 97, 0.15);
+  }
+}
+
+
+// container style
+.container {
+  max-width: 80%;
+  margin: 0 auto;
 }
