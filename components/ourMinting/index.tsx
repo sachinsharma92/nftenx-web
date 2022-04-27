@@ -1,5 +1,8 @@
 import Image from "next/image";
 import CoinIcon from "../../assets/images/coin.png";
+import AccessIcon from "../../assets/icons/access.svg";
+import InsightsIcon from "../../assets/icons/insights.svg";
+import ImmersionIcon from "../../assets/icons/immersion.svg";
 
 const OurMintingComponent = (props: Record<string, any>) => {
   return (
@@ -20,6 +23,10 @@ const OurMintingComponent = (props: Record<string, any>) => {
             <div className="row mt-5">
               <div className="col-sm-4">
                 <div className="icon-box">
+                  <div className="icon-sec">
+                    <Image src={InsightsIcon} />
+                  </div>
+
                   <h4 className="title4">Insights</h4>
                   <p className="description font-mono">
                     Live and on-demand modules to get you up to speed on Web3.
@@ -29,6 +36,9 @@ const OurMintingComponent = (props: Record<string, any>) => {
 
               <div className="col-sm-4">
                 <div className="icon-box">
+                  <div className="icon-sec">
+                    <Image src={AccessIcon} />
+                  </div>
                   <h4 className="title4">Access</h4>
                   <p className="description font-mono">
                     Live and on-demand modules to get you up to speed on Web3.
@@ -38,6 +48,9 @@ const OurMintingComponent = (props: Record<string, any>) => {
 
               <div className="col-sm-4">
                 <div className="icon-box">
+                  <div className="icon-sec">
+                    <Image src={ImmersionIcon} />
+                  </div>
                   <h4 className="title4">Immersion</h4>
                   <p className="description font-mono">
                     Live and on-demand modules to get you up to speed on Web3.

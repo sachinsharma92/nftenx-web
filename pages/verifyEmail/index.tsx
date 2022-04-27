@@ -1,15 +1,15 @@
 import { Footer } from "components/common";
 import AskedQuestionsComponent from "components/askedQuestions";
 import HowMintComponent from "components/howMint";
-import JoinHeroSection from "components/joinHeroSection";
 import JoinNextComponent from "components/joinNext";
 import OurMintingComponent from "components/ourMinting";
 import UpcomingComponent from "components/upcoming";
+import VerifyHeroSection from "components/verifyHeroSection";
 
-const JoinPage = (props: Record<string, any>) => {
+const VerifyEmail = (props: Record<string, any>) => {
   return (
-    <main className="join-page-style main-bg">
-      <JoinHeroSection />
+    <main className="verify-email-page-style join-page-style main-bg">
+      <VerifyHeroSection />
       <UpcomingComponent />
       <OurMintingComponent />
       <HowMintComponent />
@@ -22,4 +22,4 @@ const JoinPage = (props: Record<string, any>) => {
   );
 };
 
-export default JoinPage;
+export default VerifyEmail;
