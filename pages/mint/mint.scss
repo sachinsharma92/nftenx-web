@@ -1,0 +1,342 @@
+.mint-page-style {
+  min-height: 100vh;
+
+  .title3 {
+    color: $textPrimary;
+  }
+
+  .text-white {
+    color: $white;
+  }
+
+  .description {
+    color: $textPrimary;
+    opacity: 0.7;
+    font-size: 14px;
+  }
+
+}
+
+// Elligible Component
+.elligible-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .btn-join {
+    margin-left: 20px;
+    white-space: nowrap;
+  }
+
+  .flex-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .logo-section {
+    position: absolute;
+    width: 100%;
+    height: 353px;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    margin-top: 0px;
+
+    .logo-img {
+      position: relative;
+      height: 55px;
+      width: 55px;
+    }
+
+    .logo-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 168px;
+      height: 168px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        content: '';
+        background: rgba(127, 100, 159, 0.3);
+        width: 168px;
+        height: 168px;
+        border-radius: 100%;
+        filter: blur(50px);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: linear-gradient(180deg, #352645 0%, rgba(53, 38, 69, 0) 100%);
+    }
+  }
+
+  .image-style {
+    position: absolute;
+    height: 620px;
+    bottom: 0;
+    overflow: hidden;
+    background: url('../../assets/images/illustrations/coin-fade.svg');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    top: 100px;
+    filter: blur(10px);
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      content: '';
+      background: linear-gradient(180.2deg, rgba(21, 19, 21, 0) 10.44%, rgba(21, 19, 21, 0.51) 32.22%, #151315 55.59%);
+    }
+  }
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .title1 {
+      color: $textPrimary;
+      text-align: center;
+    }
+
+    .text-white {
+      color: $white;
+    }
+
+    .description {
+      color: $textPrimary;
+      text-align: center;
+      max-width: 50%;
+    }
+  }
+}
+
+
+// Mint Live Component
+.min-live-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .card {
+    background: rgba(187, 195, 218, 0.05);
+    border: 2px solid rgba(234, 240, 241, 0.15);
+    backdrop-filter: blur(200px);
+    border-radius: 24px;
+    min-width: 559px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .live-text {
+      font-size: 18px;
+      line-height: 28px;
+      color: #DDD4D9;
+      text-transform: uppercase;
+    }
+
+    .text-focus {
+
+      .text-glow {
+        text-shadow: 0px 0px 14px rgba(255, 252, 237, 0.6);
+        font-size: 64px;
+        line-height: 79px;
+        color: #FFFCED;
+      }
+
+      span {
+        color: #8E8861;
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+      color: rgba(#8E8861, 0.6);
+    }
+  
+
+    .divider {
+      background: #151415;
+      opacity: 0.3;
+      height: 2px;
+      width: 100%;
+      margin: 20px 0 35px;
+    }
+  }
+
+  .dotted-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+
+  .text-read {
+    color: rgba(142, 136, 97, 0.3);
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .click-here {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(#8E8861, 0.6);
+
+    a {
+      color: rgba(#8E8861, 1);
+    }
+  }
+
+  .btn-join {
+    margin-left: 20px;
+    white-space: nowrap;
+  }
+
+  .flex-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .logo-section {
+    position: absolute;
+    width: 100%;
+    height: 353px;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    margin-top: 0px;
+
+    .logo-img {
+      position: relative;
+      height: 55px;
+      width: 55px;
+    }
+
+    .logo-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 168px;
+      height: 168px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        content: '';
+        background: rgba(127, 100, 159, 0.3);
+        width: 168px;
+        height: 168px;
+        border-radius: 100%;
+        filter: blur(50px);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: linear-gradient(180deg, #352645 0%, rgba(53, 38, 69, 0) 100%);
+    }
+  }
+
+  .image-style {
+    position: absolute;
+    height: 620px;
+    bottom: 0;
+    overflow: hidden;
+    background: url('../../assets/images/illustrations/coin-fade.svg');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    top: 100px;
+    filter: blur(10px);
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      content: '';
+      background: linear-gradient(180.2deg, rgba(21, 19, 21, 0) 10.44%, rgba(21, 19, 21, 0.51) 32.22%, #151315 55.59%);
+    }
+  }
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .title1 {
+      text-align: center;
+      color: $white;
+    }
+  }
+}
