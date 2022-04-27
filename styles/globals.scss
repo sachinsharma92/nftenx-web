@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "~bootstrap/scss/bootstrap";
+
 @import './fonts.scss';
 
 // variables
@@ -32,6 +35,10 @@ a {
   text-decoration: none;
 }
 
+.flickity-enabled:focus {
+  outline: none;
+}
+
 // titles here
 .title1,
 .title2,
@@ -42,14 +49,17 @@ a {
 }
 
 .title1 {
-  font-size: 65px;
-  line-height: 80px;
+  font-size: 55px;
+  line-height: 70px;
   letter-spacing: 0.98px;
 }
 
 .title2 {}
 
-.title3 {}
+.title3 {
+  font-size: 30px;
+line-height: 38px;
+}
 
 .title4 {}
 
@@ -176,15 +186,54 @@ a {
   border-radius: 50px;
   color: #8E8861;
   transition: all 0.5s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon {
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
+  }
 
   &:hover {
     background: rgba(142, 136, 97, 0.15);
   }
 }
 
+.footer-style {
+  background: #08090D;
+  color: #8E8861;
+  padding-bottom: 20px;
+
+  .divider {
+    border-top: 1px solid #998378;
+    margin-bottom: 20px;
+    opacity: 0.3;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+
+    a {
+      margin-left: 12px;
+      width: 50px;
+      height: 50px;
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 
 // container style
-.container {
-  max-width: 80%;
-  margin: 0 auto;
-}
+// .container {
+//   max-width: 80%;
+//   margin: 0 auto;
+// }
