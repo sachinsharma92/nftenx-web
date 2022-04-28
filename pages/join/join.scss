@@ -11,10 +11,8 @@
 
   .description {
     color: $textPrimary;
-    opacity: 0.7;
     font-size: 14px;
   }
-
 }
 
 // Join Hero Section
@@ -58,8 +56,8 @@
 
     .logo-img {
       position: relative;
-      height: 55px;
-      width: 55px;
+      height: 65px;
+      width: 65px;
     }
 
     .logo-box {
@@ -142,6 +140,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 
 
   .content-sec {
@@ -210,8 +209,13 @@
   }
 
   .btn-join {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 200px;
+  }
+
+  .title1 {
+    color: $textSecondary;
+    font-weight: 300;
   }
 }
 
@@ -238,7 +242,7 @@
   }
 
   .img-sec {
-    width: 350px;
+    width: 500px;
   }
 
   .icon-box {
@@ -255,7 +259,7 @@
     .title4 {
       margin-bottom: 5px;
       color: #E3CDC3;
-      ;
+      font-size: 30px;
     }
   }
 }
@@ -268,21 +272,21 @@
   &::after {
     position: absolute;
     top: -15rem;
-    right: 20rem;
+    right: 10rem;
     width: 100%;
     height: 100%;
     content: '';
     background: url('../../assets/images/illustrations/mask.svg');
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 30%;
+    background-size: 60%;
     opacity: 0.2;
   }
 
   &::before {
     position: absolute;
-    top: -10rem;
-    right: 0rem;
+    top: -18rem;
+    right: -5rem;
     width: 100%;
     height: 100%;
     content: '';
@@ -290,7 +294,6 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-    opacity: 0.7;
   }
 
   .img-sec {
@@ -317,6 +320,8 @@
     .title4 {
       margin-bottom: 10px;
       color: #8E8861;
+      font-size: 40px;
+      font-weight: 300;
     }
   }
 
@@ -325,8 +330,9 @@
   }
 
   .title2 {
-    color: #FFFCED;
-    font-size: 70px;
+    color: $textSecondary;
+    font-size: 100px;
+    font-weight: 300;
   }
 }
 
@@ -340,6 +346,7 @@
 
     .accordion-item {
       margin: 10px 0;
+      padding: 0px 50px;
       border-radius: 24px;
       overflow: hidden;
       background: rgba(187, 195, 218, 0.05);
@@ -348,9 +355,11 @@
 
     .accordion-button {
       background: none;
-      color: #FFFCED;
+      color: $textSecondary;
       letter-spacing: 1.21001px;
       font-size: 20px;
+      font-family: monospace;
+      font-weight: 300;
 
       &:focus {
         box-shadow: none;
@@ -361,7 +370,7 @@
         color: rgba($textPrimary, 0.6);
         font-family: monospace;
         margin-right: 10px;
-        font-size: 20px;
+        font-size: 30px;
       }
     }
 
@@ -383,6 +392,7 @@
     .accordion-body {
       color: rgba($textPrimary, 0.6);
       font-family: monospace;
+      padding-bottom: 30px;
     }
   }
 }
@@ -415,7 +425,8 @@
     position: relative;
 
     .title1 {
-      color: $white;
+      color: $textSecondary;
+      font-weight: 300;
     }
 
     .text-white {

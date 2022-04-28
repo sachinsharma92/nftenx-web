@@ -195,6 +195,7 @@ line-height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: monospace;
 
   .icon {
     margin-left: 10px;
@@ -204,6 +205,22 @@ line-height: 38px;
 
   &:hover {
     background: rgba(142, 136, 97, 0.15);
+  }
+}
+
+// Button Gradient
+.btn-gradient { 
+  background: url('../assets/images/button-bg.svg');
+  color: $textSecondary;
+
+  &:hover {
+    background: url('../assets/images/button-bg.svg');
+    opacity: 0.5;
+  }
+
+
+  img {
+    filter: contrast(0) brightness(100);
   }
 }
 

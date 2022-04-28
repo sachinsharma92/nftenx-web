@@ -5,6 +5,7 @@ import JoinNextComponent from "components/joinNext";
 import OurMintingComponent from "components/ourMinting";
 import UpcomingComponent from "components/upcoming";
 import VerifyHeroSection from "components/verifyHeroSection";
+import CommunityDrivenComponent from "components/communityDriven";
 
 const VerifyEmail = (props: Record<string, any>) => {
   return (
@@ -12,6 +13,7 @@ const VerifyEmail = (props: Record<string, any>) => {
       <VerifyHeroSection />
       <UpcomingComponent />
       <OurMintingComponent />
+      <CommunityDrivenComponent/>
       <HowMintComponent />
       <AskedQuestionsComponent />
       <JoinNextComponent />

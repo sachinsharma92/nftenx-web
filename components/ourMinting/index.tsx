@@ -18,6 +18,8 @@ const OurMintingComponent = (props: Record<string, any>) => {
             <h1 className="title1 text-white">Our minting process</h1>
             <p className="description font-mono mt-5">
               The NF10x community is built with a hands-on approach to onboarding. Every two weeks, we welcome a new cohort of members into the fold. These smaller groups foster an environment that is more conducive to building genuine relationships while integrating into the broader
+            </p>
+            <p className="description font-mono mt-1">
               community. Our first cohort will receive our Founding Members token and be added to a dedicated channel only available to Founding Members. Subsequent cohorts will mint General Member tokens until the community grows to 1,100 members. Those who signup for the waitlist get access to the first three events at no cost.</p>
 
             <div className="row mt-5">

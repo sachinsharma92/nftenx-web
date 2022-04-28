@@ -5,13 +5,17 @@ const AskedQuestionsComponent = (props: Record<string, any>) => {
     <section className="faq-section">
       <div className="container">
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-sm-12">
             <div className="position-sticky">
-              <h1 className="title1 text-white">Frequently asked
+              <h1 className="title1 text-white">Frequently asked <br />
                 questions</h1>
             </div>
           </div>
-          <div className="col-sm-6">
+        </div>
+        <div className="row">
+          <div className="col-sm-4">
+          </div>
+          <div className="col-sm-8">
             <Accordion defaultActiveKey="0" className="accordion-primary">
               <Accordion.Item eventKey="0">
                 <Accordion.Header><span>01</span> Why should I join NF10X?</Accordion.Header>

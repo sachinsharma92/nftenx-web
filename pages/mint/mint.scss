@@ -8,13 +8,6 @@
   .text-white {
     color: $white;
   }
-
-  .description {
-    color: $textPrimary;
-    opacity: 0.7;
-    font-size: 14px;
-  }
-
 }
 
 // Elligible Component
@@ -24,11 +17,13 @@
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #141315;
 
   .date {
     color: $white;
     font-size: 18px;
     margin-top: 50px;
+    font-family: monospace;
   }
 
   .form-section {
@@ -63,8 +58,8 @@
 
     .logo-img {
       position: relative;
-      height: 55px;
-      width: 55px;
+      height: 65px;
+      width: 65px;
     }
 
     .logo-box {
@@ -134,6 +129,7 @@
     .title1 {
       color: $textPrimary;
       text-align: center;
+      font-weight: 300;
     }
 
     .text-white {
@@ -143,7 +139,7 @@
     .description {
       color: $textPrimary;
       text-align: center;
-      max-width: 50%;
+      max-width: 90%;
     }
   }
 }
@@ -156,13 +152,14 @@
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #141315;
 
   .card {
     background: rgba(187, 195, 218, 0.05);
     border: 2px solid rgba(234, 240, 241, 0.15);
     backdrop-filter: blur(200px);
     border-radius: 24px;
-    min-width: 559px;
+    min-width: 450px;
     padding: 30px;
     display: flex;
     align-items: center;
@@ -183,11 +180,12 @@
         font-size: 64px;
         line-height: 79px;
         color: #FFFCED;
+        font-weight: 300;
       }
 
       span {
         color: #8E8861;
-        font-size: 40px;
+        font-size: 30px;
         line-height: 48px;
       }
     }
@@ -204,7 +202,7 @@
       opacity: 0.3;
       height: 2px;
       width: 100%;
-      margin: 20px 0 35px;
+      margin: 0px 0 25px;
     }
   }
 
@@ -227,7 +225,7 @@
 
   .text-read {
     color: rgba(142, 136, 97, 0.3);
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
   }
 
@@ -266,8 +264,8 @@
 
     .logo-img {
       position: relative;
-      height: 55px;
-      width: 55px;
+      height: 65px;
+      width: 65px;
     }
 
     .logo-box {
@@ -312,7 +310,7 @@
     width: 100%;
     background-position: center top;
     background-repeat: no-repeat;
-    top: 100px;
+    top: 160px;
     filter: blur(10px);
 
     &::before {
