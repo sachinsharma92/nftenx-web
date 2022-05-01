@@ -4,3 +4,4 @@ export * from './Headings';
 export * from './GenericModal'
 export * from './Button'
 export * from './P';
+export * from './Loader';

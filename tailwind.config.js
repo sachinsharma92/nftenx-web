@@ -29,7 +29,7 @@ module.exports = {
         teal: "#1C4856",
       },
       animation: {
-        "spin-slow": "spin 3s linear infinite",
+        "spin-slow": "spin 5s linear infinite",
         levitate: "levitate 6s cubic-bezier(0.37, 0, 0.63, 1) infinite",
         'levitate-slow': "levitate 12s cubic-bezier(0.37, 0, 0.63, 1) infinite",
         'infinite-scroll-left': 'infiniteScrollLeft 15s linear infinite'

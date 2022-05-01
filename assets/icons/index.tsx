@@ -190,3 +190,97 @@ export const ElegantSeperator = (props: IconProps) => {
     </svg>
   );
 };
+
+export const Spinner = (props: IconProps) => {
+  return (
+    <svg
+      className={`animate-spin-slow ${props.className}`}
+      style={props.style}
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        opacity="0.4"
+        cx="13.9993"
+        cy="13.9998"
+        r="13.3333"
+        transform="rotate(-90 13.9993 13.9998)"
+        stroke="#807B86"
+        strokeWidth="1.33333"
+      />
+      <path
+        d="M13.9993 0.666495C6.63555 0.666495 0.666015 6.63603 0.666015 13.9998C0.666015 21.3636 6.63555 27.3332 13.9993 27.3332"
+        stroke="url(#paint0_linear_693_2593)"
+        strokeWidth="1.33333"
+        strokeLinecap="round"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_693_2593"
+          x1="13.9993"
+          y1="0.666497"
+          x2="13.9993"
+          y2="27.7253"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#B6E975" />
+          <stop offset="1" stopColor="#87C03E" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+};
+
+export const TickCircleGreen = (props: IconProps) => {
+  return (
+    <svg
+      className={props.className}
+      style={props.style}
+      width="24"
+      height="25"
+      viewBox="0 0 24 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12.5" r="12" fill="#B5E775" />
+      <path
+        d="M6 11.78L10.275 16.1L17.4 8.9"
+        stroke="#191B23"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const CrossCircleRed = (props: IconProps) => {
+  return (
+    <svg
+      className={props.className}
+      style={props.style}
+      width="25"
+      height="24"
+      viewBox="0 0 25 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12.5" cy="12" r="12" fill="#DA525A" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7.55074 7.05022C7.94126 6.65969 8.57443 6.65969 8.96495 7.05022L17.4502 15.5355C17.8408 15.926 17.8408 16.5592 17.4502 16.9497C17.0597 17.3402 16.4265 17.3402 16.036 16.9497L7.55074 8.46443C7.16021 8.07391 7.16021 7.44074 7.55074 7.05022Z"
+        fill="#191B23"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7.55071 16.9498C7.16018 16.5592 7.16018 15.9261 7.55071 15.5355L16.036 7.05026C16.4265 6.65973 17.0597 6.65973 17.4502 7.05026C17.8407 7.44078 17.8407 8.07395 17.4502 8.46447L8.96492 16.9498C8.5744 17.3403 7.94123 17.3403 7.55071 16.9498Z"
+        fill="#191B23"
+      />
+    </svg>
+  );
+};
