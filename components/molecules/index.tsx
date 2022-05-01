@@ -10,3 +10,4 @@ export * from './TitleDescription-ImageTitleDescriptionBtnCards';
 export * from './TitlesDescriptionButtonHero';
 export * from './ImageTitleDescriptionLinkHero';
 export * from './FAQSection';
+export * from './mint-pass';

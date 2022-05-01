@@ -1,5 +1,5 @@
 import { RightArrowSecondary } from "assets/icons";
-import { A, Seo } from "components/atoms";
+import { Seo } from "components/atoms";
 import { Header, WithSidebar } from "components/common";
 import {
   HeadingDescriptionLinkImgSection,
