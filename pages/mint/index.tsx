@@ -6,10 +6,10 @@ import SoldOutComponent from "components/mint/soldOut";
 const Mint = (props: Record<string, any>) => {
   return (
     <main className="mint-page-style main-bg">
-      {/* <ElligibleComponent /> */}
+      <ElligibleComponent />
       {/* <MintLiveComponent /> */}
       {/* <SoldOutComponent/> */}
-      <LinkExpiredComponent/>
+      {/* <LinkExpiredComponent/> */}
     </main>
   );
 };
