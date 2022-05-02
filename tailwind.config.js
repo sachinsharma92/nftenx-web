@@ -10,12 +10,14 @@ module.exports = {
         // secondary: "#FFFCED",
         // tertiary: '#714436'
         primary: {
-          1: "#1A1616",
-          2: "#100D0E",
+          1: "#101118",
+          2: "#38265D",
+          3: '#493D5E',
+          4: '#08090d',
         },
         secondary: {
           1: "#FFFCED",
-          2: "#FFCD4D",
+          2: "#8E8861",
           3: "#E5833C",
         },
         tertiary: {
@@ -27,9 +29,10 @@ module.exports = {
         teal: "#1C4856",
       },
       animation: {
-        "spin-slow": "spin 3s linear infinite",
+        "spin-slow": "spin 5s linear infinite",
         levitate: "levitate 6s cubic-bezier(0.37, 0, 0.63, 1) infinite",
         'levitate-slow': "levitate 12s cubic-bezier(0.37, 0, 0.63, 1) infinite",
+        'infinite-scroll-left': 'infiniteScrollLeft 15s linear infinite'
       },
       keyframes: {
         levitate: {
@@ -44,6 +47,9 @@ module.exports = {
           "80%": { transform: "translate(-8px, -8px)" },
           "90%": { transform: "translate(8px, -8px)" },
           "100%": { transform: "translate(0)" },
+        },
+        infiniteScrollLeft: {
+          '100%': {transform: 'translateX(-50%)'},
         },
       },
       fontFamily: {

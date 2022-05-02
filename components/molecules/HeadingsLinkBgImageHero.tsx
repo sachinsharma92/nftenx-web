@@ -11,7 +11,9 @@ type Props = {
 
 export const HeadingsLinkBgImageHero = (props: Props) => {
   return (
-    <article className="relative p-section w-full h-screen grid content-end pb-[8%] after:absolute after:w-full after:bottom-0 after:left-0 after:h-[100%] lg:after:h-20 after:bg-gradient-to-t after:from-primary-1 after:via-primary-2 lg:after:via-transparent after:to-transparent">
+    <article
+      className={`relative p-section w-full h-screen grid content-center pb-[8%] after:absolute after:w-full after:bottom-0 after:left-0 after:h-[100%] lg:after:h-20 after:bg-gradient-to-t after:from-primary-1 after:via-primary-2 lg:after:via-transparent after:to-transparent bg-gradient-to-b from-primary-2 to-primary-1`}
+    >
       {props.image && (
         <img
           src={props.image}

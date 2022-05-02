@@ -1,13 +1,32 @@
-import { A, Seo } from "components/atoms";
+import { RightArrowSecondary } from "assets/icons";
+import { Seo } from "components/atoms";
 import { Header, WithSidebar } from "components/common";
 import {
   HeadingDescriptionLinkImgSection,
   HeadingsLinkBgImageHero,
   MultipleImgTitleDescriptionSection,
   TitleDescriptionComparisonSection,
-  JoinTheCommunity
+  JoinTheCommunity,
+  TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal,
+  InfiniteScroller,
+  TitleDescription_ImageTitleDescriptionBtnCards,
+  ImageTitleDescriptionLinkHero,
+  FAQSection,
 } from "components/molecules";
-import { section1, section2, section3, section4, section6 } from "constants/landing";
+import TitlesButtonHero from "components/molecules/TitlesDescriptionButtonHero";
+import {
+  section1,
+  section10,
+  section11,
+  section12,
+  section2,
+  section3,
+  section4,
+  section6,
+  section7,
+  section8,
+  section9,
+} from "constants/landing";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -44,7 +63,6 @@ const Home: NextPage = () => {
           description={section4.description}
           items={section4.items}
         />
-        <JoinTheCommunity />
         <MultipleImgTitleDescriptionSection
           mainSection={{
             title: section6.title,
@@ -53,15 +71,43 @@ const Home: NextPage = () => {
           }}
           items={section6.items}
         />
-
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
-        <section className="grid place-items-center p-40 text-tertiary-2">Section</section>
+        <TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal
+          title={section7.title}
+          description={section7.description}
+          linkTitle={section7.linkTitle}
+          linkHref={section7.linkHref}
+          items={section7.items}
+        />
+        <InfiniteScroller items={section8} />
+        <TitleDescription_ImageTitleDescriptionBtnCards
+          title={section9.title}
+          description={section9.description}
+          items={section9.items}
+        />
+        <TitlesButtonHero
+          title={section10.title}
+          subtitle={section10.subtitle}
+          linkTitle={section10.linkTitle}
+          linkHref={section10.linkHref}
+        />
+        <JoinTheCommunity />
+        <FAQSection
+          title={section11.title}
+          items={section11.items}
+        />
+        <ImageTitleDescriptionLinkHero
+          title={section12.title}
+          description={section12.description}
+          linkHref={section12.linkHref}
+          linkTitle={
+            <span className="group text-secondary-2 text-mono whitespace-nowrap flex items-center text-lg">
+              Join the Community
+              <span role="img" className="transition-all pl-2 group-hover:pl-5">
+                <RightArrowSecondary className="h-10 w-auto" />
+              </span>
+            </span>
+          }
+        />
       </WithSidebar>
     </main>
   );
