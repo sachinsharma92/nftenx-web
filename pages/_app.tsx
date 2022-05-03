@@ -4,7 +4,7 @@ import connectors from '../utils/blockchainConnectors'
 import { Trackers } from 'components/common'
 import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps & {Component: any}) {
   return (<Web3Provider connectors={connectors} libraryName="ethers.js"  >
   <Component {...pageProps} />
   <Trackers />

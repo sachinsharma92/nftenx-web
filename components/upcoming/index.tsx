@@ -1,8 +1,5 @@
-import { Logo } from "assets/icons";
 import { ButtonOutline } from "components/atoms/ButtonOutline";
-import { InputPrimary } from "components/common/InputPrimary";
 import Image from "next/image";
-import Flickity from "react-flickity-component";
 import ImageUser from "../../assets/images/user-image.jpeg";
 import CommentIcon from "../../assets/icons/comment.svg";
 
