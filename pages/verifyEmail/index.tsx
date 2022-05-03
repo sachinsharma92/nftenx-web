@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css'
 import { Footer } from "components/common";
 import AskedQuestionsComponent from "components/askedQuestions";
 import HowMintComponent from "components/howMint";
