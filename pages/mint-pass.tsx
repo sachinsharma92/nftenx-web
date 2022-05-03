@@ -3,15 +3,20 @@ import {
   PurchaseProcessingCard,
   PurchaseProcessingCard_states,
 } from "components/molecules";
-import { TOKEN_TYPE } from "constants/globalConstants";
-import { useRouter } from "next/router";
+import { METAMASK_CONSTANTS, TOKEN_TYPE } from "constants/globalConstants";
 import { useEffect, useState } from "react";
-
+import { metaMask, hooks } from '../components/connectors/metamask/MetamaskConnector';
+import { useWeb3Context } from 'web3-react';
 // images
 import generalCoin from "/assets/images/coin-general-1.png";
+import { storage } from "utils/storage";
+import { purchaseToken } from '../utils/tokenMint';
 
 const MintPass = () => {
-  const router = useRouter();
+  const { useAccounts } = hooks;
+
+  const context = useWeb3Context();
+  const account = useAccounts()
 
   enum ScreenStateEnum {
     loading = "loading",
@@ -20,32 +25,41 @@ const MintPass = () => {
   }
 
   const [screenState, setScreenState] = useState<ScreenStateEnum>(
-    ScreenStateEnum.loading
+    ScreenStateEnum.purchase
   );
 
   const [loaderText, setLoaderText] = useState<null | string>();
   const [loaderActive, setLoaderActive] = useState<boolean>(true);
+  const [assetId, setAssetId] = useState<number>(1);
+
+  const mint=() => {
+    const metamaskAddress = storage.get(METAMASK_CONSTANTS.ADDRESS);
+    if(!metamaskAddress){
+      void metaMask.connectEagerly();
+      context.setFirstValidConnector(['MetaMask', 'Infura']);
+    }else{
+      purchaseToken(assetId);
+      setLoaderActive(false);
+    }
+  }
 
   useEffect(() => {
-    {
-      // Remove this block for
-      setTimeout(() => {
-        setLoaderText("Loading... Please Wait.");
-      }, 2000);
-      setTimeout(() => {
-        setLoaderText("Minting in progress. Don’t close this window");
-      }, 6000);
-      setTimeout(() => {
-        setScreenState(ScreenStateEnum.purchase);
-      }, 8000);      
-    }
+    mint();
   }, []);
+
+  useEffect(() => {
+    if(account) {
+      storage.set(METAMASK_CONSTANTS.ADDRESS, account);
+      purchaseToken(assetId);
+      setLoaderActive(false);
+    }
+  }, [account]);
 
   return (
     <main>
-      <Seo title="Mint da Pass" />
+      <Seo title="Mint Pass" />
 
-      {screenState == ScreenStateEnum.loading && (
+      {loaderActive && (
         <Loader active={loaderActive} text={loaderText} />
       )}
 
