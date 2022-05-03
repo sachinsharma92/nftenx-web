@@ -68,11 +68,10 @@ const UpcomingComponent = (props: Record<string, any>) => {
                   </div>
                 </div>
                 <div className="content-sec">
-                  <h3 className="title3">{item.title}</h3>
+                  <h3 className="title3 text-white">{item.title}</h3>
                   <h3 className="title3 text-golden">{item.subtitle}</h3>
                   <p className="description mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
                 </div>
-
                 <ButtonOutline className="btn-join">Know more</ButtonOutline>
               </div>
             ))}

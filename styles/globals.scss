@@ -27,7 +27,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
-  // font-family: 'Bitter', serif;
 }
 
 .main-bg {
@@ -74,27 +73,19 @@ p {
 .title3,
 .title4,
 .title5 {
-  font-family: 'Bitter', serif;
+  font-family: "reckless" !important;
 }
 
 .title1 {
-  font-size: 55px;
+  font-size: 4rem;
   line-height: 70px;
   letter-spacing: 0.98px;
 }
 
-.title2 {}
-
 .title3 {
   font-size: 30px;
-line-height: 38px;
+  line-height: 38px;
 }
-
-.title4 {}
-
-.title5 {}
-
-.title6 {}
 
 .description {
   font-size: 16px;
@@ -209,20 +200,24 @@ line-height: 38px;
     border: 1px solid $textPrimary;
     height: 50px;
     width: 100%;
-    background: transparent;
+    background: rgba(#4A4E6D, 0.1);
     color: $textPrimary;
     padding: 0 20px;
 
-    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: #6C7797;
-      opacity: 1; /* Firefox */
+      opacity: 1;
+      /* Firefox */
     }
-    
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
       color: #6C7797;
     }
-    
-    &::-ms-input-placeholder { /* Microsoft Edge */
+
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
       color: #6C7797;
     }
 
@@ -233,45 +228,48 @@ line-height: 38px;
   }
 }
 
-// button-outline
-.button-outline {
-  background: rgba(142, 136, 97, 0.1);
-  border: 1px solid rgba(142, 136, 97, 0.31);
-  height: 50px;
-  padding: 0 30px;
-  border-radius: 50px;
-  color: #8E8861;
-  transition: all 0.5s ease-in;
+.button-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-family: monospace;
 
-  .icon {
-    margin-left: 10px;
-    position: relative;
-    top: 1px;
-  }
+  .button-outline {
+    background: #1D1F2C;
+    border: 1px solid #3A3D53;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 50px;
+    color: white;
+    transition: all 0.5s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  img {
-    filter: contrast(0) brightness(100);
-  }
+    .icon {
+      margin-left: 10px;
+      position: relative;
+      top: 1px;
+      width: 20px;
+    }
 
-  &:hover {
-    background: rgba(142, 136, 97, 0.15);
+    img {
+      filter: contrast(0) brightness(100);
+    }
+
+    &:hover {
+      background: rgba(142, 136, 97, 0.15);
+    }
   }
 }
 
 .btn-join {
-  width: 280px;
   white-space: nowrap;
-  border-color: $textPrimary;
+  border: 1px solid $textPrimary;
   color: $white;
   background-color: #1D1F2C;
 }
 
 // Button Gradient
-.btn-gradient { 
+.btn-gradient {
   background: url('../assets/images/button-bg.svg');
   color: $textSecondary;
 
@@ -296,7 +294,7 @@ line-height: 38px;
     margin-bottom: 20px;
     opacity: 0.3;
   }
-  
+
   .social-icons {
     display: flex;
     align-items: center;
@@ -322,3 +320,38 @@ line-height: 38px;
 //   max-width: 80%;
 //   margin: 0 auto;
 // }
+
+// Logo Gradient Style
+.logo-section {
+  position: absolute;
+  width: 100%;
+  height: 353px;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  margin-top: 0px;
+
+  .logo-img {
+    position: relative;
+    height: 65px;
+    width: 65px;
+  }
+
+  .logo-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(180deg, #341C79 0%, rgba(52, 40, 98, 0.36) 46.64%, rgba(37, 24, 53, 0) 100%);
+  }
+}

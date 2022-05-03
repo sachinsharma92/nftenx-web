@@ -1,17 +1,10 @@
-import { Logo } from "assets/icons";
-import { ButtonOutline } from "components/atoms/ButtonOutline";
-import { InputPrimary } from "components/common/InputPrimary";
 import { SocialIcons } from "components/common/SocialIcons";
-import Image from "next/image";
+import { LogoGradient } from "components/common/logoGradient";
 
 const VerifyHeroSection = (props: Record<string, any>) => {
   return (
     <section className="verify-hero-section">
-      <div className="logo-section">
-        <div className="logo-box">
-          <Logo className="logo-img" />
-        </div>
-      </div>
+      <LogoGradient />
       <div className="flex-sec">
         <div className="image-style" />
         <div className="content-section">
