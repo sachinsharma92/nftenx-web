@@ -3,8 +3,21 @@ import { InputPrimary } from "components/common/InputPrimary";
 import LogoTop from "assets/images/illustrations/logo-top.svg";
 import Image from "next/image";
 import { LogoGradient } from "components/common/logoGradient";
+import { Api } from "services/api";
+import ArrowNext from "../../assets/icons/arrow-next.svg"
 
 const JoinHeroSection = (props: Record<string, any>) => {
+
+  const joinWaitlist = async (event: any) => {
+    event.preventDefault();
+    const payload = {
+      email: event.target.email.value
+    }
+    const response = await Api.joinTheWaitlist(payload);
+    if(response.success) {
+      alert('User created!');
+    }
+  }
   return (
     <section className="join-hero-section">
       <LogoGradient/>
@@ -14,10 +27,20 @@ const JoinHeroSection = (props: Record<string, any>) => {
           <h1 className="title1">Join our tight-knit community of</h1>
           <h2 className="title1 text-gradient">Founders and Operators</h2>
           <p className="description mt-3">Enter the NF10x general token waitlist by sharing your email below, and we'll <br /> be in touch when your turn arrives.</p>
-          <div className="form-section">
-            <InputPrimary placeholder="Enter your email" />
-            <ButtonOutline className="btn-join">Join the waitlist</ButtonOutline>
-          </div>
+            <form onSubmit={joinWaitlist} className="flex mt-5">
+              <div className="input-main-style">
+                <input className="input-style" type="email" name={'email'} placeholder={"Enter your email"} />
+              </div>
+
+              <div className={`button-wrapper ${props.buttonStyle}`}>
+                <button
+                    className={`button-outline btn-join`}
+                    type="submit"
+                >
+                    Join the waitlist {!props.arrowActive && <div className="icon"><Image src={ArrowNext} /></div>}
+                </button>
+              </div>
+            </form>
         </div>
       </div>
     </section>

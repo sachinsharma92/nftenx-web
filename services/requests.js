@@ -84,3 +84,4 @@ export class Request {
 }
 
 export const BlockchainApi = new Request(process.env.NEXT_PUBLIC_BASE_URL, 'testing');
+export const AdminApi = new Request(process.env.NEXT_PUBLIC_ADMIN_BACKEND, 'testing');
