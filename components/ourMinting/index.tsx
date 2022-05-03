@@ -15,7 +15,7 @@ const OurMintingComponent = (props: Record<string, any>) => {
             </div>
           </div>
           <div className="col-sm-6">
-            <h1 className="title1 text-white">Our minting process</h1>
+            <h1 className="title1 text-gradient">Our minting <br /> process</h1>
             <p className="description font-mono mt-5">
               The NF10x community is built with a hands-on approach to onboarding. Every two weeks, we welcome a new cohort of members into the fold. These smaller groups foster an environment that is more conducive to building genuine relationships while integrating into the broader
             </p>

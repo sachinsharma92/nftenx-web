@@ -1,4 +1,4 @@
-import { Footer } from "components/common";
+import { Footer } from "components/common/Footer";
 import AskedQuestionsComponent from "components/askedQuestions";
 import HowMintComponent from "components/howMint";
 import JoinHeroSection from "components/joinHeroSection";

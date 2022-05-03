@@ -24,11 +24,11 @@ const MintLiveComponent = (props: Record<string, any>) => {
               <div className="text-focus"><span className="text-glow">33</span> <span>/ 100</span></div>
               <p className="description">NF10X passes have been Minted</p>
               <div className="divider"></div>
-              <ButtonOutline className="btn-gradient">Mint your pass now</ButtonOutline>
+              <ButtonOutline className="btn-join">Mint your pass now</ButtonOutline>
             </div>
-            <p className="text-read font-mono mt-3">.01 ETH/Pass | 01 Pass/Account | Read FAQs</p>
+            <p className="text-read mt-3">.01 ETH/Pass | 01 Pass/Account | Read FAQs</p>
           </div>
-          <p className="click-here font-mono mt-5">Already have a pass? <a>Click here</a></p>
+          <p className="click-here mt-3">Already have a pass? <a>Click here</a></p>
         </div>
       </div>
     </section>

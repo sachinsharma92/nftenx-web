@@ -1,7 +1,5 @@
 import { Logo } from "assets/icons";
 import { ButtonOutline } from "components/atoms/ButtonOutline";
-import { InputPrimary } from "components/common/InputPrimary";
-import Image from "next/image";
 
 const ElligibleComponent = (props: Record<string, any>) => {
   return (
@@ -12,15 +10,14 @@ const ElligibleComponent = (props: Record<string, any>) => {
         </div>
       </div>
       <div className="flex-sec">
-        <div className="image-style" />
-        <div className="content-section">
-          <h1 className="title1">Congratulations!</h1>
-          <h2 className="title1 text-white">You are now eligible to mint <br />the access pass.</h2>
-          <p className="description font-mono mt-3 mb-0">Your NF10X access pass awaits you. The minting will begin at</p>
-          <p className="description font-mono">09:00 PM EUT on 1 JUN 2022</p>
-          <div className="date">23 Days | 045:00 hrs</div>
-          <p className="description font-mono mt-3">Current waittime till mint</p>
-          <ButtonOutline className="btn-join">View events</ButtonOutline>
+        <div className="image-style">
+          <div className="content-section">
+            <h1 className="title1 text-white">Congratulations!</h1>
+            <h2 className="title1 text-gradient">You are now eligible to mint <br />the access pass.</h2>
+            <p className="description mt-5">Current waittime till mint</p>
+            <div className="date">23 Days | 045:00 hrs</div>
+            <ButtonOutline className="btn-join mt-4">View all events</ButtonOutline>
+          </div>
         </div>
       </div>
     </section>

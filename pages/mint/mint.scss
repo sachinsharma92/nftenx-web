@@ -8,43 +8,14 @@
   .text-white {
     color: $white;
   }
-}
 
-// Elligible Component
-.elligible-component {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #141315;
-
-  .date {
-    color: $white;
-    font-size: 18px;
-    margin-top: 50px;
-    font-family: monospace;
-  }
-
-  .form-section {
-    display: flex;
-    align-items: center;
-    width: 60%;
-    margin-top: 50px;
-  }
-
-  .btn-join {
-    margin-left: 20px;
-    white-space: nowrap;
-  }
-
-  .flex-sec {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 50px;
+  .highlighted {
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 300;
+    color: $textPrimary;
+    opacity: 0.2;
+    margin-bottom: 30px;
   }
 
   .logo-section {
@@ -60,28 +31,11 @@
       position: relative;
       height: 65px;
       width: 65px;
+      filter: contrast(0) brightness(100);
     }
 
     .logo-box {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 168px;
-      height: 168px;
-
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0 auto;
-        content: '';
-        background: rgba(127, 100, 159, 0.3);
-        width: 168px;
-        height: 168px;
-        border-radius: 100%;
-        filter: blur(50px);
-      }
+      margin-top: 40px;
     }
 
     &::before {
@@ -91,30 +45,57 @@
       width: 100%;
       height: 100%;
       content: '';
-      background: linear-gradient(180deg, #352645 0%, rgba(53, 38, 69, 0) 100%);
+      background: linear-gradient(180deg, #341C79 0%, rgba(52, 40, 98, 0.36) 46.64%, rgba(37, 24, 53, 0) 100%);
     }
+  }
+}
+
+// Elligible Component
+.elligible-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #101118;
+  position: relative;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    font-family: monospace;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
   }
 
   .image-style {
     position: absolute;
-    height: 620px;
-    bottom: 0;
+    width: 624px;
+    height: 624px;
+    left: 0;
+    top: 0px;
     overflow: hidden;
-    background: url('../../assets/images/illustrations/coin-fade.svg');
+    background: url('../../assets/images/coin-blur.png');
     width: 100%;
     background-position: center top;
     background-repeat: no-repeat;
-    top: 100px;
-    filter: blur(10px);
+    background-size: contain;
+    margin-top: 163px;
+    padding-top: 150px;
 
     &::before {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 70%;
+      height: 80%;
       content: '';
-      background: linear-gradient(180.2deg, rgba(21, 19, 21, 0) 10.44%, rgba(21, 19, 21, 0.51) 32.22%, #151315 55.59%);
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.83) 31.84%, #101118 49.67%);
     }
   }
 
@@ -127,9 +108,7 @@
     position: relative;
 
     .title1 {
-      color: $textPrimary;
       text-align: center;
-      font-weight: 300;
     }
 
     .text-white {
@@ -151,15 +130,55 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #141315;
+  height: 100vh;
+  background-color: #101118;
+  position: relative;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    font-family: monospace;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .image-style {
+    position: absolute;
+    width: 624px;
+    height: 624px;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    background: url('../../assets/images/coin-blur.png');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 163px;
+    padding-top: 150px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      content: '';
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.83) 31.84%, #101118 49.67%);
+    }
+  }
 
   .card {
     background: rgba(187, 195, 218, 0.05);
     border: 2px solid rgba(234, 240, 241, 0.15);
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(64px);    
     border-radius: 24px;
-    min-width: 450px;
+    min-width: 550px;
     padding: 30px;
     display: flex;
     align-items: center;
@@ -184,7 +203,7 @@
       }
 
       span {
-        color: #8E8861;
+        color: $textPrimary;
         font-size: 30px;
         line-height: 48px;
       }
@@ -193,12 +212,13 @@
     .description {
       font-size: 18px;
       line-height: 28px;
-      color: rgba(#8E8861, 0.6);
+      color: rgba($textPrimary, 0.6);
     }
-  
+
 
     .divider {
-      background: #151415;
+      border: 1px solid #3A3D53;
+      backdrop-filter: blur(94px);
       opacity: 0.3;
       height: 2px;
       width: 100%;
@@ -224,7 +244,7 @@
   }
 
   .text-read {
-    color: rgba(142, 136, 97, 0.3);
+    color: rgba(#8389B2, 0.7);
     font-size: 16px;
     line-height: 28px;
   }
@@ -232,97 +252,13 @@
   .click-here {
     font-size: 18px;
     line-height: 28px;
-    color: rgba(#8E8861, 0.6);
+    color: rgba($textPrimary, 0.6);
 
     a {
-      color: rgba(#8E8861, 1);
+      color: rgba($textPrimary, 1);
     }
   }
 
-  .btn-join {
-    margin-left: 20px;
-    white-space: nowrap;
-  }
-
-  .flex-sec {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 100px;
-  }
-
-  .logo-section {
-    position: absolute;
-    width: 100%;
-    height: 353px;
-    display: flex;
-    justify-content: center;
-    top: 0;
-    margin-top: 0px;
-
-    .logo-img {
-      position: relative;
-      height: 65px;
-      width: 65px;
-    }
-
-    .logo-box {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 168px;
-      height: 168px;
-
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0 auto;
-        content: '';
-        background: rgba(127, 100, 159, 0.3);
-        width: 168px;
-        height: 168px;
-        border-radius: 100%;
-        filter: blur(50px);
-      }
-    }
-
-    &::before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: linear-gradient(180deg, #352645 0%, rgba(53, 38, 69, 0) 100%);
-    }
-  }
-
-  .image-style {
-    position: absolute;
-    height: 620px;
-    bottom: 0;
-    overflow: hidden;
-    background: url('../../assets/images/illustrations/coin-fade.svg');
-    width: 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
-    top: 160px;
-    filter: blur(10px);
-
-    &::before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 70%;
-      content: '';
-      background: linear-gradient(180.2deg, rgba(21, 19, 21, 0) 10.44%, rgba(21, 19, 21, 0.51) 32.22%, #151315 55.59%);
-    }
-  }
 
   // text styles here
   .content-section {
@@ -331,6 +267,317 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    padding-top: 200px;
+
+    .title1 {
+      text-align: center;
+      color: $white;
+    }
+  }
+}
+
+// Link Expired Component
+.link-expired-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #101118;
+  position: relative;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    font-family: monospace;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .image-style {
+    position: absolute;
+    width: 624px;
+    height: 624px;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    background: url('../../assets/images/coin-blur.png');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 163px;
+    padding-top: 150px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      content: '';
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.83) 31.84%, #101118 49.67%);
+    }
+  }
+  .card {
+    background: rgba(187, 195, 218, 0.05);
+    border: 2px solid rgba(234, 240, 241, 0.15);
+    backdrop-filter: blur(64px);    
+    border-radius: 24px;
+    min-width: 550px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .live-text {
+      font-size: 18px;
+      line-height: 28px;
+      color: #DDD4D9;
+      text-transform: uppercase;
+    }
+
+    .text-focus {
+
+      .text-glow {
+        text-shadow: 0px 0px 14px rgba(255, 252, 237, 0.6);
+        font-size: 64px;
+        line-height: 79px;
+        color: #FFFCED;
+        font-weight: 300;
+      }
+
+      span {
+        color: $textPrimary;
+        font-size: 30px;
+        line-height: 48px;
+      }
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+      color: rgba($textPrimary, 0.6);
+    }
+
+
+    .divider {
+      border: 1px solid #3A3D53;
+      backdrop-filter: blur(94px);
+      opacity: 0.3;
+      height: 2px;
+      width: 100%;
+      margin: 0px 0 25px;
+    }
+  }
+
+  .dotted-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+
+  .text-read {
+    color: rgba(#8389B2, 0.7);
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .click-here {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba($textPrimary, 0.6);
+
+    a {
+      color: rgba($textPrimary, 1);
+    }
+  }
+
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 150px;
+
+    .title1 {
+      text-align: center;
+      color: $white;
+    }
+  }
+}
+
+
+// Sold Out Component
+.sold-out-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #101118;
+  position: relative;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    font-family: monospace;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .image-style {
+    position: absolute;
+    width: 624px;
+    height: 624px;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    background: url('../../assets/images/coin-blur.png');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 133px;
+    padding-top: 150px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      content: '';
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.83) 31.84%, #101118 49.67%);
+    }
+  }
+
+
+
+  .card {
+    background: rgba(187, 195, 218, 0.05);
+    border: 2px solid rgba(234, 240, 241, 0.15);
+    backdrop-filter: blur(64px);    
+    border-radius: 24px;
+    min-width: 550px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .live-text {
+      font-size: 18px;
+      line-height: 28px;
+      color: #DDD4D9;
+      text-transform: uppercase;
+    }
+
+    .text-focus {
+
+      .text-glow {
+        text-shadow: 0px 0px 14px rgba(255, 252, 237, 0.6);
+        font-size: 30px;
+        line-height: 48px;
+        color: #FFFCED;
+        font-weight: 300;
+      }
+
+      span {
+        color: $textPrimary;
+        font-size: 30px;
+        line-height: 48px;
+      }
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+      color: $textPrimary;
+
+      &.light {
+        opacity: 0.7;
+      }
+    }
+
+
+    .divider {
+      border: 1px solid #3A3D53;
+      backdrop-filter: blur(94px);
+      opacity: 0.3;
+      height: 2px;
+      width: 100%;
+      margin: 0px 0 25px;
+    }
+  }
+
+  .dotted-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+
+  .text-read {
+    color: rgba(#8389B2, 0.7);
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .click-here {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba($textPrimary, 0.6);
+
+    a {
+      color: rgba($textPrimary, 1);
+    }
+  }
+
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 130px;
 
     .title1 {
       text-align: center;

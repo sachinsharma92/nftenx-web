@@ -26,15 +26,10 @@
   .form-section {
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 70%;
     margin-top: 50px;
   }
 
-  .btn-join {
-    margin-left: 20px;
-    width: 280px;
-    white-space: nowrap;
-  }
 
   .flex-sec {
     display: flex;
@@ -89,29 +84,29 @@
       width: 100%;
       height: 100%;
       content: '';
-      background: linear-gradient(180deg, #352645 0%, rgba(53, 38, 69, 0) 100%);
+      background: linear-gradient(180deg, #341C79 0%, rgba(52, 40, 98, 0.36) 46.64%, rgba(37, 24, 53, 0) 100%);
     }
   }
 
-  .image-style {
-    position: relative;
-    height: 620px;
-    overflow: hidden;
-    background: url('../../assets/images/illustrations/illustration.svg');
-    width: 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
+  // .image-style {
+  //   position: relative;
+  //   height: 620px;
+  //   overflow: hidden;
+  //   background: url('../../assets/images/illustrations/illustration.svg');
+  //   width: 100%;
+  //   background-position: center top;
+  //   background-repeat: no-repeat;
 
-    &::before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 70%;
-      content: '';
-      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.45) 23.91%, #101118 41.28%);
-    }
-  }
+  //   &::before {
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 70%;
+  //     content: '';
+  //     background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.45) 23.91%, #101118 41.28%);
+  //   }
+  // }
 
   // text styles here
   .content-section {
@@ -119,10 +114,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: relative;
 
     .title1 {
-      color: $textPrimary;
+      color: $white;
     }
 
     .text-white {
@@ -131,6 +126,7 @@
 
     .description {
       color: $textPrimary;
+      text-align: center;
     }
   }
 }
@@ -208,9 +204,9 @@
     right: -20px;
   }
 
-  .btn-join {
-    margin-top: 10px;
-    width: 200px;
+
+  .description {
+    opacity: 0.7;
   }
 
   .title1 {
@@ -231,14 +227,13 @@
   &::before {
     position: absolute;
     top: 10rem;
-    left: -2rem;
-    width: 100%;
-    height: 100%;
+    left: 0;
+    width: 617px;
+    height: 617px;
     content: '';
-    background: url('../../assets/images/illustrations/curve.svg');
-    background-repeat: no-repeat;
-    background-size: 50% 100%;
-    transform: rotate(5deg);
+    background: #301899;
+    opacity: 0.3;
+    filter: blur(227.698px);
   }
 
   .img-sec {
@@ -246,7 +241,7 @@
   }
 
   .icon-box {
-    
+
     .icon-sec {
       max-width: 50px;
       margin-bottom: 10px;
@@ -258,8 +253,9 @@
 
     .title4 {
       margin-bottom: 5px;
-      color: #E3CDC3;
+      color: $text-light;
       font-size: 30px;
+      font-weight: 300;
     }
   }
 }
@@ -319,7 +315,7 @@
 
     .title4 {
       margin-bottom: 10px;
-      color: #8E8861;
+      color: $textPrimary;
       font-size: 40px;
       font-weight: 300;
     }
@@ -333,6 +329,7 @@
     color: $textSecondary;
     font-size: 100px;
     font-weight: 300;
+    font-style: italic;
   }
 }
 
@@ -395,6 +392,14 @@
       padding-bottom: 30px;
     }
   }
+
+  .title1 {
+    background: linear-gradient(266.15deg, #FFFEEC 43.09%, #B9E86D 98.11%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
 }
 
 // Join Next Section
@@ -425,8 +430,12 @@
     position: relative;
 
     .title1 {
-      color: $textSecondary;
       font-weight: 300;
+      background: linear-gradient(124.28deg, #FFFEEC 22.85%, #E8E36D 108.63%), #FFFFFF;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
 
     .text-white {
@@ -436,6 +445,7 @@
     .description {
       color: $textPrimary;
       text-align: center;
+      margin: 20px 0;
     }
   }
 }

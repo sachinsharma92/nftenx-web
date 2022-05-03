@@ -7,7 +7,7 @@ const AskedQuestionsComponent = (props: Record<string, any>) => {
         <div className="row">
           <div className="col-sm-12">
             <div className="position-sticky">
-              <h1 className="title1 text-white">Frequently asked <br />
+              <h1 className="title1">Frequently asked <br />
                 questions</h1>
             </div>
           </div>

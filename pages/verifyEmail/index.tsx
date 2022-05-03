@@ -13,7 +13,7 @@ const VerifyEmail = (props: Record<string, any>) => {
       <VerifyHeroSection />
       <UpcomingComponent />
       <OurMintingComponent />
-      <CommunityDrivenComponent/>
+      {/* <CommunityDrivenComponent/> */}
       <HowMintComponent />
       <AskedQuestionsComponent />
       <JoinNextComponent />

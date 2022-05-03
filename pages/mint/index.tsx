@@ -7,9 +7,9 @@ const Mint = (props: Record<string, any>) => {
   return (
     <main className="mint-page-style main-bg">
       <ElligibleComponent />
-      {/* <MintLiveComponent /> */}
-      {/* <SoldOutComponent/> */}
-      {/* <LinkExpiredComponent/> */}
+      <MintLiveComponent />
+      <SoldOutComponent />
+      <LinkExpiredComponent />
     </main>
   );
 };
