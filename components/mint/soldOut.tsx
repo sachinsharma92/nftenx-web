@@ -13,7 +13,7 @@ const SoldOutComponent = (props: Record<string, any>) => {
         <div className="image-style" />
         <div className="content-section">
           <div className="text-center">
-            <h1 className="title1">Cohort 1: Sold Out</h1>
+            <h1 className="title1 text-gradient">Cohort 1: Sold Out</h1>
             <div className="card">
               <div className="dotted-icon">
                 <span></span>

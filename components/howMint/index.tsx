@@ -9,7 +9,7 @@ const HowMintComponent = (props: Record<string, any>) => {
           <div className="col-sm-6">
             <div className="position-sticky">
             <h1 className="title1 text-white">How to mint?</h1>
-            <p className="description font-mono mt-5">
+            <p className="description mt-5">
               Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to harness this once-in-a-decade.
             </p>
             </div>
@@ -17,24 +17,24 @@ const HowMintComponent = (props: Record<string, any>) => {
           <div className="col-sm-6">
             <div className="content">
             <div className="icon-box">
-              <h2 className="title2">01</h2>
+              <h2 className="title2 text-gradient">01</h2>
               <h4 className="title4">Set up your wallet</h4>
-              <p className="description font-mono">
+              <p className="description">
                 Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to
               </p>
             </div>
 
             <div className="icon-box">
-              <h2 className="title2">02</h2>
+              <h2 className="title2 text-gradient">02</h2>
               <h4 className="title4">Set up your wallet</h4>
-              <p className="description font-mono">
+              <p className="description">
                 Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to
               </p>
             </div>
             <div className="icon-box">
-              <h2 className="title2">03</h2>
+              <h2 className="title2 text-gradient">03</h2>
               <h4 className="title4">Set up your wallet</h4>
-              <p className="description font-mono">
+              <p className="description">
                 Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to
               </p>
             </div>

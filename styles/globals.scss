@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -26,9 +26,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  // font-family: 'Roboto Mono', monospace;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  // font-family: 'Bitter', serif;
 }
 
 .main-bg {
@@ -75,7 +74,7 @@ p {
 .title3,
 .title4,
 .title5 {
-  font-family: "Recife";
+  font-family: 'Bitter', serif;
 }
 
 .title1 {
@@ -264,7 +263,6 @@ line-height: 38px;
 }
 
 .btn-join {
-  margin-left: 20px;
   width: 280px;
   white-space: nowrap;
   border-color: $textPrimary;

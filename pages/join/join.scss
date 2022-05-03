@@ -129,6 +129,10 @@
       text-align: center;
     }
   }
+
+  .btn-join {
+    margin-left: 20px;
+  }
 }
 
 .upcoming-section {
@@ -279,19 +283,6 @@
     opacity: 0.2;
   }
 
-  &::before {
-    position: absolute;
-    top: -18rem;
-    right: -5rem;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background: url('../../assets/images/illustrations/curve-2.svg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-  }
-
   .img-sec {
     width: 350px;
   }
@@ -300,6 +291,20 @@
     position: sticky;
     top: 100px;
     padding-right: 100px;
+
+
+  &::before {
+    position: absolute;
+    top: -28rem;
+    left: -10rem;
+    width: 70rem;
+    height: 70rem;
+    content: '';
+    background: url('../../assets/images/shade1.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+  }
   }
 
 
@@ -308,11 +313,6 @@
     margin-bottom: 80px;
     position: relative;
     z-index: 1;
-
-    .description {
-      opacity: 0.6;
-    }
-
     .title4 {
       margin-bottom: 10px;
       color: $textPrimary;
@@ -320,6 +320,11 @@
       font-weight: 300;
     }
   }
+
+  .description {
+    opacity: 0.7;
+  }
+
 
   .content {
     padding-top: 100px;
