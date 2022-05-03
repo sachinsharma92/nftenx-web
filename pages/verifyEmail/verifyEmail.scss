@@ -1,0 +1,120 @@
+.verify-email-page-style {
+  min-height: 100vh;
+
+  .title3 {
+    color: $textPrimary;
+  }
+
+  .text-white {
+    color: $white;
+  }
+
+  .description {
+    color: $textPrimary;
+    font-size: 14px;
+  }
+}
+
+// Join Hero Section
+.verify-hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .flex-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .title1 {
+      color: white;
+      text-align: center;
+    }
+
+    .description {
+      color: $textPrimary;
+      text-align: center;
+      max-width: 50%;
+    }
+  }
+
+  .social-images {
+    margin-top: 5px;
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+
+      a {
+        margin: 0 8px;
+      }
+    }
+  }
+
+}
+
+
+// Community Driven Component
+.community-driven-component {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url('../../assets/images/illustrations/driven.svg') no-repeat right;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    content: '';
+    background: #101118;
+    filter: blur(196.51px);
+  }
+
+
+  .title4 {
+    color: #FFFCED;
+    font-size: 60px;
+    line-height: 65px;
+    margin-bottom: 20px;
+  }
+
+  .content-section {
+    position: relative;
+    z-index: 1;
+  }
+
+}

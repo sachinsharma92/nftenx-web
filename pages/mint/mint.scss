@@ -1,0 +1,544 @@
+.mint-page-style {
+  min-height: 100vh;
+
+  .title3 {
+    color: $textPrimary;
+  }
+
+  .text-white {
+    color: $white;
+  }
+
+  .highlighted {
+    font-size: 35px;
+    line-height: 35px;
+    color: $textPrimary;
+    opacity: 0.2;
+    margin-bottom: 30px;
+    font-family: 'reckless-book';
+  }
+
+  .logo-section {
+    position: absolute;
+    width: 100%;
+    height: 353px;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    margin-top: 0px;
+
+    .logo-img {
+      position: relative;
+      height: 65px;
+      width: 65px;
+      filter: contrast(0) brightness(100);
+    }
+
+    .logo-box {
+      margin-top: 40px;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: linear-gradient(180deg, #341C79 0%, rgba(52, 40, 98, 0.36) 46.64%, rgba(37, 24, 53, 0) 100%);
+    }
+  }
+
+  // text glow
+  .text-focus {
+
+    .text-glow {
+      text-shadow: 0px 0px 14px rgba(255, 252, 237, 0.6);
+      font-size: 64px;
+      line-height: 79px;
+      color: #FFFCED;
+      font-family: "reckless";
+    }
+
+    span {
+      color: $textPrimary;
+      font-size: 30px;
+      line-height: 48px;
+      font-weight: 300;
+      font-family: "reckless";
+    }
+  }
+
+  .live-text {
+    font-size: 16px;
+    line-height: 28px;
+    color: #DDD4D9;
+    text-transform: uppercase;
+  }
+
+  .text-read {
+    color: #8389B2;
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+// Elligible Component
+.elligible-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #101118;
+  position: relative;
+  overflow: hidden;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    font-family: monospace;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .image-style {
+    position: absolute;
+    width: 624px;
+    height: 624px;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    background: url('../../assets/images/coin-blur.png');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 163px;
+    padding-top: 150px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      content: '';
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.83) 31.84%, #101118 49.67%);
+    }
+  }
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .title1 {
+      text-align: center;
+    }
+
+    .text-white {
+      color: $white;
+    }
+
+    .description {
+      color: $textPrimary;
+      text-align: center;
+      max-width: 90%;
+    }
+  }
+}
+
+// Mint Live Component
+.min-live-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #101118;
+  position: relative;
+  overflow: hidden;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    font-family: monospace;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .image-style {
+    position: absolute;
+    width: 624px;
+    height: 624px;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    background: url('../../assets/images/coin-blur.png');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 163px;
+    padding-top: 150px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      content: '';
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.83) 31.84%, #101118 49.67%);
+    }
+  }
+
+  .card {
+    background: rgba(187, 195, 218, 0.05);
+    border: 2px solid rgba(234, 240, 241, 0.15);
+    backdrop-filter: blur(64px);
+    border-radius: 24px;
+    min-width: 550px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+      color: rgba($textPrimary, 0.6);
+    }
+
+
+    .divider {
+      border: 1px solid #3A3D53;
+      backdrop-filter: blur(94px);
+      opacity: 0.3;
+      height: 2px;
+      width: 100%;
+      margin: 0px 0 25px;
+    }
+  }
+
+  .dotted-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+
+  .click-here {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba($textPrimary, 0.6);
+
+    a {
+      color: rgba($textPrimary, 1);
+    }
+  }
+
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 200px;
+
+    .description {
+      font-size: 16px;
+    }
+
+    .title1 {
+      text-align: center;
+      color: $white;
+    }
+  }
+}
+
+// Link Expired Component
+.link-expired-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #101118;
+  position: relative;
+  overflow: hidden;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    font-family: monospace;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .image-style {
+    position: absolute;
+    width: 624px;
+    height: 624px;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    background: url('../../assets/images/coin-blur.png');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 163px;
+    padding-top: 150px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      content: '';
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.83) 31.84%, #101118 49.67%);
+    }
+  }
+
+  .card {
+    background: rgba(187, 195, 218, 0.05);
+    border: 2px solid rgba(234, 240, 241, 0.15);
+    backdrop-filter: blur(64px);
+    border-radius: 24px;
+    min-width: 550px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+      color: rgba($textPrimary, 0.6);
+    }
+
+
+    .divider {
+      border: 1px solid #3A3D53;
+      backdrop-filter: blur(94px);
+      opacity: 0.3;
+      height: 2px;
+      width: 100%;
+      margin: 0px 0 25px;
+    }
+  }
+
+  .dotted-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+  .click-here {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba($textPrimary, 0.6);
+
+    a {
+      color: rgba($textPrimary, 1);
+    }
+  }
+
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 150px;
+
+    .title1 {
+      text-align: center;
+      color: $white;
+    }
+  }
+}
+
+// Sold Out Component
+.sold-out-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #101118;
+  position: relative;
+  overflow: hidden;
+
+  .date {
+    color: $white;
+    font-size: 18px;
+    font-family: monospace;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  .image-style {
+    position: absolute;
+    width: 624px;
+    height: 624px;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    background: url('../../assets/images/coin-blur.png');
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 133px;
+    padding-top: 150px;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      content: '';
+      background: linear-gradient(180.24deg, rgba(16, 17, 24, 0) 11.95%, rgba(16, 17, 24, 0.83) 31.84%, #101118 49.67%);
+    }
+  }
+
+  .text-focus {
+    .text-glow {
+      font-size: 40px;
+    }
+    span {
+      font-size: 40px;
+    }
+  }
+
+  .card {
+    background: rgba(187, 195, 218, 0.05);
+    border: 2px solid rgba(234, 240, 241, 0.15);
+    backdrop-filter: blur(64px);
+    border-radius: 24px;
+    min-width: 550px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .description {
+      font-size: 18px;
+      line-height: 28px;
+      color: $textPrimary;
+
+      &.light {
+        opacity: 0.7;
+      }
+    }
+
+
+    .divider {
+      border: 1px solid #3A3D53;
+      backdrop-filter: blur(94px);
+      opacity: 0.3;
+      height: 2px;
+      width: 100%;
+      margin: 0px 0 25px;
+    }
+  }
+
+  .dotted-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+
+  .click-here {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba($textPrimary, 0.6);
+
+    a {
+      color: rgba($textPrimary, 1);
+    }
+  }
+
+
+  // text styles here
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 130px;
+
+    .title1 {
+      text-align: center;
+      color: $white;
+    }
+  }
+}

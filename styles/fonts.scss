@@ -56,3 +56,73 @@
       url("../assets/fonts/Recife/woff/Black.woff2") format("woff2");
   }
 }
+
+
+
+// // ######################################## //
+// // ## FONTS.SCSS ## //
+// // ######################################## //
+
+@font-face {
+  font-family: "reckless";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/reckless/RecklessNeue-Thin.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/reckless/RecklessNeue-Thin.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "reckless";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../assets/fonts/reckless/RecklessNeue-Light.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/reckless/RecklessNeue-Light.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "reckless";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/reckless/RecklessNeue-Regular.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/reckless/RecklessNeue-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "reckless";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/reckless/RecklessNeue-Medium.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/reckless/RecklessNeue-Medium.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "reckless";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/reckless/RecklessNeue-SemiBold.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/reckless/RecklessNeue-SemiBold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "reckless";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/reckless/RecklessNeue-Bold.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/reckless/RecklessNeue-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "reckless";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/reckless/RecklessNeue-Heavy.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/reckless/RecklessNeue-Heavy.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "reckless-book";
+  font-style: normal;
+  src: url("../assets/fonts/reckless/RecklessNeue-Book.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/reckless/RecklessNeue-Book.ttf") format('truetype');
+}
+
