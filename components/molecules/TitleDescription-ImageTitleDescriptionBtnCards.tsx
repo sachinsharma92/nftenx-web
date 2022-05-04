@@ -92,7 +92,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
         {getAllCards()}
       </div>
 
-      <div className="w-full md:hidden -p-section flex flex-row flex-nowrap gap-5 overflow-x-auto pb-3">
+      <div className="w-full md:hidden -p-section flex flex-row flex-nowrap gap-5 overflow-x-auto pb-3 no-scrollbar">
         {getAllCards()}
       </div>
 
