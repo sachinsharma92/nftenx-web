@@ -1,12 +1,24 @@
-import { Button, H1, Seo } from "components/atoms";
-import { TOKEN_DETAILS, TOKEN_TYPE } from "constants/globalConstants";
-import { pageAction, pageTitles } from "constants/mint";
+import { Seo } from "components/atoms";
+import LinkExpiredComponent from "components/mint/linkExpired";
+import MintLiveComponent from "components/mint/mintLive";
+import SoldOutComponent from "components/mint/soldOut";
+import { TOKEN_DETAILS } from "constants/globalConstants";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { storage } from "utils/storage";
 import { Api } from "../../services/api"
 
 const Mint = (props: Record<string, any>) => {
+  const {
+    isValid,
+    isExpired,
+    tokenType,
+    tokenId,
+    cohortName,
+    totalTokens,
+    isSoldOut,
+    soldTokens
+  } = props;
   const router = useRouter();
 
   const mint=() => {
@@ -22,20 +34,16 @@ const Mint = (props: Record<string, any>) => {
   return (
     <>
       <Seo title="Mint"/>
-      <main className="bg-primary-1">
-        <section className="min-h-screen p-section flex flex-col justify-center items-center text-secondary-1">
-          <div className="content lg:w-3/4 flex flex-col gap-8 justify-center items-center">
-            { props.isValid ? <>
-              <H1 className="text-center opacity-50">Congratulations</H1>
-              <H1 className="text-center">You are now eligible to mint the {props.tokenType}'s pass.</H1>
-              <Button onClick={mint}>Mint Now</Button>
-            </>: <>
-              <H1 className="text-center opacity-50">Sorry!</H1>
-              <H1 className="text-center">Invalid link, please contact the admin support!</H1>
-            </>}
-
-          </div>
-        </section>
+      <main className="mint-page-style main-bg">
+        {isExpired ?
+          <LinkExpiredComponent />:
+          <>
+            { isSoldOut ?
+              <SoldOutComponent type={tokenType} total={totalTokens} name={cohortName} sold={soldTokens}/>:
+              <MintLiveComponent type={tokenType} total={totalTokens} onClick={mint} sold={soldTokens}/>
+            }
+          </>
+        }
       </main>
     </>
   );
@@ -51,8 +59,13 @@ export const getServerSideProps = async (ctx: any) => {
     return {
       props: {
         isValid: true,
+        isExpired: response.data.isExpired,
         tokenType: response.data.membershipType.name,
         tokenId: response.data.group.tokenId,
+        cohortName: response.data.group.cohort.name,
+        totalTokens: response.data.group.cohort.noOfTokens,
+        isSoldOut: response.data.isSoldOut,
+        soldTokens: response.data.soldTokens,
       },
     };
   }

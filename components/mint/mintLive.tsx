@@ -1,8 +1,15 @@
-import { Logo } from "assets/icons";
 import { ButtonOutline } from "components/atoms/ButtonOutline";
 import { LogoGradient } from "components/common/logoGradient";
 
-const MintLiveComponent = (props: Record<string, any>) => {
+type MintLiveProps = {
+  type?: string;
+  sold?: number;
+  total?: number;
+  onClick: ()=>void;
+}
+
+const MintLiveComponent = (props: MintLiveProps) => {
+  const {type='founder', sold = 33, total = 100, onClick} = props;
   return (
     <section className="min-live-component">
       <LogoGradient />
@@ -17,11 +24,11 @@ const MintLiveComponent = (props: Record<string, any>) => {
                 <span></span>
                 <span></span>
               </div>
-              <p className="live-text">Founders’ pass sale</p>
-              <div className="text-focus"><span className="text-glow">33</span> <span>/100</span></div>
+              <p className="live-text">{type}&apos;s pass sale</p>
+              <div className="text-focus"><span className="text-glow">{sold}</span> <span>/{total}</span></div>
               <p className="description">NF10X passes have been Minted</p>
               <div className="divider"></div>
-              <ButtonOutline className="btn-join">Mint your pass now</ButtonOutline>
+              <ButtonOutline className="btn-join" onClick={onClick}>Mint your pass now</ButtonOutline>
             </div>
             <p className="text-read mt-3">.01 ETH/Pass | 01 Pass/Account | Read FAQs</p>
           </div>
