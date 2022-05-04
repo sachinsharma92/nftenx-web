@@ -20,7 +20,7 @@ export const JoinTheCommunity = (props: any) => {
   return (
       <article className="p-section lg:py-32">
         <H1 className="text-center mb-10">Join the Community</H1>
-        <P className="mb-10 font-mono text-secondary-2">
+        <P className="mb-10 font-mono text-primary-light">
             <>
             The NF10x community is built with a hands-on approach to onboarding. Every two weeks, we welcome a new cohort of<br/> members into the fold. These smaller groups foster an environment that is more conducive to building<br/> genuine relationships while integrating into the broader community.
             </>

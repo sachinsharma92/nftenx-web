@@ -18,8 +18,8 @@ const TitlesDescriptionButtonHero = (props: PropTypes) => {
     <div className="lg:w-2/3 flex flex-col gap-2 text-center justify-center items-center">
       {props.title && <H1>{props.title}</H1>}
       {props.subtitle && <H1 className='text-secondary-2'>{props.subtitle}</H1>}
-      {props.subtitle && <p className='text-secondary-2 font-moni'>{props.subtitle}</p>}
-      {props.linkTitle && <A gradientType href={props.linkHref ?? 'javascript:void(0)'} className="mt-6">{props.linkTitle}</A>}
+      {props.description && <p className='text-secondary-2 font-moni'>{props.description}</p>}
+      {props.linkTitle && <A passHref href={props.linkHref ?? 'javascript:void(0)'} className="mt-6 text-secondary-1"><a className='text-secondary-1'>{props.linkTitle}</a></A>}
     </div>
   </article>
 }

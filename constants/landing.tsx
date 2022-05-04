@@ -1,4 +1,4 @@
-import { RightArrowSecondary, TwitterSecondary } from "assets/icons";
+import { RightArrowSecondary, TwitterPrimaryLight } from "assets/icons";
 import coinBgImage from "../assets/images/coins-bg.png";
 import peopleConected from "../assets/images/people-connected.png";
 import gridGradient from "../assets/images/grid-gradient-bg.png";
@@ -37,7 +37,7 @@ export const section2 = {
   image: peopleConected.src,
   bgImage: gridGradient.src,
   linkTitle: (
-    <span className="group text-secondary-2 text-mono whitespace-nowrap flex items-center text-lg">
+    <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
       Know More
       <span role="img" className="transition-all pl-2 group-hover:pl-5">
         <RightArrowSecondary className="h-10 w-auto" />
@@ -86,7 +86,7 @@ export const section4 = {
 export const section6 = {
   title: (
     <>
-      Why Join <b className="font-serif">NF10X</b>
+      Why join our community
     </>
   ),
   description:
@@ -134,7 +134,7 @@ export const section7 = {
   description:
     "We recruited X Leaders, Investors, and Builders in Web3 to share their knowledge and act as resources for the community",
   linkTitle: (
-    <span className="group text-secondary-2 text-mono whitespace-nowrap flex items-center text-lg">
+    <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
       Join the Community
       <span role="img" className="transition-all pl-2 group-hover:pl-5">
         <RightArrowSecondary className="h-10 w-auto" />
@@ -151,7 +151,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -164,7 +164,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -177,7 +177,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -190,7 +190,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -203,7 +203,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -216,7 +216,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -229,7 +229,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -242,7 +242,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -255,7 +255,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterSecondary />,
+          title: <TwitterPrimaryLight />,
           href: "https://www.twitter.com",
         },
       ],
@@ -266,73 +266,83 @@ export const section7 = {
 export const section8 = [
   <i
     key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    style={{backgroundColor: '#F3C15F'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
+  <span key={1} className="p-1 text-primary-light-2 font-mono text-3xl">
     AMAS
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={2}
+    style={{backgroundColor: '#9D6842'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
-    Web3 deep dives
+  <span key={3} className="p-1 text-primary-light-2 font-mono text-3xl">
+    WEB 3 DEEP DIVES
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={4}
+    style={{backgroundColor: '#535B45'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
-    Product teardowns
+  <span key={5} className="p-1 text-primary-light-2 font-mono text-3xl">
+    PRODUCT TEARDOWNS
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={6}
+    style={{backgroundColor: '#6250E3'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
-    Fireside chats
+  <span key={7} className="p-1 text-primary-light-2 font-mono text-3xl">
+    FIRESIDE CHATS
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={8}
+    style={{backgroundColor: '#F3C15F'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
+  <span key={9} className="p-1 text-primary-light-2 font-mono text-3xl">
     AMAS
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={10}
+    style={{backgroundColor: '#9D6842'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
-    Web3 deep dives
+  <span key={11} className="p-1 text-primary-light-2 font-mono text-3xl">
+    WEB3 DEEP DIVES
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={12}
+    style={{backgroundColor: '#535B45'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
-    Product teardowns
+  <span key={13} className="p-1 text-primary-light-2 font-mono text-3xl">
+    PRODUCT TEARDOWNS
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={14}
+    style={{backgroundColor: '#6250E3'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
+  <span key={15} className="p-1 text-primary-light-2 font-mono text-3xl">
     AMAS
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={16}
+    style={{backgroundColor: '#F3C15F'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
-    Web3 deep dives
+  <span key={17} className="p-1 text-primary-light-2 font-mono text-3xl">
+    WEB3 DEEP DIVES
   </span>,
   <i
-    key={0}
-    className="inline-block h-5 w-5 p-2 rounded-full bg-secondary-2"
+    key={18}
+    style={{backgroundColor: '#9D6842'}}
+    className="inline-block text-primary-light-w-4 h-4 p-2 rounded-full bg-secondary-2"
   ></i>,
-  <span key={0} className="p-1 text-secondary-2 font-mono text-3xl">
-    Product teardowns
+  <span key={19} className="p-1 text-primary-light-2 font-mono text-3xl">
+    PRODUCT TEARDOWNS
   </span>,
 ];
 

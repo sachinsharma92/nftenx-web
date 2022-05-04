@@ -21,7 +21,7 @@ export const HeadingDescriptionLinkImgSection = (props: PropTypes) => {
       />
       <div className="z-[1] relative grid grid-flow-row-dense content-center gap-8 w-full lg:w-[90%] xl:w-[60%] 2xl:w-[50%]">
         <H1 className="max-w-lg">{props.heading}</H1>
-        <p className="font-mono text-secondary-2 leading-8 text-lg">
+        <p className="font-mono text-primary-light leading-8 text-lg">
           {props.description}
         </p>
         <A

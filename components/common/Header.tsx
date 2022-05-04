@@ -3,15 +3,17 @@ import { WalletConnectModal } from "components/walletConnectModal/walletConnectM
 import { extraLinks, navLinks } from "constants/header";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from 'react'
+import { useState } from "react";
 
 export const Header = () => {
   const router = useRouter();
   const activeRoute = router.pathname.split("/")[1];
-  const [showWalletConnectModal, setShowWalletConnectModal] = useState<Boolean | undefined>(false)
-  const connectWalletHandler = ()=>{
-    setShowWalletConnectModal(true)
-  }
+  const [showWalletConnectModal, setShowWalletConnectModal] = useState<
+    Boolean | undefined
+  >(false);
+  const connectWalletHandler = () => {
+    setShowWalletConnectModal(true);
+  };
   // const headerBg = useRef<HTMLDivElement>(null);
 
   // useEffect(() => {
@@ -23,7 +25,7 @@ export const Header = () => {
   //   if (window) window.addEventListener("scroll", toggleHeaderBg);
   // }, []);
 
-  const linkPaddings = 'px-4 py-2 xl:px-6 xl:py-3';
+  const linkPaddings = "px-4 py-2 xl:px-6 xl:py-3";
 
   return (
     <header className="w-full z-[100] text-secondary px-section py-5 flex flex-row justify-between items-center fixed top-0 text-lg">
@@ -32,15 +34,17 @@ export const Header = () => {
         className="w-full absolute bg-black bg-opacity-10 backdrop-blur-md h-full top-0 left-0 transition-all -translate-y-full"
       ></div> */}
       <Logo className="block lg:hidden w-12 h-auto" />
-      <button className="block lg:hidden"><MenuSecondary /></button>
-      <nav className="hidden lg:block rounded-full bg-secondary-3 bg-opacity-10 backdrop-blur-md overflow-hidden z-[100]">
+      <button className="block lg:hidden">
+        <MenuSecondary />
+      </button>
+      <nav className="hidden lg:block rounded-full bg-white bg-opacity-5 backdrop-blur-md overflow-hidden z-[100] border-white border-opacity-10 border-[1px]">
         <ul className="list-none flex flex-row gap-2">
           {navLinks.map((element, index) => {
             return (
               <li key={index} className="inline-block">
                 <Link passHref href={element.href ?? "javascript.void(0)"}>
                   <a
-                    className={`${linkPaddings} text-secondary-1 transition-all ${
+                    className={`${linkPaddings} font-mono text-secondary-1 transition-all ${
                       element.href.replace("/", "") != activeRoute
                         ? "opacity-50"
                         : ""
@@ -61,7 +65,7 @@ export const Header = () => {
             <li key={index} className="inline-block">
               <Link passHref href={element.href ?? "javascript.void(0)"}>
                 <a
-                  className={`${linkPaddings} text-secondary-1 bg-secondary-3 bg-opacity-10 rounded-full inline-block backdrop-blur-md font-mono`}
+                  className={`${linkPaddings} text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md font-mono`}
                 >
                   {element.title}
                 </a>
@@ -70,13 +74,19 @@ export const Header = () => {
           );
         })}
         <li className="inline-block">
-          <button onClick={connectWalletHandler} className="px-4 py-2 xl:px-6 xl:py-3 text-secondary-1 bg-secondary-3 bg-opacity-10 rounded-full inline-block backdrop-blur-md font-mono">
+          <button
+            onClick={connectWalletHandler}
+            className="px-4 py-2 xl:px-6 xl:py-3 text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md font-mono"
+          >
             Connect Wallet
           </button>
         </li>
       </ul>
 
-      <WalletConnectModal setShowModal={setShowWalletConnectModal} showModal={showWalletConnectModal}  />
+      <WalletConnectModal
+        setShowModal={setShowWalletConnectModal}
+        showModal={showWalletConnectModal}
+      />
     </header>
   );
 };

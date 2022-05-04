@@ -11,9 +11,11 @@ module.exports = {
         // tertiary: '#714436'
         primary: {
           1: "#101118",
-          2: "#38265D",
+          2: "#342862",
           3: '#493D5E',
           4: '#08090d',
+          'light': '#8389B2',
+          'light-2': '#A3ACEC'
         },
         secondary: {
           1: "#FFFCED",
@@ -53,7 +55,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        "heading-serif": ["Recife", "sans-serif"],
+        "heading-serif": ["reckless", "sans-serif"],
+        "mono": ["Roboto Mono", "sans-serif"],
       },
     },
   },
