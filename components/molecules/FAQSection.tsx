@@ -1,4 +1,4 @@
-import { H1, H3 } from "components/atoms";
+import { H1, H3, H4 } from "components/atoms";
 import { useCallback, useState } from "react";
 
 type PropTypes = {
@@ -33,18 +33,18 @@ const FAQCard = ({element, index}: {element: Record<string, JSX.Element | string
   }
   return (
     <div
-      className="w-full rounded-3xl bg-secondary-1 bg-opacity-5 border-secondary-1 border-[1px] border-opacity-10 p-4 lg:py-6 lg:px-16 flex flex-row gap-6"
+      className="w-full rounded-3xl bg-[#757FBD] bg-opacity-10 border-secondary-1 border-[1px] border-opacity-10 p-4 lg:py-6 lg:px-16 flex flex-row gap-6"
     >
       <div className="font-mono">
-        <H3 className="opacity-30">
-          <span className="font-mono">{(index + 1 < 10 ? `0${index + 1}` : index + 1).toString()}</span>
-        </H3>
+        <H4 className="opacity-30">
+          <span className="font-mono text-primary-light-2">{(index + 1 < 10 ? `0${index + 1}` : index + 1).toString()}</span>
+        </H4>
       </div>
-      <div className="flex flex-col gap-2">
-        <H3 className="relative">
+      <div className="flex flex-col gap-2" onClick={handleClick}>
+        <H4 className="relative">
           <>{element.title} <button onClick={handleClick} className="absolute top-1/2 right-0 -translate-y-1/2 -mt-1 text-secondary-2 opacity-30">+</button></>
-        </H3>
-        <p className={`font-mono text-secondary-2 opacity-60 overflow-hidden transition-all ${!active ? 'h-0' : 'h-auto'}`}>{element.description}</p>
+        </H4>
+        <p className={`font-mono text-primary-light-2 opacity-60 overflow-hidden transition-all ${!active ? 'h-0' : 'h-auto'}`}>{element.description}</p>
       </div>
     </div>
   );

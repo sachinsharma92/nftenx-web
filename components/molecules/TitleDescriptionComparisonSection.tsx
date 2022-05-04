@@ -80,11 +80,12 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
                 }
                   mb-9 lg:mb-0
                   text-secondary-2
+                  group
                 `}
               >
                 {element.title && <H2 className="shadow-primary-1 drop-shadow-2xl text-secondary-1">{element.title}</H2>}
                 {element.description && (
-                  <p className="font-mono text-lg">{element.description}</p>
+                  <p className="font-mono text-primary-light text-lg group-hover:text-white group-hover:text-opacity-70 pt-3">{element.description}</p>
                 )}
               </div>
               {index != props.items.length - 1 && (

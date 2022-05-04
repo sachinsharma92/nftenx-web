@@ -191,6 +191,18 @@ p {
   }
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+  }
+}
+
 // Input Main Style
 .input-main-style {
   width: 100%;

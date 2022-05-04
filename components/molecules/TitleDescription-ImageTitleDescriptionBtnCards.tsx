@@ -36,7 +36,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
       undefined | JSX.Element | string | MouseEventHandler
     >
   ) => {
-    return <div className="shrink-0 w-72 lg:w-72 3xl:w-96 bg-gray-200 bg-opacity-5 backdrop-blur-md p-5 border-secondary-1 border-opacity-10 border-[1px] rounded-3xl flex flex-col gap-2 items-center">
+    return <div className="shrink-0 w-72 lg:w-72 3xl:w-96 bg-[#bbc3da] bg-opacity-5 backdrop-blur-md p-5 border-secondary-1 border-opacity-10 border-[1px] rounded-3xl flex flex-col gap-2 items-center">
       {element.image && (
         <img
           src={element.image as string}
@@ -45,7 +45,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
         />
       )}
       {element.description && (
-        <p className="-mt-8 font-mono text-secondary-2 text-center">
+        <p className="-mt-8 font-mono text-primary-light text-center">
           {element.description}
         </p>
       )}
@@ -82,7 +82,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
       <div className="lg:w-3/5">
         {props.title && <H1 className="text-center">{props.title}</H1>}
         {props.description && (
-          <p className="font-mono text-secondary-2 text-center">
+          <p className="font-mono text-primary-light text-center pt-4">
             {props.description}
           </p>
         )}
@@ -92,7 +92,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
         {getAllCards()}
       </div>
 
-      <div className="w-full md:hidden -p-section flex flex-row flex-nowrap gap-5 overflow-x-auto pb-3">
+      <div className="w-full md:hidden -p-section flex flex-row flex-nowrap gap-5 overflow-x-auto pb-3 no-scrollbar">
         {getAllCards()}
       </div>
 

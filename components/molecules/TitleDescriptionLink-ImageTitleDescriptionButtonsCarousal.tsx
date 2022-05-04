@@ -24,7 +24,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
     <article className="relative p-section text-secondary-1 flex flex-col gap-8 justify-center min-h-screen overflow-x-hidden pt-20 md:pt-20">
       <div className="flex flex-col gap-5 lg:w-1/2 text-center lg:text-left items-center lg:items-start">
         {props.title && <H1>{props.title}</H1>}
-        {props.description && <p className="font-mono">{props.description}</p>}
+        {props.description && <p className="font-mono text-primary-light text-opacity-75">{props.description}</p>}
         {props.linkTitle && (
           <A
             href={props.linkHref ?? "javascript.void(0)"}
@@ -34,7 +34,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
           </A>
         )}
       </div>
-      <div className="flex flex-row flex-nowrap gap-1 carousal overflow-x-auto -px-section px-2 lg:px-28 2xl:px-32 lg:pt-16">
+      <div className="flex flex-row flex-nowrap gap-1 carousal overflow-x-auto -px-section px-2 lg:px-28 2xl:px-32 lg:pt-16 no-scrollbar">
         {props.items?.map((element, index) => {
           return (
             <div
@@ -68,7 +68,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
               )}
               {element.description && (
                 <div className="z-[1] hidden lg:block text-mono opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
-                  <p className="opacity-70 transition-all text-secondary-2">
+                  <p className="opacity-70 transition-all text-primary-light-2">
                   {element.description as string}
                   </p>
                 </div>
@@ -87,7 +87,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                       href={
                         (linkElement.href as string) ?? "javascript:void(0)"
                       }
-                      className="p-2 border-[1px] border-secondary-1 border-opacity-10"
+                      className="p-2 border-[1px] border-primary-light border-opacity-25"
                     >
                       {linkElement.title}
                     </A>

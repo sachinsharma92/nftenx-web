@@ -56,13 +56,6 @@ const Home: NextPage = () => {
           description={section3.description}
           items={section3.items}
         />
-        <TitleDescriptionComparisonSection
-          image={section4.image}
-          imageSide="left"
-          title={section4.title}
-          description={section4.description}
-          items={section4.items}
-        />
         <MultipleImgTitleDescriptionSection
           mainSection={{
             title: section6.title,
@@ -100,7 +93,7 @@ const Home: NextPage = () => {
           description={section12.description}
           linkHref={section12.linkHref}
           linkTitle={
-            <span className="group text-secondary-2 text-mono whitespace-nowrap flex items-center text-lg">
+            <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
               Join the Community
               <span role="img" className="transition-all pl-2 group-hover:pl-5">
                 <RightArrowSecondary className="h-10 w-auto" />
