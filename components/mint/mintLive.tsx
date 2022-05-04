@@ -11,7 +11,7 @@ const MintLiveComponent = (props: Record<string, any>) => {
         <div className="content-section">
           <div className="text-center">
             <h1 className="title1 text-gradient">Mint is now live!</h1>
-            <div className="card">
+            <div className="card flex-col">
               <div className="dotted-icon">
                 <span></span>
                 <span></span>

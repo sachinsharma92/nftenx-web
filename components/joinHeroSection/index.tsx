@@ -1,6 +1,3 @@
-import { ButtonOutline } from "components/atoms/ButtonOutline";
-import { InputPrimary } from "components/common/InputPrimary";
-import LogoTop from "assets/images/illustrations/logo-top.svg";
 import Image from "next/image";
 import { LogoGradient } from "components/common/logoGradient";
 import { Api } from "services/api";
@@ -20,7 +17,7 @@ const JoinHeroSection = (props: Record<string, any>) => {
     }
     const response = await Api.joinTheWaitlist(payload);
     if(response.success) {
-      setShow(true);
+      props.onSuccess(response.success);
     }else {
       setShow(true);
       setTitle('Error');
