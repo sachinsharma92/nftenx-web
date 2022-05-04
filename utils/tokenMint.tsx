@@ -8,7 +8,7 @@ export const formatAccount = (accountNumber: string) => {
   }
 }
 
-export const purchaseToken = async (assetId: number) => {
+export const purchaseToken = async (assetId: string|number) => {
   const payload = {
       assetId,
       methodName: METAMASK_CONSTANTS.TOKEN_TRANSFER_METHOD_NAME,

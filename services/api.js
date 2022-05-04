@@ -19,7 +19,7 @@ export const Api = {
                 apikey: process.env.NEXT_PUBLIC_ETHERSCAN_API_KEY
             } });
     },
-    updateInvite(id) {
-        return AdminApi.call(`/api/v1/invitation/${id}`, 'POST', { data });
+    updateInvite(id, data) {
+        return AdminApi.call(`/api/v1/invitation/${id}`, 'PUT', { data });
     }
 }

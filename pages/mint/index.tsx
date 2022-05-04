@@ -2,15 +2,16 @@ import { Seo } from "components/atoms";
 import LinkExpiredComponent from "components/mint/linkExpired";
 import MintLiveComponent from "components/mint/mintLive";
 import SoldOutComponent from "components/mint/soldOut";
+import TransactionProcessor from "components/TransactionProcessor";
 import { TOKEN_DETAILS } from "constants/globalConstants";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { storage } from "utils/storage";
 import { Api } from "../../services/api"
 
 const Mint = (props: Record<string, any>) => {
   const {
-    isValid,
+    linkId,
     isExpired,
     tokenType,
     tokenId,
@@ -20,9 +21,11 @@ const Mint = (props: Record<string, any>) => {
     soldTokens
   } = props;
   const router = useRouter();
+  const [processTxns, setProcessTxns] = useState(false);
 
   const mint=() => {
-    router.push('/mint-pass');
+    setProcessTxns(true);
+    // router.push('/mint-pass');
   }
 
   useEffect(()=>{
@@ -40,7 +43,12 @@ const Mint = (props: Record<string, any>) => {
           <>
             { isSoldOut ?
               <SoldOutComponent type={tokenType} total={totalTokens} name={cohortName} sold={soldTokens}/>:
-              <MintLiveComponent type={tokenType} total={totalTokens} onClick={mint} sold={soldTokens}/>
+              <>
+                {processTxns? <TransactionProcessor linkId={linkId} tokenId={tokenId}/>:
+                  <MintLiveComponent type={tokenType} total={totalTokens} onClick={mint} sold={soldTokens}/>
+                }
+
+              </>
             }
           </>
         }
@@ -54,11 +62,12 @@ export const getServerSideProps = async (ctx: any) => {
   const invitationId = query.linkId;
 
   const response = await Api.validateEmailLink(invitationId);
+  console.log("🚀 ~ file: index.tsx ~ line 66 ~ getServerSideProps ~ response", response)
 
   if(response.success) {
     return {
       props: {
-        isValid: true,
+        linkId: invitationId,
         isExpired: response.data.isExpired,
         tokenType: response.data.membershipType.name,
         tokenId: response.data.group.tokenId,
@@ -71,7 +80,7 @@ export const getServerSideProps = async (ctx: any) => {
   }
   return {
     props: {
-      isValid: false,
+      isExpired: true,
     },
   };
 };
