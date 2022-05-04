@@ -2,6 +2,12 @@ import { Api } from 'services/api';
 import { storage } from "utils/storage";
 import { METAMASK_CONSTANTS } from 'constants/globalConstants';
 
+export const formatAccount = (accountNumber: string) => {
+  if(accountNumber){
+    return `${accountNumber.slice(0,4)}...${accountNumber.slice(-4)}`
+  }
+}
+
 export const purchaseToken = async (assetId: number) => {
   const payload = {
       assetId,
@@ -21,5 +27,6 @@ export const purchaseToken = async (assetId: number) => {
           method: METAMASK_CONSTANTS.SEND_TRANSACTION,
           params: [generatedPayload.data],
       });
+      return txHash;
   }
 }

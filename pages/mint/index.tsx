@@ -1,7 +1,10 @@
 import { Button, H1, Seo } from "components/atoms";
-import { TOKEN_TYPE } from "constants/globalConstants";
+import { TOKEN_DETAILS, TOKEN_TYPE } from "constants/globalConstants";
 import { pageAction, pageTitles } from "constants/mint";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { storage } from "utils/storage";
+import { Api } from "../../services/api"
 
 const Mint = (props: Record<string, any>) => {
   const router = useRouter();
@@ -9,6 +12,12 @@ const Mint = (props: Record<string, any>) => {
   const mint=() => {
     router.push('/mint-pass');
   }
+
+  useEffect(()=>{
+    if(props){
+      storage.set(TOKEN_DETAILS, JSON.stringify(props));
+    }
+  }, [props])
 
   return (
     <>
@@ -18,8 +27,7 @@ const Mint = (props: Record<string, any>) => {
           <div className="content lg:w-3/4 flex flex-col gap-8 justify-center items-center">
             { props.isValid ? <>
               <H1 className="text-center opacity-50">Congratulations</H1>
-              <H1 className="text-center">{pageTitles[(props.tokenType as TOKEN_TYPE)]}</H1>
-              {/* <Button onClick={pageAction[(props.tokenType as TOKEN_TYPE)]}>Mint Now</Button> */}
+              <H1 className="text-center">You are now eligible to mint the {props.tokenType}'s pass.</H1>
               <Button onClick={mint}>Mint Now</Button>
             </>: <>
               <H1 className="text-center opacity-50">Sorry!</H1>
@@ -33,17 +41,24 @@ const Mint = (props: Record<string, any>) => {
   );
 };
 
-export const getServerSideProps = ({
-  query,
-}: {
-  query?: Record<string, any>;
-}) => {
-  // TODO: API call to verify request and fetch cohort details
-  // TODO: get response of blockchain from an API
+export const getServerSideProps = async (ctx: any) => {
+  const { query } = ctx;
+  const invitationId = query.linkId;
+
+  const response = await Api.validateEmailLink(invitationId);
+
+  if(response.success) {
+    return {
+      props: {
+        isValid: true,
+        tokenType: response.data.membershipType.name,
+        tokenId: response.data.group.tokenId,
+      },
+    };
+  }
   return {
     props: {
-      isValid: true,
-      tokenType: 'FOUNDER',
+      isValid: false,
     },
   };
 };

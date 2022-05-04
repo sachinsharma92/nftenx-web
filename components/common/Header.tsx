@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from 'react'
 import { storage } from "utils/storage";
+import { formatAccount } from "utils/tokenMint";
 import { hooks } from '../connectors/metamask/MetamaskConnector';
 
 export const Header = () => {
@@ -33,12 +34,6 @@ export const Header = () => {
       setAccount(metamaskAddr);
     }
   }, []);
-
-  const formatAccount = (accountNumber: string) => {
-    if(accountNumber){
-      return `${accountNumber.slice(0,4)}...${accountNumber.slice(-4)}`
-    }
-  }
 
   const linkPaddings = 'px-4 py-2 xl:px-6 xl:py-3';
 

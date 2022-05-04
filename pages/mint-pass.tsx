@@ -3,20 +3,21 @@ import {
   PurchaseProcessingCard,
   PurchaseProcessingCard_states,
 } from "components/molecules";
-import { METAMASK_CONSTANTS, TOKEN_TYPE } from "constants/globalConstants";
+import { METAMASK_CONSTANTS, TOKEN_DETAILS, TOKEN_TYPE } from "constants/globalConstants";
 import { useEffect, useState } from "react";
 import { metaMask, hooks } from '../components/connectors/metamask/MetamaskConnector';
 import { useWeb3Context } from 'web3-react';
 // images
 import generalCoin from "/assets/images/coin-general-1.png";
 import { storage } from "utils/storage";
-import { purchaseToken } from '../utils/tokenMint';
+import { formatAccount, purchaseToken } from '../utils/tokenMint';
+import { Api } from "services/api";
 
 const MintPass = () => {
   const { useAccounts } = hooks;
 
   const context = useWeb3Context();
-  const account = useAccounts()
+  const account: any = useAccounts()
 
   enum ScreenStateEnum {
     loading = "loading",
@@ -28,29 +29,62 @@ const MintPass = () => {
     ScreenStateEnum.purchase
   );
 
+  const [purchaseState, setPurchaseState] = useState(
+    PurchaseProcessingCard_states.processing
+  );
+
   const [loaderText, setLoaderText] = useState<null | string>();
   const [loaderActive, setLoaderActive] = useState<boolean>(true);
   const [assetId, setAssetId] = useState<number>(1);
+  const [accountNumber, setAccountNumber] = useState<string>('');
 
-  const mint=() => {
-    const metamaskAddress = storage.get(METAMASK_CONSTANTS.ADDRESS);
+  let handler: any = null;
+  const getTxnStatus = async (txHash: string)=>{
+    const response = await Api.getTransactionReceipt(txHash);
+    if(response.result.isError==='0'){
+      setPurchaseState(PurchaseProcessingCard_states.success);
+      clearInterval(handler);
+      // TODO: call API to update invitation
+    }else {
+      setPurchaseState(PurchaseProcessingCard_states.fail);
+    }
+  }
+
+  const startTxn = async ()=>{
+    const txnHash = await purchaseToken(assetId);
+    handler = setInterval(() => getTxnStatus(txnHash), 5000);
+  }
+
+  const mint=async () => {
+    const metamaskAddress: any = storage.get(METAMASK_CONSTANTS.ADDRESS);
+    setAccountNumber(metamaskAddress);
     if(!metamaskAddress){
       void metaMask.connectEagerly();
       context.setFirstValidConnector(['MetaMask', 'Infura']);
     }else{
-      purchaseToken(assetId);
+      startTxn()
       setLoaderActive(false);
     }
   }
 
   useEffect(() => {
+    const tokenDetails = storage.get(TOKEN_DETAILS);
+    if(tokenDetails){
+      const tokenObj = JSON.parse(tokenDetails);
+      setAssetId(tokenObj.tokenId);
+    }
     mint();
   }, []);
 
   useEffect(() => {
     if(account) {
-      storage.set(METAMASK_CONSTANTS.ADDRESS, account);
-      purchaseToken(assetId);
+      let accountNumber = account;
+      if(typeof(account)=='object'){
+        accountNumber = account[0];
+      }
+      storage.set(METAMASK_CONSTANTS.ADDRESS, accountNumber);
+      setAccountNumber(accountNumber);
+      startTxn();
       setLoaderActive(false);
     }
   }, [account]);
@@ -66,9 +100,9 @@ const MintPass = () => {
       {screenState == ScreenStateEnum.purchase && (
         <PurchaseProcessingCard
           title="Founders Access Pass"
-          state={PurchaseProcessingCard_states.processing}
+          state={purchaseState}
           image={generalCoin.src}
-          message="0xF7bEC...82309"
+          message={formatAccount(accountNumber)}
           tokenType={TOKEN_TYPE.FOUNDER}
         />
       )}

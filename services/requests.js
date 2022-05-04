@@ -79,9 +79,11 @@ export class Request {
       })
       .catch((err) => {
         console.log(err);
+        return err;
       });
   }
 }
 
 export const BlockchainApi = new Request(process.env.NEXT_PUBLIC_BASE_URL, 'testing');
 export const AdminApi = new Request(process.env.NEXT_PUBLIC_ADMIN_BACKEND, 'testing');
+export const MetamaskApi = new Request(process.env.NEXT_PUBLIC_METAMASK_URL, 'testing');

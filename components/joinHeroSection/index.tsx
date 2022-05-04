@@ -10,6 +10,8 @@ import { useState } from "react";
 
 const JoinHeroSection = (props: Record<string, any>) => {
   const [show, setShow] = useState(false);
+  const [title, setTitle] = useState('Success');
+  const [content, setContent] = useState('Added successfully');
 
   const joinWaitlist = async (event: any) => {
     event.preventDefault();
@@ -19,13 +21,22 @@ const JoinHeroSection = (props: Record<string, any>) => {
     const response = await Api.joinTheWaitlist(payload);
     if(response.success) {
       setShow(true);
+    }else {
+      setShow(true);
+      setTitle('Error');
+      setContent('');
     }
   }
 
   return (
     <section className="join-hero-section">
       <LogoGradient/>
-      <CustomToast show={show} content={'Added successfully'} onClose={()=>setShow(false)}/>
+      <CustomToast
+        show={show}
+        content={content}
+        onClose={()=>setShow(false)}
+        title={title}
+      />
       <div className="flex-sec">
         <div className="image-style" />
         <div className="content-section">

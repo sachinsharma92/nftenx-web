@@ -1,5 +1,7 @@
 import { DiscordSecondary, InstaSecondary, TwitterSecondary } from "assets/icons";
 
+export const DISCORD_LINK = 'https://discord.gg/phtWQDjv';
+
 export const socialLinks = [
   {
     image: <InstaSecondary />,
@@ -7,7 +9,7 @@ export const socialLinks = [
   },
   {
     image: <DiscordSecondary />,
-    href: 'https://discord.gg/phtWQDjv'
+    href: DISCORD_LINK
   },
   {
     image: <TwitterSecondary />,

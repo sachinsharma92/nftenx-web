@@ -6,6 +6,8 @@ export const METAMASK_CONSTANTS = {
   SIGNING_TOKEN: "0x",
 };
 
+export const TOKEN_DETAILS = 'token-details';
+
 export enum TOKEN_TYPE {
   FOUNDER = "FOUNDER",
   GENERAL = "GENERAL",
