@@ -5,15 +5,21 @@ import {
 } from "components/molecules";
 import { METAMASK_CONSTANTS, TOKEN_DETAILS, TOKEN_TYPE } from "constants/globalConstants";
 import { useEffect, useState } from "react";
-import { metaMask, hooks } from '../components/connectors/metamask/MetamaskConnector';
+import { metaMask, hooks } from '../connectors/metamask/MetamaskConnector';
 import { useWeb3Context } from 'web3-react';
 // images
 import generalCoin from "/assets/images/coin-general-1.png";
 import { storage } from "utils/storage";
-import { formatAccount, purchaseToken } from '../utils/tokenMint';
+import { formatAccount, purchaseToken } from '../../utils/tokenMint';
 import { Api } from "services/api";
 
-const MintPass = () => {
+type TransactionProcessorProps = {
+  linkId: string,
+  tokenId: string|number
+}
+
+const TransactionProcessor = (props: TransactionProcessorProps) => {
+  const { linkId, tokenId } = props;
   const { useAccounts } = hooks;
 
   const context = useWeb3Context();
@@ -42,16 +48,19 @@ const MintPass = () => {
   const getTxnStatus = async (txHash: string)=>{
     const response = await Api.getTransactionReceipt(txHash);
     if(response.result.isError==='0'){
-      setPurchaseState(PurchaseProcessingCard_states.success);
       clearInterval(handler);
-      // TODO: call API to update invitation
+      debugger;
+      const updateStatus = await Api.updateInvite(linkId, {status: 2});
+      if(updateStatus.success) {
+        setPurchaseState(PurchaseProcessingCard_states.success);
+      }
     }else {
       setPurchaseState(PurchaseProcessingCard_states.fail);
     }
   }
 
   const startTxn = async ()=>{
-    const txnHash = await purchaseToken(assetId);
+    const txnHash = await purchaseToken(tokenId);
     handler = setInterval(() => getTxnStatus(txnHash), 5000);
   }
 
@@ -68,11 +77,6 @@ const MintPass = () => {
   }
 
   useEffect(() => {
-    const tokenDetails = storage.get(TOKEN_DETAILS);
-    if(tokenDetails){
-      const tokenObj = JSON.parse(tokenDetails);
-      setAssetId(tokenObj.tokenId);
-    }
     mint();
   }, []);
 
@@ -110,4 +114,4 @@ const MintPass = () => {
   );
 };
 
-export default MintPass;
+export default TransactionProcessor;

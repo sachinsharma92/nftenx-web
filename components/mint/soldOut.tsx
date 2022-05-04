@@ -1,7 +1,15 @@
 import { ButtonOutline } from "components/atoms/ButtonOutline";
 import { LogoGradient } from "components/common/logoGradient";
 
-const SoldOutComponent = (props: Record<string, any>) => {
+type MintSoldOutProps = {
+  name?: string;
+  type?: string;
+  sold?: number;
+  total?: number;
+}
+
+const SoldOutComponent = (props: MintSoldOutProps) => {
+  const {name='Cohort 1', sold=33, total=100, type='founder'} = props;
   return (
     <section className="sold-out-component">
       <LogoGradient />
@@ -9,15 +17,15 @@ const SoldOutComponent = (props: Record<string, any>) => {
         <div className="image-style" />
         <div className="content-section">
           <div className="text-center">
-            <h1 className="title1 text-gradient">Cohort 1: Sold Out</h1>
-            <div className="card">
+            <h1 className="title1 text-gradient">{name}: Sold Out</h1>
+            <div className="card flex-col">
               <div className="dotted-icon">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
-              <div className="text-focus"><span className="text-glow">33</span> <span>/ 100</span></div>
-              <p className="description light">Cohort1: Founders’ passes Sold out</p>
+              <div className="text-focus"><span className="text-glow">{sold}</span> <span>/ {total}</span></div>
+              <p className="description light">{name}: {type}&apos; passes Sold out</p>
               <div className="divider"></div>
               <p className="description">Enter your email to join <br /> our waitlist:</p>
               <div className="highlighted">john@nf10x.com</div>

@@ -12,13 +12,13 @@ const LinkExpiredComponent = (props: Record<string, any>) => {
         <div className="image-style" />
         <div className="content-section">
           <div className="text-center">
-            <div className="card">
+            <div className="card flex-col">
               <div className="dotted-icon">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
-              
+
               <Image src={AlertIcon} alt="warning icon"/>
               <p className="live-text mt-3">The Link You Have Followed <br /> Has Expired</p>
               <div className="divider"></div>

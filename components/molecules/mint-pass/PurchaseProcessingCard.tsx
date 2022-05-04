@@ -8,6 +8,9 @@ import {
 } from "assets/icons";
 import { A, H1 } from "components/atoms";
 import { TOKEN_TYPE } from "constants/globalConstants";
+import DiscordIcon from "../../../assets/icons/discord.svg";
+import Image from "next/image";
+import { DISCORD_LINK } from "constants/sidebar";
 
 export enum PurchaseProcessingCard_states {
   "processing",
@@ -56,10 +59,13 @@ export const PurchaseProcessingCard = (props: PropType) => {
       // animateIcon: <TickCircleGreen className="w-full" />,
       linkTitle: (
         <>
-          Join the Waitlist <RightArrowSecondary className="inline" />
+        <div className="flex items-center gap-2">
+          <span>Go to discord</span>
+          <Image src={DiscordIcon} alt="discord-icon"/>
+        </div>
         </>
       ),
-      linkHref: "/join",
+      linkHref: DISCORD_LINK,
     },
     [PurchaseProcessingCard_states.fail]: {
       title: "PURCHASE UNSUCCESSFUL",
