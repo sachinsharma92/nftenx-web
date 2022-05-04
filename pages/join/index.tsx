@@ -6,11 +6,13 @@ import JoinHeroSection from "components/joinHeroSection";
 import JoinNextComponent from "components/joinNext";
 import OurMintingComponent from "components/ourMinting";
 import UpcomingComponent from "components/upcoming";
+import { Seo } from 'components/atoms';
 
 
 const JoinPage = (props: Record<string, any>) => {
   return (
     <main className="join-page-style main-bg">
+      <Seo title="Join waitlist"/>
       <JoinHeroSection />
       <UpcomingComponent />
       <OurMintingComponent />

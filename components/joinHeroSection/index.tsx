@@ -5,8 +5,11 @@ import Image from "next/image";
 import { LogoGradient } from "components/common/logoGradient";
 import { Api } from "services/api";
 import ArrowNext from "../../assets/icons/arrow-next.svg"
+import CustomToast from "components/atoms/Toast";
+import { useState } from "react";
 
 const JoinHeroSection = (props: Record<string, any>) => {
+  const [show, setShow] = useState(false);
 
   const joinWaitlist = async (event: any) => {
     event.preventDefault();
@@ -15,12 +18,14 @@ const JoinHeroSection = (props: Record<string, any>) => {
     }
     const response = await Api.joinTheWaitlist(payload);
     if(response.success) {
-      alert('User created!');
+      setShow(true);
     }
   }
+
   return (
     <section className="join-hero-section">
       <LogoGradient/>
+      <CustomToast show={show} content={'Added successfully'} onClose={()=>setShow(false)}/>
       <div className="flex-sec">
         <div className="image-style" />
         <div className="content-section">
