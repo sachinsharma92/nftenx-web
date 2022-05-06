@@ -3,7 +3,7 @@ services:
   frontend:
     build: .
     ports:
-      - '3004:3000'
+      - '3004:3004'
       - '9229:9229'
     volumes:
       - /app/node_modules
