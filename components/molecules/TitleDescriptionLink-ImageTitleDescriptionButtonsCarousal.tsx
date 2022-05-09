@@ -57,7 +57,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                 />
               )}
               {element.title && (
-                <H4 className="z-[1] lg:group-hover:opacity-0 transition-all lg:group-hover:-translate-y-9 text-secondary-2">
+                <H4 className="z-[1] lg:group-hover:opacity-0 transition-all lg:group-hover:-translate-y-9 text-secondary-1">
                   {element.title as string}
                 </H4>
               )}

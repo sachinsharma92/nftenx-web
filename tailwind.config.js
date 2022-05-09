@@ -55,8 +55,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        "heading-serif": ["reckless", "sans-serif"],
-        "mono": ["Roboto Mono", "sans-serif"],
+        "heading-serif": ["reckless", "Recife", "serif"],
+        "recife": ["Recife", "serif"],
+        "reckless": ["reckless", "serif"],
+        "mono": ["Roboto Mono", "mono"],
       },
     },
   },
