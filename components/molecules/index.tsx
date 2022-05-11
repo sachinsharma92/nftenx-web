@@ -11,3 +11,4 @@ export * from './TitlesDescriptionButtonHero';
 export * from './ImageTitleDescriptionLinkHero';
 export * from './FAQSection';
 export * from './mint-pass';
+export * from './join-waitlist';
