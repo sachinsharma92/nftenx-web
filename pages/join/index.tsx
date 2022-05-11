@@ -1,6 +1,13 @@
 import { Seo } from "components/atoms";
 import { useState } from "react";
-import { EmailJoinSection, JoinSuccess } from "components/molecules";
+import {
+  EmailJoinSection,
+  FAQSection,
+  JoinSuccess,
+  MultipleImgTitleDescriptionSection,
+} from "components/molecules";
+
+import { section4, section5 } from "constants/joinPage";
 
 const JoinPage = (props: Record<string, any>) => {
   const [addedToWaitlist, setAddedToWaitlist] = useState(false);
@@ -23,8 +30,8 @@ const JoinPage = (props: Record<string, any>) => {
 
       {addedToWaitlist ? (
         <JoinSuccess
-          // type="event-available"
-          // timeTillMint={new Date("Wed May 20 2022 01:17:46 GMT+0530")}
+        // type="event-available"
+        // timeTillMint={new Date("Wed May 20 2022 01:17:46 GMT+0530")}
         />
       ) : (
         <EmailJoinSection
@@ -35,6 +42,17 @@ const JoinPage = (props: Record<string, any>) => {
           }}
         />
       )}
+
+      <MultipleImgTitleDescriptionSection
+        mainSection={{
+          title: section4.title,
+          description:
+            section4.description,
+        }}
+        items={section4.items}
+      />
+
+      <FAQSection title={section5.title} items={section5.items} />
 
       {/* {addedToWaitlist? <ElligibleComponent/>: <JoinHeroSection onSuccess={(status: boolean)=>{
         setAddedToWaitlist(status);

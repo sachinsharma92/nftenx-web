@@ -21,7 +21,6 @@ import {
   section12,
   section2,
   section3,
-  section4,
   section6,
   section7,
   section8,
