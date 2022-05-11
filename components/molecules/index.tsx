@@ -12,3 +12,4 @@ export * from './ImageTitleDescriptionLinkHero';
 export * from './FAQSection';
 export * from './mint-pass';
 export * from './join-waitlist';
+export * from './LeftImage-RightTitleDescription-ImageTitleDescriptionItems';

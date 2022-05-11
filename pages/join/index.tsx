@@ -4,10 +4,11 @@ import {
   EmailJoinSection,
   FAQSection,
   JoinSuccess,
+  LeftImage_RightTitleDescription_ImageTitleDescriptionItems,
   MultipleImgTitleDescriptionSection,
 } from "components/molecules";
 
-import { section4, section5 } from "constants/joinPage";
+import { section3, section4, section5 } from "constants/joinPage";
 
 const JoinPage = (props: Record<string, any>) => {
   const [addedToWaitlist, setAddedToWaitlist] = useState(false);
@@ -43,11 +44,17 @@ const JoinPage = (props: Record<string, any>) => {
         />
       )}
 
+      <LeftImage_RightTitleDescription_ImageTitleDescriptionItems
+        title={section3.title}
+        description={section3.description}
+        image={section3.image}
+        items={section3.items}
+      />
+
       <MultipleImgTitleDescriptionSection
         mainSection={{
           title: section4.title,
-          description:
-            section4.description,
+          description: section4.description,
         }}
         items={section4.items}
       />
