@@ -90,6 +90,7 @@ const Home: NextPage = () => {
         <ImageTitleDescriptionLinkHero
           title={section12.title}
           description={section12.description}
+          image={section12.image}
           linkHref={section12.linkHref}
           linkTitle={
             <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">

@@ -19,7 +19,7 @@ export const JoinTheCommunity = (props: any) => {
     }
 
   return (
-      <article className="p-section lg:py-32">
+      <article className="p-section lg:py-32 overflow-x-hidden">
         <H1 className="text-center mb-10">Join the Community</H1>
         <P className="mb-10 font-mono text-primary-light">
             <>

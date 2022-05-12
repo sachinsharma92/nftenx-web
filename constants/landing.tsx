@@ -488,6 +488,7 @@ export const section11 = {
 
 export const section12 = {
   title: "Join the next wave of web3",
+  image: logo3d.src,
   description:
     "Subsribe to our newsletter to receive weekly updates. We usually start with some updates from the community, what has been going on the inside.",
   linkHref: "/join",

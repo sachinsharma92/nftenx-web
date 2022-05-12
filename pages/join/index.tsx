@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
   EmailJoinSection,
   FAQSection,
+  ImageTitleDescriptionLinkHero,
   JoinSuccess,
   LeftImage_RightTitleDescription_ImageTitleDescriptionItems,
   MultipleImgTitleDescriptionSection,
@@ -10,6 +11,8 @@ import {
 } from "components/molecules";
 
 import { section2, section3, section4, section5 } from "constants/joinPage";
+import { section12 } from "constants/landing";
+import { RightArrowSecondary } from "assets/icons";
 
 const JoinPage = (props: Record<string, any>) => {
   const [addedToWaitlist, setAddedToWaitlist] = useState(false);
@@ -67,6 +70,21 @@ const JoinPage = (props: Record<string, any>) => {
       />
 
       <FAQSection title={section5.title} items={section5.items} />
+
+      <ImageTitleDescriptionLinkHero
+          title={section12.title}
+          description={section12.description}
+          linkHref={section12.linkHref}
+          image={section12.image}
+          linkTitle={
+            <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
+              Join the Community
+              <span role="img" className="transition-all pl-2 group-hover:pl-5">
+                <RightArrowSecondary className="h-10 w-auto" />
+              </span>
+            </span>
+          }
+        />
 
       {/* {addedToWaitlist? <ElligibleComponent/>: <JoinHeroSection onSuccess={(status: boolean)=>{
         setAddedToWaitlist(status);
