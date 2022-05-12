@@ -49,7 +49,6 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
     const response = await Api.getTransactionReceipt(txHash);
     if(response.result.isError==='0'){
       clearInterval(handler);
-      debugger;
       const updateStatus = await Api.updateInvite(linkId, {status: 2});
       if(updateStatus.success) {
         setPurchaseState(PurchaseProcessingCard_states.success);

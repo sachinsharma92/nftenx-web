@@ -1,5 +1,4 @@
 import { Logo, MenuSecondary } from "assets/icons";
-import { WalletConnectModal } from "components/walletConnectModal/walletConnectModal";
 import { METAMASK_CONSTANTS } from "constants/globalConstants";
 import { extraLinks, navLinks } from "constants/header";
 import Link from "next/link";
@@ -7,24 +6,27 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from 'react'
 import { storage } from "utils/storage";
 import { formatAccount } from "utils/tokenMint";
-import { hooks } from '../connectors/metamask/MetamaskConnector';
+import { hooks, metaMask } from '../connectors/metamask/MetamaskConnector';
+import { useWeb3Context } from 'web3-react';
 
 export const Header = () => {
   const router = useRouter();
   const activeRoute = router.pathname.split("/")[1];
-  const [showWalletConnectModal, setShowWalletConnectModal] = useState<Boolean | undefined>(false)
   const [account, setAccount] = useState<string>('');
   const { useAccounts } = hooks;
-  const accounts = useAccounts()
+  const accounts = useAccounts();
+  const context = useWeb3Context();
 
-  const connectWalletHandler = ()=>{
-    setShowWalletConnectModal(true)
+
+  const connectWalletHandler = () => {
+    void metaMask.connectEagerly();
+    context.setFirstValidConnector(['MetaMask', 'Infura']);
   }
-  // const headerBg = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if(accounts){
       setAccount(accounts[0]);
+      storage.set(METAMASK_CONSTANTS.ADDRESS, accounts[0]);
     }
   }, [accounts]);
 
@@ -89,10 +91,6 @@ export const Header = () => {
         </li>
       </ul>
 
-      <WalletConnectModal
-        setShowModal={setShowWalletConnectModal}
-        showModal={showWalletConnectModal}
-      />
     </header>
   );
 };
