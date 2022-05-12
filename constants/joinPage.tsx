@@ -21,6 +21,38 @@ export const section2 = {
       linkTitle: "Know More",
       linkHref: "/events",
     },
+    {
+      title: "Fireside Chat",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+      image: userImage.src,
+      linkTitle: "Know More",
+      linkHref: "/events",
+    },
+    {
+      title: "Fireside Chat",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+      image: userImage.src,
+      linkTitle: "Know More",
+      linkHref: "/events",
+    },
+    {
+      title: "Fireside Chat",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+      image: userImage.src,
+      linkTitle: "Know More",
+      linkHref: "/events",
+    },
+    {
+      title: "Fireside Chat",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+      image: userImage.src,
+      linkTitle: "Know More",
+      linkHref: "/events",
+    },
   ],
 };
 

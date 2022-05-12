@@ -20,7 +20,7 @@ export const TitleDescription_TitleDescriptionImageCardCarousal = (
           {props.description}
         </p>
       </div>
-      <div className="-px-section pl-6 lg:pl-32 flex flex-row flex-nowrap overflow-x-auto no-scrollbar">
+      <div className="-px-section pl-6 lg:px-32 flex flex-row flex-nowrap overflow-x-auto styled-scrollbar mt-16 gap-8 py-5">
         {props.items?.map((element, index) => {
           return (
             <div
