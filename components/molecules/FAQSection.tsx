@@ -1,9 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import { H1, H3, H4 } from "components/atoms";
-import { useCallback, useState } from "react";
+import { useState } from "react";
+import leftBlob from 'assets/images/illustrations/green-blue-light-blob-to-bottom-right.png';
+
 
 type PropTypes = {
   title?: string;
   items?: ReadonlyArray<Record<string, string | JSX.Element>>;
+  gradient?: boolean
 };
 export const FAQSection = (props: PropTypes) => {
 
@@ -16,6 +20,8 @@ export const FAQSection = (props: PropTypes) => {
 
   return (
     <article className="relative p-section lg:py-32 w-full text-secondary-1 flex flex-col lg:flex-row gap-10 lg:gap-4">
+      {props.gradient && <img src={leftBlob.src} alt="blob" className="absolute -top-[100px] lg:-top-[500px] left-0 -px-section" />}
+
       {props.title && (
         <div className="lg:w-2/5 shrink-0">
           <H1>{props.title}</H1>

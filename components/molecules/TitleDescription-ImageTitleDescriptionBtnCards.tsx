@@ -3,6 +3,9 @@ import { H1 } from "components/atoms";
 import React, { MouseEventHandler } from "react";
 import moment from "moment";
 
+import leftBlob from 'assets/images/illustrations/green-blue-light-blob-to-bottom-right.png';
+import rightBlob from 'assets/images/illustrations/blue-blob-to-bottom-left.png';
+
 type PropTypes = {
   title?: string | JSX.Element;
   description?: string | JSX.Element;
@@ -83,6 +86,9 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
 
   return (
     <article className="relative p-section py-14 lg:py-28 text-secondary-1 flex flex-col gap-8 justify-center items-center min-h-screen overflow-x-hidden">
+      <img src={leftBlob.src} alt="blob" className="absolute -top-[100px] lg:-top-[500px] left-0 -px-section" />
+      <img src={rightBlob.src} alt="blob" className="absolute top-[100px] lg:-top-[300px] right-0 -px-section" />
+      
       <div className="lg:w-3/5">
         {props.title && <H1 className="text-center">{props.title}</H1>}
         {props.description && (

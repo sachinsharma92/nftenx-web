@@ -88,6 +88,7 @@ const Home: NextPage = (props: any) => {
         <FAQSection
           title={section11.title}
           items={section11.items}
+          gradient
         />
         <ImageTitleDescriptionLinkHero
           title={section12.title}

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import leftBlobImg from '/assets/images/primary-1-secondary-2-blur-blog-2.png';
-import rightBlobImg from '/assets/images/primary-1-secondary-2-blur-blog-1.png';
+import leftBlobImg from 'assets/images/illustrations/green-blue-blob-to-bottom-right.png';
+import rightBlobImg from 'assets/images/illustrations/blue-blob-to-top-left.png';
 import { A, H1 } from 'components/atoms';
 
 type PropTypes = {
@@ -17,8 +17,8 @@ const TitlesDescriptionButtonHero = (props: PropTypes) => {
     <img src={rightBlobImg.src} alt="grafient blob" className="absolute top-0 h-full right-0" />
     <div className="lg:w-2/3 flex flex-col gap-2 text-center justify-center items-center">
       {props.title && <H1>{props.title}</H1>}
-      {props.subtitle && <H1 className='text-secondary-2'>{props.subtitle}</H1>}
-      {props.description && <p className='text-secondary-2 font-moni'>{props.description}</p>}
+      {props.subtitle && <H1 className=''>{props.subtitle}</H1>}
+      {props.description && <p className='text-primary-light font-mono'>{props.description}</p>}
       {props.linkTitle && <A passHref href={props.linkHref ?? 'javascript:void(0)'} className="mt-6 text-secondary-1"><a className='text-secondary-1'>{props.linkTitle}</a></A>}
     </div>
   </article>
