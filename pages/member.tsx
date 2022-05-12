@@ -79,7 +79,7 @@ const Member: NextPage = (props: any) => {
           linkHref={section7.linkHref}
           items={mentors}
         />
-        <FAQSection title={section11.title} items={section11.items} />
+        <FAQSection title={section11.title} items={section11.items} gradient />
       </WithSidebar>
     </main>
   );
