@@ -5,3 +5,5 @@ export * from './GenericModal'
 export * from './Button'
 export * from './P';
 export * from './Loader';
+export * from  './Layouts';
+export * from './Input';
