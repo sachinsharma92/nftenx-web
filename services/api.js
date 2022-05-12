@@ -21,5 +21,11 @@ export const Api = {
     },
     updateInvite(id, data) {
         return AdminApi.call(`/api/v1/invitation/${id}`, 'PUT', { data });
+    },
+    getMentors() {
+        return AdminApi.call(`/api/v1/mentor`, 'GET');
+    },
+    getEvents() {
+        return AdminApi.call(`/api/v1/event`, 'GET');
     }
 }

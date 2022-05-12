@@ -28,8 +28,10 @@ import {
   section9,
 } from "constants/landing";
 import type { NextPage } from "next";
+import { Api } from "../services/api";
 
-const Home: NextPage = () => {
+const Home: NextPage = (props: any) => {
+  const { mentors = [], events = [] } = props;
   return (
     <main className="bg-primary-1 min-h-screen">
       <Seo title="Home" />
@@ -69,12 +71,13 @@ const Home: NextPage = () => {
           description={section7.description}
           linkTitle={section7.linkTitle}
           linkHref={section7.linkHref}
-          items={section7.items}
+          items={mentors}
         />
         <InfiniteScroller items={section8} />
         <TitleDescription_ImageTitleDescriptionBtnCards
           title={section9.title}
           description={section9.description}
+          // items={events}
           items={section9.items}
         />
         <TitlesButtonHero
@@ -104,6 +107,29 @@ const Home: NextPage = () => {
       </WithSidebar>
     </main>
   );
+};
+
+export const getServerSideProps = async (ctx: any) => {
+  const mentorsResponse = await Api.getMentors();
+  const eventsResponse = await Api.getEvents();
+
+  let propsResponse = {};
+
+  if(mentorsResponse.success) {
+    propsResponse = {
+      ...propsResponse,
+      mentors: mentorsResponse.data.results
+    };
+  }
+  if(eventsResponse.success) {
+    propsResponse = {
+      ...propsResponse,
+      events: eventsResponse.data.results
+    };
+  }
+  return {
+      props: propsResponse,
+  };
 };
 
 export default Home;
