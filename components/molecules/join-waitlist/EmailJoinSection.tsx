@@ -29,7 +29,8 @@ export const EmailJoinSection = (props: PropType) => {
     }else {
       setShow(true);
       setTitle('Error');
-      setContent('');
+      // TODO: change this message according to the message received from the API
+      setContent('Email already in the waitlist');
     }
   }
 
