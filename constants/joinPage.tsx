@@ -6,6 +6,23 @@ import generalCoin from "assets/images/coin-general.png";
 import accessIcon from "assets/icons/access.svg";
 import immersionIcon from "assets/icons/immersion.svg";
 import insightIcon from "assets/icons/insights.svg";
+import userImage from "assets/images/user-image.jpeg";
+
+export const section2 = {
+  title: "Upcoming this month",
+  description:
+    "Web3 is more than a sprouting new industry. It’s a re-architecting of the internet. New, unthought-of companies will emerge.",
+  items: [
+    {
+      title: "Fireside Chat",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+      image: userImage.src,
+      linkTitle: "Know More",
+      linkHref: "/events",
+    },
+  ],
+};
 
 export const section3 = {
   title: "Our minting process",

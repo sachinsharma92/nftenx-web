@@ -6,9 +6,10 @@ import {
   JoinSuccess,
   LeftImage_RightTitleDescription_ImageTitleDescriptionItems,
   MultipleImgTitleDescriptionSection,
+  TitleDescription_TitleDescriptionImageCardCarousal,
 } from "components/molecules";
 
-import { section3, section4, section5 } from "constants/joinPage";
+import { section2, section3, section4, section5 } from "constants/joinPage";
 
 const JoinPage = (props: Record<string, any>) => {
   const [addedToWaitlist, setAddedToWaitlist] = useState(false);
@@ -43,6 +44,12 @@ const JoinPage = (props: Record<string, any>) => {
           }}
         />
       )}
+
+      <TitleDescription_TitleDescriptionImageCardCarousal
+        title={section2.title}
+        description={section2.description}
+        items={section2.items}
+      />
 
       <LeftImage_RightTitleDescription_ImageTitleDescriptionItems
         title={section3.title}
