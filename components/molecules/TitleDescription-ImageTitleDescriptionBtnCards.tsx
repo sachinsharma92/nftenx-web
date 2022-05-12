@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { H1 } from "components/atoms";
 import React, { MouseEventHandler } from "react";
+import moment from 'moment';
 
 type PropTypes = {
   title?: string | JSX.Element;
@@ -37,16 +38,22 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
     >
   ) => {
     return <div className="shrink-0 w-72 lg:w-72 3xl:w-96 bg-[#bbc3da] bg-opacity-5 backdrop-blur-md p-5 border-secondary-1 border-opacity-10 border-[1px] rounded-3xl flex flex-col gap-2 items-center">
-      {element.image && (
+      {element.eventImage && (
         <img
-          src={element.image as string}
-          alt={(element.description as string) ?? "NF10X event"}
-          className="w-full h-auto"
+          src={element.eventImage.mediaUrl as string}
+          alt={(element.title as string) ?? "NF10X event"}
+          className="w-full h-auto  max-h-[200px]"
         />
       )}
-      {element.description && (
+      {element.title && (
         <p className="-mt-8 font-mono text-primary-light text-center">
-          {element.description}
+          <>
+          {element.title} by
+          <br />
+          {element.hostedBy}
+          <br />
+          {moment(element.eventDate).format('DD MMM')}
+        </>
         </p>
       )}
       {element.buttonTitle && (
