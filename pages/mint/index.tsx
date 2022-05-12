@@ -62,7 +62,6 @@ export const getServerSideProps = async (ctx: any) => {
   const invitationId = query.linkId;
 
   const response = await Api.validateEmailLink(invitationId);
-  console.log("🚀 ~ file: index.tsx ~ line 66 ~ getServerSideProps ~ response", response)
 
   if(response.success) {
     return {

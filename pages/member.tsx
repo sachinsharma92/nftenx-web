@@ -7,8 +7,10 @@ import {
 import { TitleDescriotion_DateTitleDesctiptionElements } from "components/molecules/TitleDescriotion-DateTitleDesctiptionElements";
 import { section11, section7 } from "constants/landing";
 import { NextPage } from "next";
+import { Api } from "services/api";
 
-const Member: NextPage = () => {
+const Member: NextPage = (props: any) => {
+  const { mentors = [], events = [] } = props;
   return (
     <main className="bg-primary-1 min-h-screen">
       <Seo title="Member's Page" />
@@ -75,7 +77,7 @@ const Member: NextPage = () => {
           description={section7.description}
           linkTitle={section7.linkTitle}
           linkHref={section7.linkHref}
-          items={section7.items}
+          items={mentors}
         />
         <FAQSection title={section11.title} items={section11.items} />
       </WithSidebar>
@@ -84,3 +86,26 @@ const Member: NextPage = () => {
 };
 
 export default Member;
+
+export const getServerSideProps = async (ctx: any) => {
+  const mentorsResponse = await Api.getMentors();
+  const eventsResponse = await Api.getEvents();
+
+  let propsResponse = {};
+
+  if(mentorsResponse.success) {
+    propsResponse = {
+      ...propsResponse,
+      mentors: mentorsResponse.data.results
+    };
+  }
+  if(eventsResponse.success) {
+    propsResponse = {
+      ...propsResponse,
+      events: eventsResponse.data.results
+    };
+  }
+  return {
+      props: propsResponse,
+  };
+};

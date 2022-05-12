@@ -2,6 +2,8 @@
 import { H1, H2, H3 } from "components/atoms";
 // import gsap from "gsap";
 // import { useEffect } from "react";
+import blobImg from 'assets/images/illustrations/green-blue-blob-to-right.png';
+
 
 type PropType = {
   mainSection?: Record<string, JSX.Element | string>;
@@ -13,8 +15,10 @@ export const MultipleImgTitleDescriptionSection = (props: PropType) => {
     <article className="MultipleImgTitleDescriptionSection relative p-section lg:py-32 w-full min-h-screen flex flex-col lg:flex-row lg:justify-between text-secondary-1">
       <div className="order-1 lg:w-[50%]">
         <div className="lg:sticky top-16 mb-12">
+        <img src={blobImg.src} alt="blob" className="absolute -top-20 w-[700px] opacity-80 h-[1000px] -px-section" />
           {props.mainSection?.image && (
-            <div className="relative block after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:bg-gradient-to-t after:from-primary-1 after:via-primary-1 after:to-transparent">
+            <div className="relative block">
+              {/* after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-[30%] after:bg-gradient-to-t after:from-primary-1 after:via-primary-1 after:to-transparent */}
               <img
                 className="w-full h-auto"
                 src={props.mainSection?.image as string}
@@ -52,9 +56,9 @@ export const MultipleImgTitleDescriptionSection = (props: PropType) => {
                     alt="image"
                   />
                 )}
-                {element.title && <H2>{element.title}</H2>}
+                {element.title && <H3>{element.title}</H3>}
                 {element.description && (
-                  <p className="font-mono text-primary-light-2 text-opacity-70 pt-4">
+                  <p className="font-mono text-primary-light-2 text-opacity-70 pt-4 text-sm">
                     {element.description}
                   </p>
                 )}

@@ -29,6 +29,7 @@ module.exports = {
         },
         accent: "#4B1C56",
         teal: "#1C4856",
+        voilet1: '#A07CFF',
       },
       animation: {
         "spin-slow": "spin 5s linear infinite",

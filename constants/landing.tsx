@@ -441,7 +441,7 @@ export const section9 = {
 export const section10 = {
   title: "Join the waitlist Now!",
   subtitle: "All waitlisted members get free access to the first three events.",
-  linkTitle: "Join the Community",
+  linkTitle: <span className="flex">Join the Community <RightArrowSecondary /></span>,
   linkHref: "/join",
 };
 
@@ -488,6 +488,7 @@ export const section11 = {
 
 export const section12 = {
   title: "Join the next wave of web3",
+  image: logo3d.src,
   description:
     "Subsribe to our newsletter to receive weekly updates. We usually start with some updates from the community, what has been going on the inside.",
   linkHref: "/join",

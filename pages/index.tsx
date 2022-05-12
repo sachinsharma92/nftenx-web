@@ -21,15 +21,16 @@ import {
   section12,
   section2,
   section3,
-  section4,
   section6,
   section7,
   section8,
   section9,
 } from "constants/landing";
 import type { NextPage } from "next";
+import { Api } from "../services/api";
 
-const Home: NextPage = () => {
+const Home: NextPage = (props: any) => {
+  const { mentors = [], events = [] } = props;
   return (
     <main className="bg-primary-1 min-h-screen">
       <Seo title="Home" />
@@ -69,13 +70,13 @@ const Home: NextPage = () => {
           description={section7.description}
           linkTitle={section7.linkTitle}
           linkHref={section7.linkHref}
-          items={section7.items}
+          items={mentors}
         />
         <InfiniteScroller items={section8} />
         <TitleDescription_ImageTitleDescriptionBtnCards
           title={section9.title}
           description={section9.description}
-          items={section9.items}
+          items={events}
         />
         <TitlesButtonHero
           title={section10.title}
@@ -87,10 +88,12 @@ const Home: NextPage = () => {
         <FAQSection
           title={section11.title}
           items={section11.items}
+          gradient
         />
         <ImageTitleDescriptionLinkHero
           title={section12.title}
           description={section12.description}
+          image={section12.image}
           linkHref={section12.linkHref}
           linkTitle={
             <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
@@ -104,6 +107,29 @@ const Home: NextPage = () => {
       </WithSidebar>
     </main>
   );
+};
+
+export const getServerSideProps = async (ctx: any) => {
+  const mentorsResponse = await Api.getMentors();
+  const eventsResponse = await Api.getEvents();
+
+  let propsResponse = {};
+
+  if(mentorsResponse.success) {
+    propsResponse = {
+      ...propsResponse,
+      mentors: mentorsResponse.data.results
+    };
+  }
+  if(eventsResponse.success) {
+    propsResponse = {
+      ...propsResponse,
+      events: eventsResponse.data.results
+    };
+  }
+  return {
+      props: propsResponse,
+  };
 };
 
 export default Home;
