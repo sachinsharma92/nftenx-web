@@ -77,8 +77,7 @@ const Home: NextPage = (props: any) => {
         <TitleDescription_ImageTitleDescriptionBtnCards
           title={section9.title}
           description={section9.description}
-          // items={events}
-          items={section9.items}
+          items={events}
         />
         <TitlesButtonHero
           title={section10.title}
