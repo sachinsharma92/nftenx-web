@@ -10,13 +10,29 @@ import { TitleDescriotion_DateTitleDesctiptionElements } from "components/molecu
 import { section11, section12, section7 } from "constants/landing";
 import { NextPage } from "next";
 import { Api } from "services/api";
-
+import moment from "moment";
 // images - remove
 import userImage from "assets/images/user-image.jpeg";
 import { RightArrowSecondary } from "assets/icons";
 
 const Member: NextPage = (props: any) => {
   const { mentors = [], events = [] } = props;
+
+  const getEventsRestructured=()=>{
+    return events.map((event: any)=>{
+      return {
+          date: {
+            day: moment(event.eventDate).format("DD"),
+            month: moment(event.eventDate).format("MMMM"),
+            time: moment(event.eventTime).format("LT"),
+          },
+          title: event.title,
+          description:
+            event.description,
+        }
+    })
+  }
+
   return (
     <main className="bg-primary-1 min-h-screen">
       <Seo title="Member's Page" />
@@ -39,58 +55,7 @@ const Member: NextPage = (props: any) => {
         <TitleDescriotion_DateTitleDesctiptionElements
           title="Programmes this month"
           description="Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to harness this once-in-a-decade."
-          items={[
-            {
-              date: {
-                day: "2",
-                month: "JULY",
-                time: "09:00 am IST",
-              },
-              title: "Fireside Chats",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit a",
-            },
-            {
-              date: {
-                day: "2",
-                month: "JULY",
-                time: "09:00 am IST",
-              },
-              title: "Fireside Chats",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit a",
-            },
-            {
-              date: {
-                day: "2",
-                month: "JULY",
-                time: "09:00 am IST",
-              },
-              title: "Fireside Chats",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit a",
-            },
-            {
-              date: {
-                day: "2",
-                month: "JULY",
-                time: "09:00 am IST",
-              },
-              title: "Fireside Chats",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit a",
-            },
-            {
-              date: {
-                day: "2",
-                month: "JULY",
-                time: "09:00 am IST",
-              },
-              title: "Fireside Chats",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit a",
-            },
-          ]}
+          items={getEventsRestructured()}
         />
         <TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal
           title={section7.title}
