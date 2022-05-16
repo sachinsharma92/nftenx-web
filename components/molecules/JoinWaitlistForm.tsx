@@ -17,7 +17,7 @@ export const JoinWaitlistForm = (props: PropType) => {
 
   useEffect(() => {
     if (props.onChange) {
-      props.onChange({fshow: show, ftitle: title, fcontent: content});
+      props.onChange({ fshow: show, ftitle: title, fcontent: content });
     }
   }, [show, title, content]);
 
@@ -39,9 +39,12 @@ export const JoinWaitlistForm = (props: PropType) => {
   return (
     <form
       onSubmit={joinWaitlist}
-      className={`flex flex-col ${props.layout != 'vertical' ? 'md:flex-row' : ''}  gap-4 mt-16`}
+      className={`flex flex-col ${
+        props.layout != "vertical" ? "md:flex-row" : ""
+      }  gap-4 mt-16`}
     >
       <PrimaryInput
+        styletype={props.type == "secondary" ? "transparent" : undefined}
         name="email"
         type="email"
         placeholder="Enter Your Email"
@@ -49,7 +52,7 @@ export const JoinWaitlistForm = (props: PropType) => {
       />
       <Button
         type="submit"
-        className="bg-white bg-opacity-5 border-[1px] border-white border-opacity-20 flex flex-row w-auto group"
+        className="bg-white bg-opacity-5 border-[1px] border-white border-opacity-20 flex flex-row w-auto group self-center"
       >
         <>
           Join Waitlist{" "}

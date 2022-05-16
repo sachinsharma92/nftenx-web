@@ -62,7 +62,7 @@ export const EmailJoinSection = (props: PropType) => {
         </p>
       </div>
 
-      <JoinWaitlistForm onChange={onFormChange} onSuccess={props.onSuccess} />
+      <JoinWaitlistForm onChange={onFormChange} onSuccess={props.onSuccess} type="secondary" layout="vertical" />
     </ArticleCetered>
   );
 };
