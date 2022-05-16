@@ -27,5 +27,8 @@ export const Api = {
     },
     getEvents(type = '') {
         return AdminApi.call(`/api/v1/event?type=${type}`, 'GET');
+    },
+    postSuccess(invitationId, txnHash='') {
+        return AdminApi.call(`/api/v1/invitation/${invitationId}/on-complete`, 'POST', { data: { txnHash } });
     }
 }

@@ -51,7 +51,10 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
       clearInterval(handler);
       const updateStatus = await Api.updateInvite(linkId, {status: 2});
       if(updateStatus.success) {
-        setPurchaseState(PurchaseProcessingCard_states.success);
+        const postSuccessResponse = await Api.postSuccess(linkId, txHash);
+        if(postSuccessResponse.success){
+          setPurchaseState(PurchaseProcessingCard_states.success);
+        }
       }
     }else {
       setPurchaseState(PurchaseProcessingCard_states.fail);
