@@ -1,7 +1,8 @@
-import { Seo } from "components/atoms";
+import { Seo, ToggleButtons } from "components/atoms";
 import { Header, WithSidebar } from "components/common";
 import {
   FAQSection,
+  HeadingToggleCards,
   ImageTitleDescriptionLinkHero,
   TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal,
   TitlesDescriptionSingleCardHero,
@@ -14,6 +15,7 @@ import moment from "moment";
 // images - remove
 import userImage from "assets/images/user-image.jpeg";
 import { RightArrowSecondary } from "assets/icons";
+import { ToggleButton } from "react-bootstrap";
 
 const Member: NextPage = (props: any) => {
   const { mentors = [], eventsThisWeek, eventsThisMonth = [] } = props;
@@ -21,17 +23,16 @@ const Member: NextPage = (props: any) => {
   const getEventsRestructured=()=>{
     return (eventsThisMonth || []).map((event: any)=>{
       return {
-          date: {
-            day: moment(event.eventDate).format("DD"),
-            month: moment(event.eventDate).format("MMMM"),
-            time: moment(event.eventTime).format("LT"),
-          },
-          title: event.title,
-          description:
-            event.description,
-        }
-    })
-  }
+        date: {
+          day: moment(event.eventDate).format("DD"),
+          month: moment(event.eventDate).format("MMMM"),
+          time: moment(event.eventTime).format("LT"),
+        },
+        title: event.title,
+        description: event.description,
+      };
+    });
+  };
 
   return (
     <main className="bg-primary-1 min-h-screen">
@@ -63,6 +64,59 @@ const Member: NextPage = (props: any) => {
           linkHref={section7.linkHref}
           items={mentors}
         />
+
+        <HeadingToggleCards
+          title="From the Content Hub"
+          categories={[
+            {
+              title: "TRENDING IN WEB3",
+              value: "trending",
+            },
+            {
+              title: "HOT IN WEB3",
+              value: "hot",
+            },
+            {
+              title: "AWESOME IN WEB3",
+              value: "awesome",
+            },
+          ]}
+          items={[
+            {
+              title: "Design Thinking for Blockchains",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
+              image:
+                "https://images.unsplash.com/photo-1636388951474-d84e2e5bb6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+              href: '/content/1',
+            },
+            {
+              title: "Design Thinking for Blockchains",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
+              image:
+                "https://images.unsplash.com/photo-1636388951474-d84e2e5bb6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+              href: '/content/1',
+            },
+            {
+              title: "Design Thinking for Blockchains",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
+              image:
+                "https://images.unsplash.com/photo-1636388951474-d84e2e5bb6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+              href: '/content/1',
+            },
+            {
+              title: "Design Thinking for Blockchains",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
+              image:
+                "https://images.unsplash.com/photo-1636388951474-d84e2e5bb6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+              href: '/content/1',
+            },
+          ]}
+        />
+
         <FAQSection title={section11.title} items={section11.items} gradient />
 
         <ImageTitleDescriptionLinkHero

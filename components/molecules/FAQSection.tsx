@@ -20,7 +20,7 @@ export const FAQSection = (props: PropTypes) => {
 
   return (
     <article className="relative p-section lg:py-32 w-full text-secondary-1 flex flex-col lg:flex-row gap-10 lg:gap-4">
-      {props.gradient && <img src={leftBlob.src} alt="blob" className="absolute -top-[100px] lg:-top-[500px] left-0 -px-section" />}
+      {props.gradient && <img src={leftBlob.src} alt="blob" className="absolute -top-[100px] lg:-top-[500px] left-0 -px-section pointer-events-none" />}
 
       {props.title && (
         <div className="lg:w-2/5 shrink-0">

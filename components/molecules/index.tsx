@@ -16,3 +16,5 @@ export * from './LeftImage-RightTitleDescription-ImageTitleDescriptionItems';
 export * from './TitleDescription-TitleDescriptionImageCardCarousal';
 export * from './TitlesDescriptionSingleCardHero';
 export * from './JoinWaitlistForm';
+export * from './member';
+
