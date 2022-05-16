@@ -127,6 +127,16 @@
 }
 
 
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/JetBrainsMono/JetBrainsMono.ttf"); /* IE9 Compat Modes */
+  src: url("../assets/fonts/JetBrainsMono/JetBrainsMono.ttf") format('truetype');
+}
+
+
+
+
+
 .font-heading-serif {
   font-family: 'reckless', 'Recife' ,serif !important;
   font-family: reckless, Recife ,serif !important;

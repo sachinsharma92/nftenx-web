@@ -59,7 +59,7 @@ module.exports = {
         "heading-serif": ["reckless", "Recife", "serif"],
         "recife": ["Recife", "serif"],
         "reckless": ["reckless", "serif"],
-        "mono": ["Roboto Mono", "mono"],
+        "mono": ["JetBrains Mono", "mono"],
       },
     },
   },

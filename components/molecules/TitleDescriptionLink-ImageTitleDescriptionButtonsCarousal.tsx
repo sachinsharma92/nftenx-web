@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { TwitterPrimaryLight } from "assets/icons";
+import { GlobePrimary, InstaPrimary, TwitterPrimary } from "assets/icons";
 import { A, H1, H2, H3, H4 } from "components/atoms";
 
 type PropTypes = {
@@ -84,7 +84,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                       }
                       className="p-2 border-[1px] border-primary-light border-opacity-25"
                     >
-                      <TwitterPrimaryLight />
+                      <TwitterPrimary />
                     </A>
                 </div>
               }
@@ -97,7 +97,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                       }
                       className="p-2 border-[1px] border-primary-light border-opacity-25"
                     >
-                      <TwitterPrimaryLight />
+                      <GlobePrimary />
                     </A>
                 </div>
               }
@@ -110,7 +110,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                       }
                       className="p-2 border-[1px] border-primary-light border-opacity-25"
                     >
-                      <TwitterPrimaryLight />
+                      <InstaPrimary />
                     </A>
                 </div>
               }

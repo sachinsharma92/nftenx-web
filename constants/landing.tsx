@@ -1,4 +1,4 @@
-import { RightArrowSecondary, TwitterPrimaryLight } from "assets/icons";
+import { RightArrowSecondary, TwitterPrimary } from "assets/icons";
 import coinBgImage from "../assets/images/coins-bg.png";
 import peopleConected from "../assets/images/people-connected.png";
 import gridGradient from "../assets/images/grid-gradient-bg.png";
@@ -151,7 +151,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],
@@ -164,7 +164,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],
@@ -177,7 +177,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],
@@ -190,7 +190,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],
@@ -203,7 +203,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],
@@ -216,7 +216,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],
@@ -229,7 +229,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],
@@ -242,7 +242,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],
@@ -255,7 +255,7 @@ export const section7 = {
         "Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are",
       links: [
         {
-          title: <TwitterPrimaryLight />,
+          title: <TwitterPrimary />,
           href: "https://www.twitter.com",
         },
       ],

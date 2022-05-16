@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import CustomToast from "components/atoms/Toast";
 import { Api } from "services/api";
+import { JoinWaitlistForm } from "../JoinWaitlistForm";
 
 type PropType = {
   title?: string;
@@ -13,33 +14,32 @@ type PropType = {
 };
 
 export const EmailJoinSection = (props: PropType) => {
-
   const [show, setShow] = useState(false);
-  const [title, setTitle] = useState('Success');
-  const [content, setContent] = useState('Added successfully');
+  const [title, setTitle] = useState("Success");
+  const [content, setContent] = useState("Added successfully");
 
-  const joinWaitlist = async (event: any) => {
-    event.preventDefault();
-    const payload = {
-      email: event.target.email.value
-    }
-    const response = await Api.joinTheWaitlist(payload);
-    if(response.success && props.onSuccess) {
-      props.onSuccess(response.success);
-    }else {
-      setShow(true);
-      setTitle('Error');
-      // TODO: change this message according to the message received from the API
-      setContent('Email already in the waitlist');
-    }
-  }
+  const onFormChange = ({
+    fshow,
+    ftitle,
+    fcontent,
+  }: {
+    fshow?: boolean;
+    ftitle?: string;
+    fcontent?: string;
+  }) => {
+    if (fshow === true) setShow(true);
+    else if (fshow !== undefined && fshow === false) setShow(false);
+
+    (ftitle && setTitle(ftitle));
+    (fcontent && setContent(fcontent));
+  };
 
   return (
     <ArticleCetered>
       <CustomToast
         show={show}
         content={content}
-        onClose={()=>setShow(false)}
+        onClose={() => setShow(false)}
         title={title}
       />
       {/* the top gradients & logo */}
@@ -62,23 +62,7 @@ export const EmailJoinSection = (props: PropType) => {
         </p>
       </div>
 
-      <form onSubmit={joinWaitlist} className="flex flex-col md:flex-row gap-4 mt-16">
-        <PrimaryInput
-          name="email"
-          type="email"
-          placeholder="Enter Your Email"
-          className="w-96"
-        />
-        <Button
-          type="submit"
-          className="bg-white bg-opacity-5 border-[1px] border-white border-opacity-20 flex flex-row w-auto group"
-        >
-          <>
-            Join Waitlist{" "}
-            <RightArrowSecondary className="transition-all group-hover:translate-x-2" />
-          </>
-        </Button>
-      </form>
+      <JoinWaitlistForm onChange={onFormChange} onSuccess={props.onSuccess} type="secondary" layout="vertical" />
     </ArticleCetered>
   );
 };
