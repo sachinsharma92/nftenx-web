@@ -39,7 +39,7 @@ export const JoinWaitlistForm = (props: PropType) => {
   return (
     <form
       onSubmit={joinWaitlist}
-      className="flex flex-col md:flex-row gap-4 mt-16"
+      className={`flex flex-col ${props.layout != 'vertical' ? 'md:flex-row' : ''}  gap-4 mt-16`}
     >
       <PrimaryInput
         name="email"
