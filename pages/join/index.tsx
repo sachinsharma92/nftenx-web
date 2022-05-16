@@ -13,45 +13,41 @@ import {
 import { section2, section3, section4, section5 } from "constants/joinPage";
 import { section12 } from "constants/landing";
 import { RightArrowSecondary } from "assets/icons";
+import { Api } from "services/api";
 
 const JoinPage = (props: Record<string, any>) => {
-  const [addedToWaitlist, setAddedToWaitlist] = useState(false);
+  const {success, eventsThisMonth} = props;
+  console.log("🚀 ~ file: index.tsx ~ line 20 ~ JoinPage ~ eventsThisMonth", eventsThisMonth)
+
+  const getEventsRestructured=()=>{
+    return (eventsThisMonth || []).map((event: any)=>{
+      return {
+      title: event.title,
+      description: event.description,
+      image: event.eventImage.mediaUrl,
+      linkTitle: "Know More",
+      linkHref: `/event/${event.id}`,
+      }
+    })
+  }
 
   return (
     <main className="join-page-style main-bg">
       <Seo title="Join Waitlist" />
 
-      {/* <EmailJoinSection
-        title="Join our tight-knit community of Founders and Operators"
-        description="Enter the NF10x general token waitlist by sharing your email below, and we'll be in touch when your turn arrives."
-        onSuccess={(status: boolean) => {
-          setAddedToWaitlist(status);
-        }}
-      />
-      <JoinSuccess
-        type="event-available"
-        timeTillMint={new Date("Wed May 20 2022 01:17:46 GMT+0530")}
-      /> */}
-
-      {addedToWaitlist ? (
-        <JoinSuccess
-        // type="event-available"
-        // timeTillMint={new Date("Wed May 20 2022 01:17:46 GMT+0530")}
-        />
+      {success ? (
+        <JoinSuccess />
       ) : (
         <EmailJoinSection
           title="Join our tight-knit community of Founders and Operators"
           description="Enter the NF10x general token waitlist by sharing your email below, and we'll be in touch when your turn arrives."
-          onSuccess={(status: boolean) => {
-            setAddedToWaitlist(status);
-          }}
         />
       )}
 
       <TitleDescription_TitleDescriptionImageCardCarousal
         title={section2.title}
         description={section2.description}
-        items={section2.items}
+        items={getEventsRestructured()}
       />
 
       <LeftImage_RightTitleDescription_ImageTitleDescriptionItems
@@ -85,21 +81,28 @@ const JoinPage = (props: Record<string, any>) => {
             </span>
           }
         />
-
-      {/* {addedToWaitlist? <ElligibleComponent/>: <JoinHeroSection onSuccess={(status: boolean)=>{
-        setAddedToWaitlist(status);
-      }}/>}
-
-      <UpcomingComponent />
-      <OurMintingComponent />
-      <HowMintComponent />
-      <AskedQuestionsComponent />
-      <JoinNextComponent />
-
-
-      <Footer /> */}
     </main>
   );
+};
+
+export const getServerSideProps = async (ctx: any) => {
+  const { query } = ctx;
+  const success = query.success;
+  const eventsThisMonth = await Api.getEvents('month');
+  let propsResponse: any = {
+    success: success || '',
+  };
+
+  if (eventsThisMonth.success) {
+    propsResponse = {
+      ...propsResponse,
+      eventsThisMonth: eventsThisMonth.data.results,
+    };
+  }
+
+  return {
+    props: propsResponse,
+  };
 };
 
 export default JoinPage;

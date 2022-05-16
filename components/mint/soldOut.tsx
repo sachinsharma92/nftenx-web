@@ -1,5 +1,5 @@
-import { ButtonOutline } from "components/atoms/ButtonOutline";
 import { LogoGradient } from "components/common/logoGradient";
+import { JoinWaitlistForm } from "components/molecules";
 
 type MintSoldOutProps = {
   name?: string;
@@ -27,9 +27,7 @@ const SoldOutComponent = (props: MintSoldOutProps) => {
               <div className="text-focus"><span className="text-glow">{sold}</span> <span>/ {total}</span></div>
               <p className="description light">{name}: {type}&apos; passes Sold out</p>
               <div className="divider"></div>
-              <p className="description">Enter your email to join <br /> our waitlist:</p>
-              <div className="highlighted">john@nf10x.com</div>
-              <ButtonOutline className="btn-join">Join our waitlist</ButtonOutline>
+              <JoinWaitlistForm type="secondary" layout="vertical"/>
             </div>
           </div>
           <p className="click-here font-mono mt-5">Already have a pass? <a>Click here</a></p>

@@ -25,7 +25,7 @@ export const Api = {
     getMentors() {
         return AdminApi.call(`/api/v1/mentor`, 'GET');
     },
-    getEvents() {
-        return AdminApi.call(`/api/v1/event`, 'GET');
+    getEvents(type = '') {
+        return AdminApi.call(`/api/v1/event?type=${type}`, 'GET');
     }
 }
