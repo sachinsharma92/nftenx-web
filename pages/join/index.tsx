@@ -13,9 +13,23 @@ import {
 import { section2, section3, section4, section5 } from "constants/joinPage";
 import { section12 } from "constants/landing";
 import { RightArrowSecondary } from "assets/icons";
+import { Api } from "services/api";
 
 const JoinPage = (props: Record<string, any>) => {
-  const {success} = props;
+  const {success, eventsThisMonth} = props;
+  console.log("🚀 ~ file: index.tsx ~ line 20 ~ JoinPage ~ eventsThisMonth", eventsThisMonth)
+
+  const getEventsRestructured=()=>{
+    return (eventsThisMonth || []).map((event: any)=>{
+      return {
+      title: event.title,
+      description: event.description,
+      image: event.eventImage.mediaUrl,
+      linkTitle: "Know More",
+      linkHref: `/event/${event.id}`,
+      }
+    })
+  }
 
   return (
     <main className="join-page-style main-bg">
@@ -33,7 +47,7 @@ const JoinPage = (props: Record<string, any>) => {
       <TitleDescription_TitleDescriptionImageCardCarousal
         title={section2.title}
         description={section2.description}
-        items={section2.items}
+        items={getEventsRestructured()}
       />
 
       <LeftImage_RightTitleDescription_ImageTitleDescriptionItems
@@ -74,11 +88,20 @@ const JoinPage = (props: Record<string, any>) => {
 export const getServerSideProps = async (ctx: any) => {
   const { query } = ctx;
   const success = query.success;
+  const eventsThisMonth = await Api.getEvents('month');
+  let propsResponse: any = {
+    success: success || '',
+  };
+
+  if (eventsThisMonth.success) {
+    propsResponse = {
+      ...propsResponse,
+      eventsThisMonth: eventsThisMonth.data.results,
+    };
+  }
 
   return {
-    props: {
-      success: success || '',
-    },
+    props: propsResponse,
   };
 };
 
