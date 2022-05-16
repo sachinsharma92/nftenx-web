@@ -1,4 +1,4 @@
-import { Seo, ToggleButtons } from "components/atoms";
+import { Seo } from "components/atoms";
 import { Header, WithSidebar } from "components/common";
 import {
   FAQSection,
@@ -13,12 +13,32 @@ import { NextPage } from "next";
 import { Api } from "services/api";
 import moment from "moment";
 // images - remove
-import userImage from "assets/images/user-image.jpeg";
 import { RightArrowSecondary } from "assets/icons";
-import { ToggleButton } from "react-bootstrap";
 
 const Member: NextPage = (props: any) => {
-  const { mentors = [], eventsThisWeek, eventsThisMonth = [] } = props;
+  const { mentors = [], eventsThisWeek, eventsThisMonth = [], articles = [], categories = [] } = props;
+  console.log("🚀 ~ file: member.tsx ~ line 22 ~ categories", categories)
+  console.log("🚀 ~ file: member.tsx ~ line 22 ~ articles", articles)
+
+  const getStructuredCategories=()=>{
+    return categories.map((category: any)=>{
+      return {
+        title: category.name,
+        value: category.id
+      }
+    })
+  }
+
+  const getStructuredArticles = ()=>{
+    return articles.map((article: any)=>{
+      return {
+        title: article.title,
+        description: article.description,
+        image: article.postImage.mediaUrl,
+        href: `/category/${article.id}`
+      }
+    })
+  }
 
   const getEventsRestructured=()=>{
     return (eventsThisMonth || []).map((event: any)=>{
@@ -67,54 +87,8 @@ const Member: NextPage = (props: any) => {
 
         <HeadingToggleCards
           title="From the Content Hub"
-          categories={[
-            {
-              title: "TRENDING IN WEB3",
-              value: "trending",
-            },
-            {
-              title: "HOT IN WEB3",
-              value: "hot",
-            },
-            {
-              title: "AWESOME IN WEB3",
-              value: "awesome",
-            },
-          ]}
-          items={[
-            {
-              title: "Design Thinking for Blockchains",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
-              image:
-                "https://images.unsplash.com/photo-1636388951474-d84e2e5bb6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-              href: '/content/1',
-            },
-            {
-              title: "Design Thinking for Blockchains",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
-              image:
-                "https://images.unsplash.com/photo-1636388951474-d84e2e5bb6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-              href: '/content/1',
-            },
-            {
-              title: "Design Thinking for Blockchains",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
-              image:
-                "https://images.unsplash.com/photo-1636388951474-d84e2e5bb6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-              href: '/content/1',
-            },
-            {
-              title: "Design Thinking for Blockchains",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
-              image:
-                "https://images.unsplash.com/photo-1636388951474-d84e2e5bb6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-              href: '/content/1',
-            },
-          ]}
+          categories={getStructuredCategories()}
+          items={getStructuredArticles()}
         />
 
         <FAQSection title={section11.title} items={section11.items} gradient />
@@ -144,6 +118,8 @@ export const getServerSideProps = async (ctx: any) => {
   const mentorsResponse = await Api.getMentors();
   const eventsThisMonth = await Api.getEvents('month');
   const eventsThisWeek = await Api.getEvents('week');
+  const categories = await Api.getCategories();
+  const articles = await Api.getArticles();
 
   let propsResponse = {};
 
@@ -163,6 +139,18 @@ export const getServerSideProps = async (ctx: any) => {
     propsResponse = {
       ...propsResponse,
       eventsThisWeek: !!eventsThisWeek.data.results.length && eventsThisWeek.data.results[0],
+    };
+  }
+  if (categories.success) {
+    propsResponse = {
+      ...propsResponse,
+      categories: !!categories.data.results.length && categories.data.results,
+    };
+  }
+  if (articles.success) {
+    propsResponse = {
+      ...propsResponse,
+      articles: !!articles.data.results.length && articles.data.results,
     };
   }
   return {
