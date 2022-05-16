@@ -1,6 +1,5 @@
-import { Logo } from "assets/icons";
-import { ButtonOutline } from "components/atoms/ButtonOutline";
 import { LogoGradient } from "components/common/logoGradient";
+import { JoinWaitlistForm } from "components/molecules";
 import Image from "next/image";
 import AlertIcon from "../../assets/icons/warning.svg"
 
@@ -22,9 +21,7 @@ const LinkExpiredComponent = (props: Record<string, any>) => {
               <Image src={AlertIcon} alt="warning icon"/>
               <p className="live-text mt-3">The Link You Have Followed <br /> Has Expired</p>
               <div className="divider"></div>
-              <p className="description">Enter your email to join <br /> our waitlist:</p>
-              <div className="highlighted">john@nf10x.com</div>
-              <ButtonOutline className="btn-join">Join our waitlist</ButtonOutline>
+              <JoinWaitlistForm type="secondary" layout="vertical"/>
             </div>
           </div>
           <p className="click-here font-mono mt-5">Already have a pass? <a>Click here</a></p>

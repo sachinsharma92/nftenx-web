@@ -15,36 +15,18 @@ import { section12 } from "constants/landing";
 import { RightArrowSecondary } from "assets/icons";
 
 const JoinPage = (props: Record<string, any>) => {
-  const [addedToWaitlist, setAddedToWaitlist] = useState(false);
+  const {success} = props;
 
   return (
     <main className="join-page-style main-bg">
       <Seo title="Join Waitlist" />
 
-      {/* <EmailJoinSection
-        title="Join our tight-knit community of Founders and Operators"
-        description="Enter the NF10x general token waitlist by sharing your email below, and we'll be in touch when your turn arrives."
-        onSuccess={(status: boolean) => {
-          setAddedToWaitlist(status);
-        }}
-      />
-      <JoinSuccess
-        type="event-available"
-        timeTillMint={new Date("Wed May 20 2022 01:17:46 GMT+0530")}
-      /> */}
-
-      {addedToWaitlist ? (
-        <JoinSuccess
-        // type="event-available"
-        // timeTillMint={new Date("Wed May 20 2022 01:17:46 GMT+0530")}
-        />
+      {success ? (
+        <JoinSuccess />
       ) : (
         <EmailJoinSection
           title="Join our tight-knit community of Founders and Operators"
           description="Enter the NF10x general token waitlist by sharing your email below, and we'll be in touch when your turn arrives."
-          onSuccess={(status: boolean) => {
-            setAddedToWaitlist(status);
-          }}
         />
       )}
 
@@ -85,21 +67,19 @@ const JoinPage = (props: Record<string, any>) => {
             </span>
           }
         />
-
-      {/* {addedToWaitlist? <ElligibleComponent/>: <JoinHeroSection onSuccess={(status: boolean)=>{
-        setAddedToWaitlist(status);
-      }}/>}
-
-      <UpcomingComponent />
-      <OurMintingComponent />
-      <HowMintComponent />
-      <AskedQuestionsComponent />
-      <JoinNextComponent />
-
-
-      <Footer /> */}
     </main>
   );
+};
+
+export const getServerSideProps = async (ctx: any) => {
+  const { query } = ctx;
+  const success = query.success;
+
+  return {
+    props: {
+      success: success || '',
+    },
+  };
 };
 
 export default JoinPage;
