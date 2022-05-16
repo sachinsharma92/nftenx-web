@@ -16,10 +16,10 @@ import userImage from "assets/images/user-image.jpeg";
 import { RightArrowSecondary } from "assets/icons";
 
 const Member: NextPage = (props: any) => {
-  const { mentors = [], events = [] } = props;
+  const { mentors = [], eventsThisWeek, eventsThisMonth = [] } = props;
 
   const getEventsRestructured=()=>{
-    return events.map((event: any)=>{
+    return (eventsThisMonth || []).map((event: any)=>{
       return {
           date: {
             day: moment(event.eventDate).format("DD"),
@@ -39,18 +39,17 @@ const Member: NextPage = (props: any) => {
       <WithSidebar>
         <Header />
 
-        <TitlesDescriptionSingleCardHero
-          title="Up Next:"
-          titleSecondary="Programmes this week"
-          description="Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to harness this once-in-a-decade."
-          cardImage={userImage.src}
-          cardTitle={"Fireside Chats"}
-          cardDescription={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
-          }
-          cardLinkHref="/join"
-          cardlinkTitle={"Know More"}
-        />
+        {eventsThisWeek && <TitlesDescriptionSingleCardHero
+            title="Up Next:"
+            titleSecondary="Programmes this week"
+            description="Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to harness this once-in-a-decade."
+            cardImage={eventsThisWeek.eventImage.mediaUrl}
+            cardTitle={eventsThisWeek.title}
+            cardDescription={eventsThisWeek.description}
+            cardLinkHref={`/event/${eventsThisWeek.id}`}
+            cardlinkTitle={"Know More"}
+          />
+        }
 
         <TitleDescriotion_DateTitleDesctiptionElements
           title="Programmes this month"
@@ -89,7 +88,8 @@ export default Member;
 
 export const getServerSideProps = async (ctx: any) => {
   const mentorsResponse = await Api.getMentors();
-  const eventsResponse = await Api.getEvents();
+  const eventsThisMonth = await Api.getEvents('month');
+  const eventsThisWeek = await Api.getEvents('week');
 
   let propsResponse = {};
 
@@ -99,10 +99,16 @@ export const getServerSideProps = async (ctx: any) => {
       mentors: mentorsResponse.data.results,
     };
   }
-  if (eventsResponse.success) {
+  if (eventsThisMonth.success) {
     propsResponse = {
       ...propsResponse,
-      events: eventsResponse.data.results,
+      eventsThisMonth: eventsThisMonth.data.results,
+    };
+  }
+  if (eventsThisWeek.success) {
+    propsResponse = {
+      ...propsResponse,
+      eventsThisWeek: !!eventsThisWeek.data.results.length && eventsThisWeek.data.results[0],
     };
   }
   return {
