@@ -30,5 +30,11 @@ export const Api = {
     },
     postSuccess(invitationId, txnHash='') {
         return AdminApi.call(`/api/v1/invitation/${invitationId}/on-complete`, 'POST', { data: { txnHash } });
+    },
+    getCategories() {
+        return AdminApi.call(`/api/v1/category`, 'GET');
+    },
+    getArticles() {
+        return AdminApi.call(`/api/v1/content-hub`, 'GET');
     }
 }
