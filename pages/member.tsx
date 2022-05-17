@@ -16,27 +16,7 @@ import moment from "moment";
 import { RightArrowSecondary } from "assets/icons";
 
 const Member: NextPage = (props: any) => {
-  const { mentors = [], eventsThisWeek, eventsThisMonth = [], articles = [], categories = [] } = props;
-
-  const getStructuredCategories=()=>{
-    return categories.map((category: any)=>{
-      return {
-        title: category.name,
-        value: category.id
-      }
-    })
-  }
-
-  const getStructuredArticles = ()=>{
-    return articles.map((article: any)=>{
-      return {
-        title: article.title,
-        description: article.description,
-        image: article.postImage.mediaUrl,
-        href: `/category/${article.id}`
-      }
-    })
-  }
+  const { mentors = [], eventsThisWeek, eventsThisMonth = [] } = props;
 
   const getEventsRestructured=()=>{
     return (eventsThisMonth || []).map((event: any)=>{
@@ -85,8 +65,6 @@ const Member: NextPage = (props: any) => {
 
         <HeadingToggleCards
           title="From the Content Hub"
-          categories={getStructuredCategories()}
-          items={getStructuredArticles()}
         />
 
         <FAQSection title={section11.title} items={section11.items} gradient />
@@ -116,8 +94,6 @@ export const getServerSideProps = async (ctx: any) => {
   const mentorsResponse = await Api.getMentors();
   const eventsThisMonth = await Api.getEvents('month');
   const eventsThisWeek = await Api.getEvents('week');
-  const categories = await Api.getCategories();
-  const articles = await Api.getArticles();
 
   let propsResponse = {};
 
@@ -137,18 +113,6 @@ export const getServerSideProps = async (ctx: any) => {
     propsResponse = {
       ...propsResponse,
       eventsThisWeek: !!eventsThisWeek.data.results.length && eventsThisWeek.data.results[0],
-    };
-  }
-  if (categories.success) {
-    propsResponse = {
-      ...propsResponse,
-      categories: !!categories.data.results.length && categories.data.results,
-    };
-  }
-  if (articles.success) {
-    propsResponse = {
-      ...propsResponse,
-      articles: !!articles.data.results.length && articles.data.results,
     };
   }
   return {
