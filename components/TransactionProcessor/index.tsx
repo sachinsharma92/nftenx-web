@@ -16,10 +16,11 @@ import { Api } from "services/api";
 type TransactionProcessorProps = {
   linkId: string,
   tokenId: string|number
+  tokenType: string
 }
 
 const TransactionProcessor = (props: TransactionProcessorProps) => {
-  const { linkId, tokenId } = props;
+  const { linkId, tokenId, tokenType } = props;
   const { useAccounts } = hooks;
 
   const context = useWeb3Context();
@@ -105,11 +106,11 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
 
       {screenState == ScreenStateEnum.purchase && (
         <PurchaseProcessingCard
-          title="Founders Access Pass"
+          title={`${tokenType==='member'?'General' :'Founder'} Access Pass`}
           state={purchaseState}
           image={generalCoin.src}
           message={formatAccount(accountNumber)}
-          tokenType={TOKEN_TYPE.FOUNDER}
+          tokenType={tokenType==='member'?TOKEN_TYPE.GENERAL :TOKEN_TYPE.FOUNDER}
         />
       )}
     </main>

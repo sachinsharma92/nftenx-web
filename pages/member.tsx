@@ -17,8 +17,6 @@ import { RightArrowSecondary } from "assets/icons";
 
 const Member: NextPage = (props: any) => {
   const { mentors = [], eventsThisWeek, eventsThisMonth = [], articles = [], categories = [] } = props;
-  console.log("🚀 ~ file: member.tsx ~ line 22 ~ categories", categories)
-  console.log("🚀 ~ file: member.tsx ~ line 22 ~ articles", articles)
 
   const getStructuredCategories=()=>{
     return categories.map((category: any)=>{
