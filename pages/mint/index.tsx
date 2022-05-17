@@ -44,7 +44,7 @@ const Mint = (props: Record<string, any>) => {
             { isSoldOut ?
               <SoldOutComponent type={tokenType} total={totalTokens} name={cohortName} sold={soldTokens}/>:
               <>
-                {processTxns? <TransactionProcessor linkId={linkId} tokenId={tokenId}/>:
+                {processTxns? <TransactionProcessor linkId={linkId} tokenId={tokenId} tokenType={tokenType}/>:
                   <MintLiveComponent type={tokenType} total={totalTokens} onClick={mint} sold={soldTokens}/>
                 }
 

@@ -17,6 +17,17 @@ export const Header = () => {
   const accounts = useAccounts();
   const context = useWeb3Context();
 
+  if (typeof window !== "undefined") {
+    const windowObj:any = window;
+    windowObj.ethereum.on('accountsChanged', async (accounts: any) => {
+      if(!accounts.length) {
+        storage.del(METAMASK_CONSTANTS.ADDRESS);
+        setAccount('');
+        console.log("🚀 ~ file: Header.tsx ~ line 30 ~ windowObj.ethereum.on ~ event", event)
+      }
+    });
+  }
+
 
   const connectWalletHandler = () => {
     void metaMask.connectEagerly();

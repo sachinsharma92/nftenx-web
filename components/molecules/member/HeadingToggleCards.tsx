@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Article, H1, H3, H4, ToggleButtons } from "components/atoms";
 import Link from "next/link";
+import { Api } from "services/api";
+import {useState, useEffect} from 'react';
 
 type PropType = {
   items?: ReadonlyArray<Record<string, any>>;
@@ -40,15 +42,68 @@ export const ContentCard = ({
 };
 
 export const HeadingToggleCards = (props: PropType) => {
+  const [articles, setArticles] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+  const getArticles = async (categoryId='') => {
+    const articles = await Api.getArticles(categoryId);
+    if (articles.success) {
+      setArticles(articles.data.results)
+    }
+  }
+
+  const getCategories = async () => {
+    const categories = await Api.getCategories();
+    if (categories.success) {
+      setCategories(categories.data.results);
+    }
+  }
+
+  useEffect(() => {
+    if(props.categories){
+      getArticles(props.categories[0].id);
+    }else{
+      getArticles();
+    }
+  }, [categories]);
+
+  useEffect(()=>{
+    getCategories();
+  },[])
+
+  const onCategoryChange=(categoryId: string)=>{
+    getArticles(categoryId);
+  }
+
+  const getStructuredCategories=()=>{
+    return categories.map((category: any)=>{
+      return {
+        title: category.name,
+        value: category.id
+      }
+    })
+  }
+
+  const getStructuredArticles = ()=>{
+    return articles.map((article: any)=>{
+      return {
+        title: article.title,
+        description: article.description,
+        image: article.postImage.mediaUrl,
+        href: `/category/${article.id}`
+      }
+    })
+  }
+
   return (
     <Article>
       {props.title && <H1>{props.title}</H1>}
       <ToggleButtons
-        items={props.categories}
-        onChange={props.onCategoryChange}
+        items={getStructuredCategories()}
+        onChange={onCategoryChange}
       />
       <div className="flex flex-row flex-nowrap gap-5 overflow-x-auto no-scrollbar -px-section lg:px-28">
-        {props.items?.map((element, index) => {
+        {getStructuredArticles()?.map((element, index) => {
           return (
             <div className="shrink-0" key={index}>
               <ContentCard

@@ -10,7 +10,6 @@ export const ToggleButtons = (props: PropType) => {
   const [active, setActive] = useState(0);
 
   const handleClick = (index: number, value: string) => {
-    console.log("skfnskfn");
     setActive(index);
     if (props.onChange) props.onChange(value);
   };

@@ -34,7 +34,7 @@ export const Api = {
     getCategories() {
         return AdminApi.call(`/api/v1/category`, 'GET');
     },
-    getArticles() {
-        return AdminApi.call(`/api/v1/content-hub`, 'GET');
+    getArticles(categoryId = '') {
+        return AdminApi.call(`/api/v1/content-hub?category=${categoryId}`, 'GET');
     }
 }
