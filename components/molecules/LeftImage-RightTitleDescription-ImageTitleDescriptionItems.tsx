@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { ArticleCetered, H1, H3 } from "components/atoms";
+import { ArticleCentered, H1, H3 } from "components/atoms";
 
 type PropType = {
   title?: string;
@@ -12,7 +12,7 @@ export const LeftImage_RightTitleDescription_ImageTitleDescriptionItems = (
   props: PropType
 ) => {
   return (
-    <ArticleCetered>
+    <ArticleCentered>
       <div className="w-full flex-col gap-5 lg:grid lg:grid-flow-col lg:grid-cols-2">
         <div className="relative grid place-items-center">
           <img
@@ -42,6 +42,6 @@ export const LeftImage_RightTitleDescription_ImageTitleDescriptionItems = (
           </div>
         </div>
       </div>
-    </ArticleCetered>
+    </ArticleCentered>
   );
 };

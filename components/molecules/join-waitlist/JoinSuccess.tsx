@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { A, Button, H1, PrimaryInput } from "components/atoms";
-import { ArticleCetered } from "components/atoms";
+import { ArticleCentered } from "components/atoms";
 import { Logo, RightArrowSecondary } from "assets/icons";
 import Link from "next/link";
 import { socialLinks } from "constants/sidebar";
@@ -20,7 +20,7 @@ export const JoinSuccess = (props: PropType) => {
   );
 
   return (
-    <ArticleCetered>
+    <ArticleCentered>
       {/* the top gradients & logo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-violet-600 w-1/2 h-28 p-1 rounded-full blur-[180px]"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-violet-500 w-1/3 h-28 p-1 rounded-full blur-[150px]"></div>
@@ -93,6 +93,6 @@ export const JoinSuccess = (props: PropType) => {
           </A>
         </div>
       )}
-    </ArticleCetered>
+    </ArticleCentered>
   );
 };

@@ -3,12 +3,14 @@ import { Article, H1, H3, H4, ToggleButtons } from "components/atoms";
 import Link from "next/link";
 import { Api } from "services/api";
 import {useState, useEffect} from 'react';
+import { RichText } from "../RichText";
 
 type PropType = {
   items?: ReadonlyArray<Record<string, any>>;
   title?: string;
   categories?: ReadonlyArray<Record<string, any>>;
   onCategoryChange?: Function;
+  toggleButtons?: boolean
 };
 
 export const ContentCard = ({
@@ -35,7 +37,8 @@ export const ContentCard = ({
           }`}
         />
         <H4>{title}</H4>
-        <p className="font-mono text-primary-light">{description}</p>
+        {/* <p className="font-mono text-primary-light">{description}</p> */}
+        <RichText data={description as string} />
       </a>
     </Link>
   );
@@ -98,10 +101,10 @@ export const HeadingToggleCards = (props: PropType) => {
   return (
     <Article>
       {props.title && <H1>{props.title}</H1>}
-      <ToggleButtons
+      {props.toggleButtons && <ToggleButtons
         items={getStructuredCategories()}
         onChange={onCategoryChange}
-      />
+      />}
       <div className="flex flex-row flex-nowrap gap-5 overflow-x-auto no-scrollbar -px-section lg:px-28">
         {getStructuredArticles()?.map((element, index) => {
           return (

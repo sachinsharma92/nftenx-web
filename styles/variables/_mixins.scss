@@ -261,3 +261,13 @@ $shadowSecondary: 0px 0px 1px rgba(12, 26, 75, 0.1), 0px 4px 20px -2px rgba(50, 
 $theme-gradient : linear-gradient(360deg, #FF77A0 -5.06%, #FFBA88 100%);
 
 $theme-light-gradient :linear-gradient(180deg, #FADECF 0%, #F7F0E2 100%);
+
+// NEW THINGS
+
+@function headings($from:1, $to:6) {
+  @if $from == $to {
+      @return 'h#{$from}';
+  } @else {
+      @return 'h#{$from},' + headings($from+1, $to);
+  }
+}

@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Article, ArticleCetered, H1 } from "components/atoms";
+import { Article, H1 } from "components/atoms";
 import { TitleDescriptionImageCardCarousal3DotsCard } from ".";
 
 import bubbleImg from "assets/images/illustrations/bubble-gradient.png";
