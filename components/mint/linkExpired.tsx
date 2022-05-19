@@ -24,7 +24,7 @@ const LinkExpiredComponent = (props: Record<string, any>) => {
               <JoinWaitlistForm type="secondary" layout="vertical"/>
             </div>
           </div>
-          <p className="click-here font-mono mt-5">Already have a pass? <a>Click here</a></p>
+          <p className="click-here font-mono mt-5">Already have a pass? <a href='/member'>Click here</a></p>
         </div>
       </div>
     </section>

@@ -26,11 +26,15 @@ const SoldOutComponent = (props: MintSoldOutProps) => {
               </div>
               <div className="text-focus"><span className="text-glow">{sold}</span> <span>/ {total}</span></div>
               <p className="description light">{name}: {type}&apos; passes Sold out</p>
-              <div className="divider"></div>
-              <JoinWaitlistForm type="secondary" layout="vertical"/>
+              {type==='founder' ? <>
+                  <div className="divider"></div>
+                  <JoinWaitlistForm type="secondary" layout="vertical"/>
+                </>:
+                <p className="description light">Don't worry! We will invite you when our next cohort starts.</p>
+              }
             </div>
           </div>
-          <p className="click-here font-mono mt-5">Already have a pass? <a>Click here</a></p>
+          <p className="click-here font-mono mt-5">Already have a pass? <a href='/member'>Click here</a></p>
         </div>
       </div>
     </section>

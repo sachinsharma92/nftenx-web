@@ -32,7 +32,7 @@ const MintLiveComponent = (props: MintLiveProps) => {
             </div>
             <p className="text-read mt-3">.01 ETH/Pass | 01 Pass/Account | Read FAQs</p>
           </div>
-          <p className="click-here mt-3">Already have a pass? <a>Click here</a></p>
+          <p className="click-here mt-3">Already have a pass? <a href='/member'>Click here</a></p>
         </div>
       </div>
     </section>
