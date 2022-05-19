@@ -93,7 +93,7 @@ export const HeadingToggleCards = (props: PropType) => {
         title: article.title,
         description: article.description,
         image: article.postImage.mediaUrl,
-        href: `/category/${article.id}`
+        href: `/content/${article.id}`
       }
     })
   }

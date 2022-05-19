@@ -36,5 +36,8 @@ export const Api = {
     },
     getArticles(categoryId = '') {
         return AdminApi.call(`/api/v1/content-hub?category=${categoryId}`, 'GET');
-    }
+    },
+    getArticleDetail(articleId = '') {
+        return AdminApi.call(`/api/v1/content-hub/${articleId}`, 'GET');
+    },
 }
