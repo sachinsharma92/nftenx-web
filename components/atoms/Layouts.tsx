@@ -28,4 +28,4 @@ const ArticleCenteredComponent = (props: PropType, ref: Ref<any>) => {
   );
 };
 
-export const ArticleCetered = forwardRef<HTMLElement, PropType>(ArticleCenteredComponent);
+export const ArticleCentered = forwardRef<HTMLElement, PropType>(ArticleCenteredComponent);

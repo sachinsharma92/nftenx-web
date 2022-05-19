@@ -64,6 +64,7 @@ const Member: NextPage = (props: any) => {
         />
 
         <HeadingToggleCards
+        toggleButtons={true}
           title="From the Content Hub"
         />
 

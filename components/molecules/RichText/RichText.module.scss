@@ -1,0 +1,60 @@
+@import '/styles/variables/mixins';
+
+.richTextContainer_root {
+  color: theme('textColor.primary.light');
+  h1 {
+    font-size: theme('fontSize.6xl');
+  }
+  h2 {
+    font-size: theme('fontSize.5xl');
+  }
+  h3 {
+    font-size: theme('fontSize.4xl');
+  }
+  h4 {
+    font-size: theme('fontSize.3xl');
+  }
+  h5 {
+    font-size: theme('fontSize.2xl');
+  }
+  h6 {
+    font-size: theme('fontSize.xl');
+  }
+
+  #{headings(1,6)} {
+    font-family: theme('fontFamily.heading-serif');
+    color: theme('textColor.white');
+  }
+  
+  p {
+    font-size: theme('fontSize.base');
+    font-family: theme('fontFamily.mono');
+    color: theme('textColor.primary.light');
+  }
+
+  ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  strong, b {
+    font-weight: theme('fontWeight.bold');
+  }
+
+  a {
+    color: theme('textColor.blue.500');
+    outline: none;
+
+    &:hover {
+      color: theme('textColor.blue.300');
+    }
+  }
+}
