@@ -104,6 +104,7 @@ const MintPass = () => {
           image={generalCoin.src}
           message={formatAccount(accountNumber)}
           tokenType={TOKEN_TYPE.FOUNDER}
+          tokenId={assetId}
         />
       )}
     </main>

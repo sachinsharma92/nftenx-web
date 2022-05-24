@@ -111,6 +111,7 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
           image={generalCoin.src}
           message={formatAccount(accountNumber)}
           tokenType={tokenType==='member'?TOKEN_TYPE.GENERAL :TOKEN_TYPE.FOUNDER}
+          tokenId={tokenId}
         />
       )}
     </main>

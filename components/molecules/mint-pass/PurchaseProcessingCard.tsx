@@ -7,7 +7,7 @@ import {
   TickCircleGreen,
 } from "assets/icons";
 import { A, H1 } from "components/atoms";
-import { TOKEN_TYPE } from "constants/globalConstants";
+import { METAMASK_CONSTANTS, TOKEN_TYPE } from "constants/globalConstants";
 import DiscordIcon from "../../../assets/icons/discord.svg";
 import Image from "next/image";
 import { DISCORD_LINK } from "constants/sidebar";
@@ -26,9 +26,17 @@ type PropType = {
   message?: string;
   statusMessage?: string;
   tokenType?: TOKEN_TYPE;
+  tokenId?: string | number;
 };
 
 export const PurchaseProcessingCard = (props: PropType) => {
+
+  const getOpenSeaUrl = () => {
+    const url = `${process.env.NEXT_PUBLIC_OPENSEA_URL}/${METAMASK_CONSTANTS.CONTRACT_ADDRESS}/${props.tokenId}`
+    debugger;
+    return url;
+  }
+
   const statusMessages: Record<
     string,
     Record<string, JSX.Element | string | null>
@@ -53,6 +61,9 @@ export const PurchaseProcessingCard = (props: PropType) => {
           <span className="opacity-50">
             You just purchased a {props.tokenType?.toLocaleLowerCase()} pass.
           </span>
+          <p>
+            <A href={getOpenSeaUrl()} transparent>{'See your token on OpenSea'}</A>
+          </p>
         </>
       ),
       description: "It should be confirmed on the blockchain shortly.",
