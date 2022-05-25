@@ -45,15 +45,18 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
           />
         )}
         {element.title && (
-          <p className="-mt-8 font-mono text-primary-light text-center">
+          <>
+          <p className="font-mono text-primary-light text-center min-h-[74px]">
             <>
               {element.title} by
               <br />
               {element.hostedBy}
-              <br />
-              {moment(element.eventDate).format("DD MMM")}
             </>
           </p>
+          <p className="text-primary-light-2">
+              {moment(element.eventDate).format("DD MMM")}
+          </p>
+          </>
         )}
         {element.buttonTitle && (
           <button
@@ -88,7 +91,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
     <article className="relative p-section py-14 lg:py-28 text-secondary-1 flex flex-col gap-8 justify-center items-center min-h-screen overflow-x-hidden">
       <img src={leftBlob.src} alt="blob" className="absolute -top-[100px] lg:-top-[500px] left-0 -px-section" />
       <img src={rightBlob.src} alt="blob" className="absolute top-[100px] lg:-top-[300px] right-0 -px-section" />
-      
+
       <div className="lg:w-3/5">
         {props.title && <H1 className="text-center">{props.title}</H1>}
         {props.description && (

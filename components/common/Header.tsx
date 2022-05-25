@@ -1,4 +1,4 @@
-import { Logo, MenuSecondary } from "assets/icons";
+import { Logo, MenuSecondary, RightArrowSecondary } from "assets/icons";
 import { METAMASK_CONSTANTS } from "constants/globalConstants";
 import { extraLinks, navLinks } from "constants/header";
 import Link from "next/link";
@@ -83,9 +83,13 @@ export const Header = () => {
             <li key={index} className="inline-block">
               <Link passHref href={element.href ?? "javascript.void(0)"}>
                 <a
-                  className={`${linkPaddings} text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md font-mono`}
+                  className={`${linkPaddings} flex items-center text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md font-mono`}
                 >
                   {element.title}
+                  {element.showArrow && <span role="img">
+                      <RightArrowSecondary className="w-auto" />
+                    </span>
+                  }
                 </a>
               </Link>
             </li>

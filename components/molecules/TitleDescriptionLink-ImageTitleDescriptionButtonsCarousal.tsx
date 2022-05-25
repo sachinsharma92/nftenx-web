@@ -18,6 +18,29 @@ type PropTypes = {
   linkHref?: string;
 };
 
+const SocialMediaIcon=({link, image})=>{
+  return <div className="mt-2 flex-flex-row justify-start gap-2 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
+          <A
+            transparent
+            noPadding
+            href={
+              (link as string) ?? "javascript:void(0)"
+            }
+            className="p-2 border-[1px] border-primary-light border-opacity-25"
+          >
+            {image}
+          </A>
+    </div>
+}
+
+const SocialMediaIcons = ({ element }) => {
+  return <div className="flex gap-2 social-media-profiles">
+    {element.twitterLink && <SocialMediaIcon link={element.twitterLink} image={<TwitterPrimary />}/>}
+    {element.websiteLink && <SocialMediaIcon link={element.websiteLink} image={<GlobePrimary />}/>}
+    {element.socialMediaLink && <SocialMediaIcon link={element.socialMediaLink} image={<InstaPrimary />}/>}
+  </div>
+}
+
 export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
   props: PropTypes
 ) => {
@@ -62,6 +85,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                   {element.name as string}
                 </H4>
               )}
+              <SocialMediaIcons element={element}/>
               {element.name && (
                 <H2 className="z-[1] hidden lg:block leading-[0] 2xl:leading-[1] opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-24 transition-all">
                   {element.name as string}
@@ -74,47 +98,7 @@ export const TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal = (
                   </p>
                 </div>
               )}
-              <div className="flex gap-2 social-media-profiles">
-                {element.twitterLink && <div className="mt-2 flex-flex-row justify-start gap-2 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
-                  <A
-                      transparent
-                      noPadding
-                      href={
-                        (element.twitterLink as string) ?? "javascript:void(0)"
-                      }
-                      className="p-2 border-[1px] border-primary-light border-opacity-25"
-                    >
-                      <TwitterPrimary />
-                    </A>
-                </div>
-              }
-              {element.websiteLink && <div className="mt-2 flex-flex-row justify-start gap-2 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
-                  <A
-                      transparent
-                      noPadding
-                      href={
-                        (element.websiteLink as string) ?? "javascript:void(0)"
-                      }
-                      className="p-2 border-[1px] border-primary-light border-opacity-25"
-                    >
-                      <GlobePrimary />
-                    </A>
-                </div>
-              }
-              {element.socialMediaLink && <div className="mt-2 flex-flex-row justify-start gap-2 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
-                  <A
-                      transparent
-                      noPadding
-                      href={
-                        (element.socialMediaLink as string) ?? "javascript:void(0)"
-                      }
-                      className="p-2 border-[1px] border-primary-light border-opacity-25"
-                    >
-                      <InstaPrimary />
-                    </A>
-                </div>
-              }
-              </div>
+              <SocialMediaIcons element={element}/>
             </div>
           );
         })}

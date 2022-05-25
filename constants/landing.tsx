@@ -3,9 +3,9 @@ import coinBgImage from "../assets/images/coins-bg.png";
 import peopleConected from "../assets/images/people-connected.png";
 import gridGradient from "../assets/images/grid-gradient-bg.png";
 
-import insightImg from "/assets/images/Insight.png";
-import accessImg from "/assets/images/Access.png";
-import immersionImg from "/assets/images/Immersion.png";
+import insightImg from "/assets/icons/insight.svg";
+import accessImg from "/assets/icons/access.svg";
+import immersionImg from "/assets/icons/immersion.svg";
 
 import logo3d from "/assets/images/nf10x-logo-3d.png";
 import square3dTranslucent from "/assets/images/sqiares-3d-translucent.png";
@@ -16,7 +16,7 @@ import eventLogo1 from "/assets/images/event-logo-1.png";
 export const section1 = {
   headings: [
     "The Web3 Community for Founders and Operators",
-    "Learn and connect with Web3’s best and brightest minds",
+    "Learn and connect with Web3's best and brightest minds",
   ],
   image: coinBgImage.src,
   linkTitle: (
@@ -49,7 +49,7 @@ export const section2 = {
 
 export const section3 = {
   title: "Who is NF10X For?",
-  description: "Web3 isn’t the next frontier. It’s a new paradigm.",
+  description: "Web3 isn't the next frontier. It's a new paradigm.",
   image: sphereSqTranslucent.src,
   items: [
     {
@@ -60,7 +60,7 @@ export const section3 = {
     {
       title: "Catalysts",
       description:
-        "Entrepreneurs and leaders actively building in Web3 that want to learn with and from a productive, insight-filled community",
+        "Founders and executives of legacy companies seeking resources to spark conversation and steer their businesses ahead of the Web3 curve.",
     },
   ],
 };
@@ -97,13 +97,11 @@ export const section6 = {
       title: "Insights",
       description: (
         <>
-          Live and on-demand modules to get you up to speed on Web3.Tactical
-          discussions about operating a business in Web3 Weekly roundups of
-          Web3&apos;s biggest headlines, stories, and projects
+          Live and on-demand modules to get you up to speed on Web3.
           <br />
           <ul className="list-inside">
             <li className="list-item">
-              Tactical discussions about operating a business in Web3
+              Tactical discussions about operating a business in Web3.
             </li>
             <li className="list-item">
               Weekly roundups of Web3&apos;s biggest headlines, stories, and
@@ -116,14 +114,38 @@ export const section6 = {
     },
     {
       title: "Access",
-      description:
-        "Connect with our mentors - Leaders, Investors, and Builders in Web3 Attend members-only sessions with Web3’s trailblazers",
+      description: (
+        <>
+          Connect with our mentors - Leaders, Investors, and Builders in
+          <br />
+          <ul className="list-inside">
+            <li className="list-item">
+              Web3 Attend members-only sessions with Web3's trailblazers
+            </li>
+            <li className="list-item">
+              Web3 Attend members-only sessions with Web3's trailblazers
+            </li>
+          </ul>
+        </>
+      ),
       image: accessImg.src,
     },
     {
       title: "Immersion",
-      description:
-        "Join a cohort of other Founders and Operators exploring opportunities in Web3 Connect with the community in our private Discord server",
+      description: (
+        <>
+          Join a cohort of other Founders and Operators exploring opportunities in
+          <br />
+          <ul className="list-inside">
+            <li className="list-item">
+              Web3 Connect with the community in our private Discord server
+            </li>
+            <li className="list-item">
+              Web3 Attend members-only sessions with Web3's trailblazers
+            </li>
+          </ul>
+        </>
+      ),
       image: immersionImg.src,
     },
   ],
@@ -135,7 +157,7 @@ export const section7 = {
     "We recruited X Leaders, Investors, and Builders in Web3 to share their knowledge and act as resources for the community",
   linkTitle: (
     <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
-      Join the Community
+      Join the waitlist
       <span role="img" className="transition-all pl-2 group-hover:pl-5">
         <RightArrowSecondary className="h-10 w-auto" />
       </span>
@@ -454,35 +476,20 @@ export const section11 = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      title: "Why should I join NF10X?",
+      title: "Who is NF10X for?",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      title: "Why should I join NF10X?",
+      title: "What is the minting process?",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      title: "Why should I join NF10X?",
+      title: "I don't have an metamask wallet, can I join? ",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      title: "Why should I join NF10X?",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      title: "Why should I join NF10X?",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      title: "Why should I join NF10X?",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
+    }
   ],
 };
 
@@ -490,6 +497,6 @@ export const section12 = {
   title: "Join the next wave of web3",
   image: logo3d.src,
   description:
-    "Subsribe to our newsletter to receive weekly updates. We usually start with some updates from the community, what has been going on the inside.",
+    "Subscribe to our newsletter to receive weekly updates. We usually start with some updates from the community, what has been going on the inside.",
   linkHref: "/join",
 };
