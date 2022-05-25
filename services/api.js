@@ -28,8 +28,8 @@ export const Api = {
     getEvents(type = '') {
         return AdminApi.call(`/api/v1/event?type=${type}`, 'GET');
     },
-    postSuccess(invitationId, txnHash='') {
-        return AdminApi.call(`/api/v1/invitation/${invitationId}/on-complete`, 'POST', { data: { txnHash } });
+    postSuccess(invitationId, txnHash='', address= '') {
+        return AdminApi.call(`/api/v1/invitation/${invitationId}/on-complete`, 'POST', { data: { txnHash, address } });
     },
     getCategories() {
         return AdminApi.call(`/api/v1/category`, 'GET');
@@ -39,5 +39,8 @@ export const Api = {
     },
     getArticleDetail(articleId = '') {
         return AdminApi.call(`/api/v1/content-hub/${articleId}`, 'GET');
+    },
+    getTokenBalance(address) {
+        return AdminApi.call(`/api/v1/invitation/isTokenHolder/${address}`, 'GET');
     },
 }

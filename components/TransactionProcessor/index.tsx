@@ -52,7 +52,8 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
       clearInterval(handler);
       const updateStatus = await Api.updateInvite(linkId, {status: 2});
       if(updateStatus.success) {
-        const postSuccessResponse = await Api.postSuccess(linkId, txHash);
+        const address: any = storage.get(METAMASK_CONSTANTS.ADDRESS);
+        const postSuccessResponse = await Api.postSuccess(linkId, txHash, address);
         if(postSuccessResponse.success){
           setPurchaseState(PurchaseProcessingCard_states.success);
         }
@@ -111,6 +112,7 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
           image={generalCoin.src}
           message={formatAccount(accountNumber)}
           tokenType={tokenType==='member'?TOKEN_TYPE.GENERAL :TOKEN_TYPE.FOUNDER}
+          tokenId={tokenId}
         />
       )}
     </main>
