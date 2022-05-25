@@ -37,12 +37,12 @@ export const TitleDescriotion_DateTitleDesctiptionElements = (
                 <span className="font-recife text-8xl font-extralight">
                   {(element.date as Record<string, string>).day}
                 </span>{" "}
-                <span className="font-mono text-primary-light text-3xl ml-2">
+                <span className="font-mono text-primary-light text-2xl ml-2">
                   {(element.date as Record<string, string>).month}
                 </span>
               </div>
               <div className="w-full flex flex-col gap-4">
-                <div className="font-mono uppercase text-primary-light text-3xl">
+                <div className="font-mono uppercase text-primary-light text-2xl">
                   {element.title}
                 </div>
                 <div className="font-mono uppercase text-3xl text-secondary-1 text-opacity-50">
