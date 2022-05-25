@@ -24,8 +24,8 @@ export const TitleDescriptionImageCardCarousal3DotsCard = ({element, index}: {el
       ></span>
     ))}
   </div>
-  <H2 className="mt-20 w-1/2 leading-[3rem] 2xl:leading-[3rem]">{element.title}</H2>
-  <p className="font-mono text-primary-light text-base mt-3 text-opacity-60">
+  <H2 className="mt-16 w-1/2 leading-[3rem] 2xl:leading-[3rem] max-h-[150px] min-h-[150px] overflow-hidden text-[50px]" style={{fontSize: 50}}>{element.title}</H2>
+  <p className="font-mono text-primary-light text-base mt-3 text-opacity-60 min-h-[100px] max-h-[100px]">
     {element.description}
   </p>
   <A className="mt-6 flex w-fit" href={(element.linkHref as string) ?? 'javascript:void(0)'}><>{element.linkTitle} <RightArrowSecondary /></></A>
@@ -39,11 +39,11 @@ export const TitleDescription_TitleDescriptionImageCardCarousal = (
     <Article>
       <div className="block lg:w-1/2">
         <H1>{props.title}</H1>
-        <p className="font-mono text-primary-light text-base">
+        <p className="font-mono text-primary-light text-base mt-2">
           {props.description}
         </p>
       </div>
-      <div className="-px-section pl-6 lg:px-32 flex flex-row flex-nowrap overflow-x-auto styled-scrollbar mt-16 gap-8 py-5">
+      <div className="event-scroll -px-section pl-6 lg:px-32 flex flex-row flex-nowrap overflow-x-auto styled-scrollbar mt-16 gap-8 py-5">
         {props.items?.map((element, index) => {
           return <TitleDescriptionImageCardCarousal3DotsCard element={element} key={index} index={index} />;
         })}

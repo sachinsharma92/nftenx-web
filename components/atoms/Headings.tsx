@@ -18,6 +18,7 @@ export const H1 = forwardRef(H1component);
 
 const H2component = (props: HeadingProps, ref: Ref<any>) => (
   <h2
+    {...props}
     className={`${props.className} drop-shadow-sm 2xl:leading-snug text-4xl lg:text-5xl 2xl:text-6xl text-secondary-1 font-heading-serif font-extralight`}
     ref={ref}
   >

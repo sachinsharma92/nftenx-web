@@ -5,7 +5,7 @@ import generalCoin from "assets/images/coin-general.png";
 
 import accessIcon from "assets/icons/access.svg";
 import immersionIcon from "assets/icons/immersion.svg";
-import insightIcon from "assets/icons/insights.svg";
+import insightIcon from "assets/icons/insight.svg";
 import userImage from "assets/images/user-image.jpeg";
 
 export const section2 = {
