@@ -24,7 +24,7 @@ const Member: NextPage = (props: any) => {
         date: {
           day: moment(event.eventDate).format("DD"),
           month: moment(event.eventDate).format("MMMM"),
-          time: moment(event.eventTime).format("LT"),
+          time: moment(`1970-01-01 ${event.eventTime}`).format("LT"),
         },
         title: event.title,
         description: event.description,
@@ -52,20 +52,20 @@ const Member: NextPage = (props: any) => {
 
         <TitleDescriotion_DateTitleDesctiptionElements
           title="Programmes this month"
-          description="Web3’s pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to harness this once-in-a-decade."
+          description="Web3's pace, depth, and potential are immense. We saw that Builders, Operators, and Leaders from all backgrounds are searching for ways to learn more, to get involved, to harness this once-in-a-decade."
           items={getEventsRestructured()}
         />
-        <TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal
+        <HeadingToggleCards
+        toggleButtons={true}
+          title="From the Content Hub"
+        />
+
+         <TitleDescriptionLink_ImageTitleDescriptionButtonsCarousal
           title={section7.title}
           description={section7.description}
           linkTitle={section7.linkTitle}
           linkHref={section7.linkHref}
           items={mentors}
-        />
-
-        <HeadingToggleCards
-        toggleButtons={true}
-          title="From the Content Hub"
         />
 
         <FAQSection title={section11.title} items={section11.items} gradient />
@@ -77,7 +77,7 @@ const Member: NextPage = (props: any) => {
           image={section12.image}
           linkTitle={
             <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
-              Join the Community
+              Join the waitlist
               <span role="img" className="transition-all pl-2 group-hover:pl-5">
                 <RightArrowSecondary className="h-10 w-auto" />
               </span>
