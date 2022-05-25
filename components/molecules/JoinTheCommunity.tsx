@@ -1,6 +1,6 @@
 import { H1, P } from "components/atoms";
-import generalCoin from "../../assets/images/coin-general.png";
-import founderCoin from "../../assets/images/coin-founder.png";
+import generalCoin from "../../assets/images/Gen_Front.png";
+import founderCoin from "../../assets/images/FDR_Front.png";
 import { ButtonWithDescription } from 'components/molecules';
 import { purchaseToken } from "utils/tokenMint";
 import { TOKEN_TYPE_ID } from "constants/globalConstants";
