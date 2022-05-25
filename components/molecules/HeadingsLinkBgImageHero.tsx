@@ -17,7 +17,7 @@ export const HeadingsLinkBgImageHero = (props: Props) => {
       {props.image && (
         <img
           src={props.image}
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-3/5 md:h-full object-cover"
           alt="NF10X"
         />
       )}

@@ -56,7 +56,7 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
 
       <div
         ref={customCursorRef}
-        className="absolute transition-all bg-secondary-2 opacity-40 h-60 w-60 rounded-full blur-[170px] animate-levitate-slow"
+        className="absolute transition-all bg-primary-light opacity-40 h-60 w-60 rounded-full blur-[170px] animate-levitate-slow"
       ></div>
 
       {props.title && <H1 className="z-[1] text-center">{props.title}</H1>}
