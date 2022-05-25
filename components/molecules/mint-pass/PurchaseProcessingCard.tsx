@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import {
   CrossCircleRed,
+  DiscordSecondary,
   Logo,
   RightArrowSecondary,
   Spinner,
@@ -60,7 +61,7 @@ export const PurchaseProcessingCard = (props: PropType) => {
             You just purchased a {props.tokenType?.toLocaleLowerCase()} pass.
           </span>
           <p>
-            <A href={getOpenSeaUrl()} transparent>{'See your pass on OpenSea'}</A>
+            <A href={getOpenSeaUrl()} transparent className="text-primary-light-2">{'See your pass on OpenSea'}</A>
           </p>
         </>
       ),
@@ -68,9 +69,9 @@ export const PurchaseProcessingCard = (props: PropType) => {
       // animateIcon: <TickCircleGreen className="w-full" />,
       linkTitle: (
         <>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <span>Go to discord</span>
-          <Image src={DiscordIcon} alt="discord-icon"/>
+          <A href={DISCORD_LINK} transparent noPadding className="ml-2"><DiscordSecondary /></A>
         </div>
         </>
       ),
