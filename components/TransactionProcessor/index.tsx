@@ -63,9 +63,13 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
     }
   }
 
-  const startTxn = async ()=>{
-    const txnHash = await purchaseToken(tokenId);
-    handler = setInterval(() => getTxnStatus(txnHash), 5000);
+  const startTxn = async () => {
+    try {
+      const txnHash = await purchaseToken(tokenId);
+      handler = setInterval(() => getTxnStatus(txnHash), 5000);
+    } catch (error) {
+      setPurchaseState(PurchaseProcessingCard_states.fail);
+    }
   }
 
   const mint=async () => {

@@ -44,7 +44,7 @@ export const PurchaseProcessingCard = (props: PropType) => {
       subtitle: (
         <>
           <span className="opacity-50">
-            You just purchased a {props.tokenType?.toLocaleLowerCase()} pass.
+            Purchase of {props.tokenType?.toLocaleLowerCase()} pass in progress.
           </span>
         </>
       ),
@@ -60,11 +60,11 @@ export const PurchaseProcessingCard = (props: PropType) => {
             You just purchased a {props.tokenType?.toLocaleLowerCase()} pass.
           </span>
           <p>
-            <A href={getOpenSeaUrl()} transparent>{'See your token on OpenSea'}</A>
+            <A href={getOpenSeaUrl()} transparent>{'See your pass on OpenSea'}</A>
           </p>
         </>
       ),
-      description: "It should be confirmed on the blockchain shortly.",
+      description: "You can access discord channel now.",
       // animateIcon: <TickCircleGreen className="w-full" />,
       linkTitle: (
         <>
@@ -88,7 +88,7 @@ export const PurchaseProcessingCard = (props: PropType) => {
           </span>
         </>
       ),
-      description: "It will not be confirmed on the blockchain shortly.",
+      description: "You can join the waitlist.",
       // animateIcon: <CrossCircleRed className="w-full" />,
       linkTitle: (
         <>
