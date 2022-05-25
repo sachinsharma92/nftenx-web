@@ -11,13 +11,12 @@ import {
 } from "components/molecules";
 
 import { section2, section3, section4, section5 } from "constants/joinPage";
-import { section12 } from "constants/landing";
+import { section11, section12 } from "constants/landing";
 import { RightArrowSecondary } from "assets/icons";
 import { Api } from "services/api";
 
 const JoinPage = (props: Record<string, any>) => {
   const {success, eventsThisMonth} = props;
-  console.log("🚀 ~ file: index.tsx ~ line 20 ~ JoinPage ~ eventsThisMonth", eventsThisMonth)
 
   const getEventsRestructured=()=>{
     return (eventsThisMonth || []).map((event: any)=>{
@@ -65,16 +64,16 @@ const JoinPage = (props: Record<string, any>) => {
         items={section4.items}
       />
 
-      <FAQSection title={section5.title} items={section5.items} />
+      <FAQSection title={section11.title} items={section11.items} />
 
       <ImageTitleDescriptionLinkHero
           title={section12.title}
           description={section12.description}
-          linkHref={section12.linkHref}
           image={section12.image}
+          linkHref={section12.linkHref}
           linkTitle={
             <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
-              Join the Community
+              Join the waitlist
               <span role="img" className="transition-all pl-2 group-hover:pl-5">
                 <RightArrowSecondary className="h-10 w-auto" />
               </span>

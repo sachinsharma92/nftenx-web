@@ -23,7 +23,8 @@ export const navLinks = [
 
 export const extraLinks = [
   {
-    title: "Join the Community",
+    title: "Join the waitlist",
     href: "/join",
+    showArrow: true
   },
 ];

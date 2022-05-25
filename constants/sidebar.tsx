@@ -5,7 +5,7 @@ export const DISCORD_LINK = process.env.NEXT_PUBLIC_DISCORD_URL || 'https://disc
 export const socialLinks = [
   {
     image: <InstaSecondary />,
-    href: 'https://www.instagram.com'
+    href: process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://www.instagram.com'
   },
   {
     image: <DiscordSecondary />,
@@ -13,6 +13,6 @@ export const socialLinks = [
   },
   {
     image: <TwitterSecondary />,
-    href: 'https://www.twitter.com'
+    href: process.env.NEXT_PUBLIC_TWITTER_URL || 'https://www.twitter.com'
   },
 ]

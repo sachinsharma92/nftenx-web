@@ -59,6 +59,9 @@ export const MultipleImgTitleDescriptionSection = (props: PropType) => {
                 {element.title && <H3>{element.title}</H3>}
                 {element.description && (
                   <p className="font-mono text-primary-light-2 text-opacity-70 pt-4 text-sm">
+                     {/* <div
+                      dangerouslySetInnerHTML={{__html: element.description}}
+                    /> */}
                     {element.description}
                   </p>
                 )}

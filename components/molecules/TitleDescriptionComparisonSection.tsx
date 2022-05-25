@@ -61,7 +61,7 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
 
       {props.title && <H1 className="z-[1] text-center">{props.title}</H1>}
       {props.description && (
-        <p className="z-[1] text-center font-mono">{props.description}</p>
+        <p className="z-[1] text-center font-mono text-primary-light-2">{props.description}</p>
       )}
       <div className="z-[1] flex w-full flex-col lg:flex-row mt-36 lg:mt-8 gap-4 justify-around align-center">
         {props.items.map((element, index) => {
