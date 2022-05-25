@@ -93,7 +93,7 @@ export const Header = () => {
         })}
         <li className="inline-block">
           <button
-            onClick={account? ()=>null: connectWalletHandler}
+            onClick={account? ()=>router.push('/member'): connectWalletHandler}
             className="px-4 py-2 xl:px-6 xl:py-3 text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md font-mono"
           >
             {formatAccount(account) || 'Connect Wallet'}
