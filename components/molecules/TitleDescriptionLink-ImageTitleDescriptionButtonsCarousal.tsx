@@ -18,7 +18,12 @@ type PropTypes = {
   linkHref?: string;
 };
 
-const SocialMediaIcon=({link, image})=>{
+type SocialMediaIconProps = {
+  link: any;
+  image: any;
+}
+
+const SocialMediaIcon=({link, image}: SocialMediaIconProps)=>{
   return <div className="mt-2 flex-flex-row justify-start gap-2 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:-translate-y-20 transition-all">
           <A
             transparent
@@ -33,7 +38,7 @@ const SocialMediaIcon=({link, image})=>{
     </div>
 }
 
-const SocialMediaIcons = ({ element }) => {
+const SocialMediaIcons = ({ element }: {element: any}) => {
   return <div className="flex gap-2 social-media-profiles">
     {element.twitterLink && <SocialMediaIcon link={element.twitterLink} image={<TwitterPrimary />}/>}
     {element.websiteLink && <SocialMediaIcon link={element.websiteLink} image={<GlobePrimary />}/>}

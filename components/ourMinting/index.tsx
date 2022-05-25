@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CoinIcon from "../../assets/images/coin.png";
 import AccessIcon from "../../assets/icons/access.svg";
-import InsightsIcon from "../../assets/icons/insights.svg";
+import InsightsIcon from "../../assets/icons/insight.svg";
 import ImmersionIcon from "../../assets/icons/immersion.svg";
 
 const OurMintingComponent = (props: Record<string, any>) => {
