@@ -1,6 +1,6 @@
 import { DiscordSecondary, InstaSecondary, TwitterSecondary } from "assets/icons";
 
-export const DISCORD_LINK = 'https://discord.gg/phtWQDjv';
+export const DISCORD_LINK = process.env.NEXT_PUBLIC_DISCORD_URL || 'https://discord.gg/phtWQDjv';
 
 export const socialLinks = [
   {
