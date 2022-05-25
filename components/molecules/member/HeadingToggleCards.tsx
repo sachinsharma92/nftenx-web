@@ -32,13 +32,13 @@ export const ContentCard = ({
         <img
           alt={title}
           src={image}
-          className={`w-[320px] h-[320px] max-w-full object-cover ${
+          className={`w-[320px] min-h-[320px] max-h-[320px] max-w-full object-cover ${
             type == 2 ? "order-2" : ""
           }`}
         />
-        <H4>{title}</H4>
+        <H4 className="max-h-[80px] min-h-[80px] overflow-hidden">{title}</H4>
         {/* <p className="font-mono text-primary-light">{description}</p> */}
-        <RichText data={description as string} />
+        <RichText data={description as string} className="min-h-[100px] max-h-[100px] overflow-hidden"/>
       </a>
     </Link>
   );
