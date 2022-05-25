@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 import { metaMask, hooks } from '../connectors/metamask/MetamaskConnector';
 import { useWeb3Context } from 'web3-react';
 // images
-import generalCoin from "/assets/images/coin-general-1.png";
+import generalCoin from "/assets/images/Gen_Front.png";
+import founderCoin from "/assets/images/FDR_Front.png";
 import { storage } from "utils/storage";
 import { formatAccount, purchaseToken } from '../../utils/tokenMint';
 import { Api } from "services/api";
@@ -117,7 +118,7 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
         <PurchaseProcessingCard
           title={`${tokenType==='member'?'General' :'Founder'} Access Pass`}
           state={purchaseState}
-          image={generalCoin.src}
+          image={tokenType==='member'? generalCoin.src: founderCoin.src}
           message={formatAccount(accountNumber)}
           tokenType={tokenType==='member'?TOKEN_TYPE.GENERAL :TOKEN_TYPE.FOUNDER}
           tokenId={tokenId}

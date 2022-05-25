@@ -11,7 +11,6 @@ type Props = {
 export const ButtonWithDescription = ({src, onClick, title, subTitle}: Props) => {
   return (
         <div className="relative flex flex-col items-center gap-5">
-            <img src={src} alt="founder-coin" className="absolute w-96 blur-3xl animate-spin-slow"/>
             <button onClick={onClick} className="z-[1]">
                 <img src={src} alt="founder-coin" className="w-96"/>
             </button>
