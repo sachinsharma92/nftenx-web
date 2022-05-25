@@ -28,5 +28,7 @@ export const purchaseToken = async (assetId: string|number) => {
           params: [generatedPayload.data],
       });
       return txHash;
+  }else {
+    return false;
   }
 }

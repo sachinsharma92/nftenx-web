@@ -66,7 +66,11 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
   const startTxn = async () => {
     try {
       const txnHash = await purchaseToken(tokenId);
-      handler = setInterval(() => getTxnStatus(txnHash), 5000);
+      if(txnHash){
+        handler = setInterval(() => getTxnStatus(txnHash), 5000);
+      }else{
+        setPurchaseState(PurchaseProcessingCard_states.fail);
+      }
     } catch (error) {
       setPurchaseState(PurchaseProcessingCard_states.fail);
     }
