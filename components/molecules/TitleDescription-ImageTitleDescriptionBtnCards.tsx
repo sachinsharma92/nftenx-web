@@ -41,7 +41,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
           <img
             src={element.eventImage.mediaUrl as string}
             alt={(element.title as string) ?? "NF10X event"}
-            className="w-full h-auto  max-h-[200px]"
+            className="w-full h-auto  max-h-[200px] object-contain"
           />
         )}
         {element.title && (
