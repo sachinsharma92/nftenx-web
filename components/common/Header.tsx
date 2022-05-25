@@ -23,7 +23,6 @@ export const Header = () => {
       if(!accounts.length) {
         storage.del(METAMASK_CONSTANTS.ADDRESS);
         setAccount('');
-        console.log("🚀 ~ file: Header.tsx ~ line 30 ~ windowObj.ethereum.on ~ event", event)
       }
     });
   }

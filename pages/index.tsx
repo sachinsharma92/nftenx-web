@@ -26,11 +26,16 @@ import {
   section8,
   section9,
 } from "constants/landing";
+import { useIsMemberUser } from "hooks";
 import type { NextPage } from "next";
 import { Api } from "../services/api";
+import { useRouter } from 'next/router'
+import { useState, useEffect } from "react";
 
 const Home: NextPage = (props: any) => {
   const { mentors = [], events = [] } = props;
+  const [isMember, getIsMember] = useIsMemberUser();
+
   return (
     <main className="bg-primary-1 min-h-screen">
       <Seo title="Home" />

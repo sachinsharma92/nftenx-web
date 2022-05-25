@@ -32,9 +32,7 @@ type PropType = {
 export const PurchaseProcessingCard = (props: PropType) => {
 
   const getOpenSeaUrl = () => {
-    const url = `${process.env.NEXT_PUBLIC_OPENSEA_URL}/${METAMASK_CONSTANTS.CONTRACT_ADDRESS}/${props.tokenId}`
-    debugger;
-    return url;
+    return `${process.env.NEXT_PUBLIC_OPENSEA_URL}/${METAMASK_CONSTANTS.CONTRACT_ADDRESS}/${props.tokenId}`
   }
 
   const statusMessages: Record<
