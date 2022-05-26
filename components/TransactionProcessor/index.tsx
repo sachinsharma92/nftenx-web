@@ -153,7 +153,7 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
               <Logo />
               <div className="">
                 <H1 className="font-[500]">Mint Successful!</H1>
-                <H1 className="font-[500]">Here is your {tokenType==='member'?'Member': 'Founder'}&apos;s Token.</H1>
+                <H1 className="font-[500]"><>Here is your {tokenType==='member'?'Member': 'Founder'}&apos;s Token.</></H1>
               </div>
               <div className="">
                 <p className="font-mono text-secondary-1 font-light">You can also see this token on</p>
