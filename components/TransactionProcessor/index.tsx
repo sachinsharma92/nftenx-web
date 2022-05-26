@@ -158,7 +158,9 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
               <div className="">
                 <p className="font-mono text-secondary-1 font-light">You can also see this token on</p>
                 <p className="font-mono text-[#7C6EF6] font-light break-all">
-                  <A href={getOpenSeaUrl()} transparent className="text-primary-light-2" noPadding>{getOpenSeaUrl()}</A>
+                  <a className="text-primary-light-2" href={getOpenSeaUrl()} target="_blank" rel="noreferrer">
+                    {getOpenSeaUrl()}
+                  </a>
                 </p>
               </div>
               <div className="">
