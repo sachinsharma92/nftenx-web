@@ -157,7 +157,9 @@ const TransactionProcessor = (props: TransactionProcessorProps) => {
               </div>
               <div className="">
                 <p className="font-mono text-secondary-1 font-light">You can also see this token on</p>
-                <p className="font-mono text-[#7C6EF6] font-light break-all">{getOpenSeaUrl()}</p>
+                <p className="font-mono text-[#7C6EF6] font-light break-all">
+                  <A href={getOpenSeaUrl()} transparent className="text-primary-light-2" noPadding>{getOpenSeaUrl()}</A>
+                </p>
               </div>
               <div className="">
                 <p className="font-mono text-primary-light font-light">Head to the NF10X members&apos; page to view your unlocked content</p>
