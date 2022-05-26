@@ -24,8 +24,8 @@ export const TitleDescriptionImageCardCarousal3DotsCard = ({element, index}: {el
       ></span>
     ))}
   </div>
-  <H2 className="mt-16 w-1/2 leading-[3rem] 2xl:leading-[3rem] max-h-[150px] min-h-[150px] overflow-hidden text-[50px]" style={{fontSize: 50}}>{element.title}</H2>
-  <p className="font-mono text-primary-light text-base mt-3 text-opacity-60 min-h-[100px] max-h-[100px]">
+  <H2 className="mt-16 w-1/2 leading-[3rem] 2xl:leading-[3rem] max-h-[100px] min-h-[100px] overflow-hidden line-clamp-2 text-[50px]" style={{fontSize: 50}}>{element.title}</H2>
+  <p className="font-mono text-primary-light text-base mt-3 text-opacity-60 min-h-[100px] max-h-[100px] overflow-hidden line-clamp-4">
     {element.description}
   </p>
   <A className="mt-6 flex w-fit" href={(element.linkHref as string) ?? 'javascript:void(0)'}><>{element.linkTitle} <RightArrowSecondary /></></A>

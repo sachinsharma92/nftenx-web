@@ -36,9 +36,9 @@ export const ContentCard = ({
             type == 2 ? "order-2" : ""
           }`}
         />
-        <H4 className="max-h-[80px] min-h-[80px] overflow-hidden">{title}</H4>
+        <H4 className="max-h-[80px] min-h-[80px] overflow-hidden line-clamp-2">{title}</H4>
         {/* <p className="font-mono text-primary-light">{description}</p> */}
-        <RichText data={description as string} className="min-h-[100px] max-h-[100px] overflow-hidden"/>
+        <RichText data={description as string} className="min-h-[100px] max-h-[100px] overflow-hidden line-clamp-4"/>
       </a>
     </Link>
   );
