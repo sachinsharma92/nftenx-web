@@ -15,6 +15,7 @@
     "@ethersproject/providers": "^5.6.0",
     "@ethersproject/units": "^5.6.0",
     "@metamask/providers": "^8.1.1",
+    "@tailwindcss/line-clamp": "^0.4.0",
     "@walletconnect/ethereum-provider": "^1.7.7",
     "@walletconnect/jsonrpc-http-connection": "^1.0.0",
     "@walletconnect/jsonrpc-provider": "^1.0.3",
