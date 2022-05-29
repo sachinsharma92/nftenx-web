@@ -16,7 +16,7 @@ export const A = (props: AProps) => {
           !props.noPadding ? "px-8 py-5" : ""
         } rounded-full backdrop-blur-md inline-block ${
           props.transparent ? "transparent" : "bg-primary-light-2 border-white border-opacity-10 border-[1px]"
-        } bg-opacity-10 text-secondary-1 font-mono transition-all ${
+        } bg-opacity-10 text-secondary-1 transition-all ${
           props.className
         }`}
       >

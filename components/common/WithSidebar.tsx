@@ -14,7 +14,7 @@ export const WithSidebar = (props: WithSidebarProps) => {
     <>
       <div
         className="z-[110] hidden lg:flex lg:flex-col justify-between
-        items-center fixed top-0 left-0 h-screen w-[80px]
+        items-center fixed top-0 left-0 h-screen w-[72px]
       bg-primary-1 bg-opacity-20 backdrop-blur-md text-secondary-1
         py-6 border-r-2 border-secondary-1 border-opacity-5"
       >
@@ -30,7 +30,7 @@ export const WithSidebar = (props: WithSidebarProps) => {
               <A
                 key={index}
                 href={element.href ?? "javascript.void(0)"}
-                className="px-2 py-2"
+                className="social-side-icons"
               >
                 {element.image}
               </A>

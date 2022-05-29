@@ -56,13 +56,13 @@ export const Header = () => {
         <MenuSecondary />
       </button>
       <nav className="hidden lg:block rounded-full bg-white bg-opacity-5 backdrop-blur-md overflow-hidden z-[100] border-white border-opacity-10 border-[1px]">
-        <ul className="list-none flex flex-row gap-2">
+        <ul className="list-none flex flex-row gap-1">
           {navLinks.map((element, index) => {
             return (
               <li key={index} className="inline-block">
                 <Link passHref href={element.href ?? "javascript.void(0)"}>
                   <a
-                    className={`${linkPaddings} font-mono text-secondary-1 transition-all ${
+                    className={`${linkPaddings} text-secondary-1 transition-all ${
                       element.href.replace("/", "") != activeRoute
                         ? "opacity-50"
                         : ""
@@ -83,7 +83,7 @@ export const Header = () => {
             <li key={index} className="inline-block">
               <Link passHref href={element.href ?? "javascript.void(0)"}>
                 <a
-                  className={`${linkPaddings} flex items-center text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md font-mono`}
+                  className={`${linkPaddings} flex items-center text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md`}
                 >
                   {element.title}
                   {element.showArrow && <span role="img">
@@ -98,7 +98,7 @@ export const Header = () => {
         <li className="inline-block">
           <button
             onClick={account? ()=>router.push('/member'): connectWalletHandler}
-            className="px-4 py-2 xl:px-6 xl:py-3 text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md font-mono"
+            className="px-4 py-2 xl:px-6 xl:py-3 text-secondary-1 bg-white bg-opacity-5 rounded-full inline-block backdrop-blur-md"
           >
             {formatAccount(account) || 'Connect Wallet'}
           </button>

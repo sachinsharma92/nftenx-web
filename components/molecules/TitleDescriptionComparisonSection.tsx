@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ElegantSeperator } from "assets/icons";
 import { H1, H2 } from "components/atoms";
-import React, { MouseEventHandler, useRef } from "react";
+import React, { MouseEventHandler, useEffect, useRef } from "react";
 
 type PropType = {
   title?: string | JSX.Element;
@@ -61,15 +61,15 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
 
       {props.title && <H1 className="z-[1] text-center">{props.title}</H1>}
       {props.description && (
-        <p className="z-[1] text-center font-mono text-primary-light-2">{props.description}</p>
+        <p className="z-[1] text-center text-primary-light-2">{props.description}</p>
       )}
       <div className="z-[1] flex w-full flex-col lg:flex-row mt-36 lg:mt-8 gap-4 justify-around align-center">
         {props.items.map((element, index) => {
           return (
             <React.Fragment key={index}>
               <div
-                // onMouseEnter={handleElementMouseEnter}
-                className={`select-none lg:max-w-md transition-all lg:opacity-50 lg:hover:opacity-100
+                onMouseEnter={handleElementMouseEnter}
+                className={`hover-card-style select-none lg:max-w-md transition-all lg:opacity-50 lg:hover:opacity-100
                 ${index % 2 == 0 ? "text-left" : "text-right"}
                 ${
                   index === 0
@@ -85,7 +85,7 @@ export const TitleDescriptionComparisonSection = (props: PropType) => {
               >
                 {element.title && <H2 className="shadow-primary-1 drop-shadow-2xl text-secondary-1">{element.title}</H2>}
                 {element.description && (
-                  <p className="font-mono text-primary-light text-lg group-hover:text-white group-hover:text-opacity-70 pt-3">{element.description}</p>
+                  <p className="text-primary-light text-lg group-hover:text-white group-hover:text-opacity-70 pt-3">{element.description}</p>
                 )}
               </div>
               {index != props.items.length - 1 && (

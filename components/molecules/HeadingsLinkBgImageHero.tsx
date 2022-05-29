@@ -17,11 +17,11 @@ export const HeadingsLinkBgImageHero = (props: Props) => {
       {props.image && (
         <img
           src={props.image}
-          className="absolute top-0 left-0 w-full h-3/5 md:h-full object-cover"
+          className="image-bg-style"
           alt="NF10X"
         />
       )}
-      <div className="z-[1] relative grid grid-flow-row-dense content-center gap-6 w-full lg:w-[90%] xl:w-[70%] 2xl:w-[70%]">
+      <div className="z-[1] relative grid grid-flow-row-dense content-center gap-6 w-full lg:w-[90%] xl:w-[70%] 2xl:w-[70%] hero-section-heading">
         {props.headings?.map((element, index) => {
           return (
             <H1
@@ -33,7 +33,7 @@ export const HeadingsLinkBgImageHero = (props: Props) => {
           );
         })}
         <div className="mt-8">
-          <A href={props.href ?? "javascript.void(0)"} className="px-8 py-3">
+          <A href={props.href ?? "javascript.void(0)"} className="btn-join">
             {props.linkTitle}
           </A>
         </div>

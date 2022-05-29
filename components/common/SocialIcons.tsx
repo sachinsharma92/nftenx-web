@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 // Images
-import InstaIcon from "../../assets/icons/insta.svg";
-import DiscordIcon from "../../assets/icons/discord.svg";
-import TwitterIcon from "../../assets/icons/twitter.svg";
+import InstaIcon from "../../assets/icons/new/insta.svg";
+import DiscordIcon from "../../assets/icons/new/discord.svg";
+import TwitterIcon from "../../assets/icons/new/twitter.svg";
 
 export const SocialIcons = () => {
 
