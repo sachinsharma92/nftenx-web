@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { ElegantSeperator } from "assets/icons";
-import { H1, H2 } from "components/atoms";
-import React, { MouseEventHandler, useEffect, useRef } from "react";
+import { H1 } from "components/atoms";
+import React, { } from "react";
+import square3dTranslucent from "/assets/images/sqiares-3d-translucent.png";
+import sphereSqTranslucent from "/assets/images/shperes-square-translucent.png";
+import Image from "next/image";
 
 type PropType = {
   title?: string | JSX.Element;
@@ -12,89 +15,38 @@ type PropType = {
 };
 
 export const TitleDescriptionComparisonSection = (props: PropType) => {
-  const customCursorRef = useRef<HTMLDivElement>(null);
-
-  // Un Comment bellow for mouse move animation
-  // useEffect(() => {
-  //   if (window) {
-  //     window.addEventListener("mousemove", (data) => {
-  //       requestAnimationFrame(() => {
-  //         customCursorRef.current!.style.top = `${data.clientY - 160}px`;
-  //         customCursorRef.current!.style.left = `${data.clientX - 160}px`;
-  //       });
-  //     });
-  //   }
-  // }, []);
-
-  const imageSideXPosision = {
-    left: "-left-[20px] lg:-left-[100px]",
-    right: "-right-[20px] lg:-right-[100px]",
-  };
-
-  const handleElementMouseEnter: MouseEventHandler<HTMLDivElement> = (e) => {
-    if(customCursorRef.current) {
-      customCursorRef.current.style.left = `${e.clientX - 30}px`;
-      customCursorRef.current.style.top = `${e.clientY - 30}px`;
-    }
-  };
 
   return (
-    <article className="relative p-section py-14 text-secondary-2 flex flex-col gap-8 justify-center min-h-screen overflow-x-hidden">
-      {props.image && (
-        <div
-          className={`absolute z-0 top-[30%] lg:top-[50%] lg:-translate-y-[80%] w-1/2 lg:w-2/6 ${
-            imageSideXPosision[props.imageSide as "left" | "right"]
-          } transition-all lg:hover:scale-[102%]`}
-        >
-          <img
-            src={props.image}
-            alt="image"
-            className="w-full animate-levitate-slow"
-          />
-        </div>
-      )}
-
-      <div
-        ref={customCursorRef}
-        className="absolute transition-all bg-primary-light opacity-40 h-60 w-60 rounded-full blur-[170px] animate-levitate-slow"
-      ></div>
-
+    <div className="who-nf10x">
       {props.title && <H1 className="z-[1] text-center">{props.title}</H1>}
       {props.description && (
-        <p className="z-[1] text-center text-primary-light-2">{props.description}</p>
+        <p className="z-[1] text-center text-primary-light-2 mt-3">{props.description}</p>
       )}
-      <div className="z-[1] flex w-full flex-col lg:flex-row mt-36 lg:mt-8 gap-4 justify-around align-center">
-        {props.items.map((element, index) => {
-          return (
-            <React.Fragment key={index}>
-              <div
-                onMouseEnter={handleElementMouseEnter}
-                className={`hover-card-style select-none lg:max-w-md transition-all lg:opacity-50 lg:hover:opacity-100
-                ${index % 2 == 0 ? "text-left" : "text-right"}
-                ${
-                  index === 0
-                    ? "lg:text-left"
-                    : index === props.items.length - 1
-                    ? "lg:text-right"
-                    : "lg:text-center"
-                }
-                  mb-9 lg:mb-0
-                  text-secondary-2
-                  group
-                `}
-              >
-                {element.title && <H2 className="shadow-primary-1 drop-shadow-2xl text-secondary-1">{element.title}</H2>}
-                {element.description && (
-                  <p className="text-primary-light text-lg group-hover:text-white group-hover:text-opacity-70 pt-3">{element.description}</p>
-                )}
-              </div>
-              {index != props.items.length - 1 && (
-                <ElegantSeperator className="hidden lg:block" />
-              )}
-            </React.Fragment>
-          );
-        })}
+      <div className="flex-section">
+        <div className="col-1">
+          <div className="img-card">
+            <Image src={square3dTranslucent} className="img-hover" alt="" />
+          </div>
+          <h4 className="title4">Disruptors</h4>
+          <p className="description">
+            Entrepreneurs and leaders actively building in Web3 that want to learn with and from a productive, insight-filled community
+          </p>
+        </div>
+
+        <div className="img-divider">
+          <ElegantSeperator className="hidden lg:block" />
+        </div>
+
+        <div className="col-1 right">
+          <div className="img-card">
+            <Image src={sphereSqTranslucent} className="img-hover" alt="" />
+          </div>
+          <h4 className="title4">Catalysts</h4>
+          <p className="description">
+            Founders and executives of legacy companies seeking resources to spark conversation and steer their businesses ahead of the Web3 curve.
+          </p>
+        </div>
       </div>
-    </article>
+    </div>
   );
 };

@@ -726,7 +726,7 @@ p {
 // get-one-card
 .get-one-card {
   .text-style {
-    font-size: 13px;
+    font-size: 14px;
     margin: 0;
   }
 
@@ -739,7 +739,6 @@ p {
 .menter-cards {
   display: flex;
   gap: 10px;
-  margin-bottom: 100px;
 
   .footer-sec {
     transition: all 0.5s ease-in-out;
@@ -830,4 +829,91 @@ p {
       }
     }
   }
+}
+
+// who-nf10x
+.who-nf10x {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+
+  .flex-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 150px;
+    margin-top: 50px;
+
+    .title4 {
+      color: white;
+      font-size: 35px;
+    }
+
+    .img-divider {
+      padding: 50px 20px;
+      transform: scale(0.8);
+    }
+
+    .description {
+      color: #A3ACEC;
+      max-width: 90%;
+    }
+
+    .img-card {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      top: 50px;
+      left: 70px;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .right {
+      text-align: right;
+
+      .img-card {
+        left: auto;
+        right: 0;
+        top: 0;
+      }
+
+      .description {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+
+    .col-1 {
+      opacity: 0.6;
+      cursor: pointer;
+      transition: all 0.5 ease-in-out;
+
+      &:hover {
+        opacity: 1;
+
+        .img-card {
+          opacity: 1;
+          opacity: 0.6;
+        }
+
+        .title4 {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+// hero-section-home
+.hero-section-home {
+  padding-bottom: 400px;
+}
+
+.learn-and-grow {
+  margin-top: -150px;
 }
