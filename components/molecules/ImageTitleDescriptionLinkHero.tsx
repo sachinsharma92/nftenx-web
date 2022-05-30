@@ -18,7 +18,7 @@ export const ImageTitleDescriptionLinkHero = (props: PropTypes) => {
           <img src={props.image} alt="NF10X" className="w-full" />
         </div>
       )}
-      <div className="lg:w-2/3 flex flex-col items-center gap-8 -mt-36 z-[1]">
+      <div className="lg:w-2/3 flex flex-col items-center gap-8 -mt-36 z-[1] text-join-wave">
         {props.title && <H1>{props.title}</H1>}
         {props.description && (
           <p className=" text-center font-mono text-primary-light">

@@ -1,7 +1,6 @@
 import { H1, P } from "components/atoms";
-import generalCoin from "../../assets/images/Gen_Front.png";
-import founderCoin from "../../assets/images/FDR_Front.png";
-import { ButtonWithDescription } from 'components/molecules';
+import generalCoin from "../../assets/images/general-token.png";
+import founderCoin from "../../assets/images/founder-token.png";
 import { purchaseToken } from "utils/tokenMint";
 import { TOKEN_TYPE_ID } from "constants/globalConstants";
 /* eslint-disable @next/next/no-img-element */
@@ -13,35 +12,42 @@ import { TOKEN_TYPE_ID } from "constants/globalConstants";
 // };
 
 export const JoinTheCommunity = (props: any) => {
-    const TOKEN_TYPE = {
-        'FOUNDER': 1,
-        'MEMBER': 2
-    }
+	const TOKEN_TYPE = {
+		'FOUNDER': 1,
+		'MEMBER': 2
+	}
 
-  return (
-      <article className="p-section lg:py-32 overflow-x-hidden">
-        <H1 className="text-center mb-10">Join the Community</H1>
-        <P className="mb-10 font-mono text-primary-light">
-            <>
-            The NF10x community is built with a hands-on approach to onboarding. Every two weeks, we welcome a new cohort of<br/> members into the fold. These smaller groups foster an environment that is more conducive to building<br/> genuine relationships while integrating into the broader community.
-            </>
-        </P>
-        <div className="flex flex-col gap-7 md:grid md:grid-cols-2 md:justify-center md:gap-5">
-            <ButtonWithDescription
-                onClick={()=>purchaseToken(TOKEN_TYPE_ID.FOUNDER)}
-                src={founderCoin.src}
-                title={"100 Tokens"}
-                subTitle={<>
-                    Our first cohort will receive our Founding<br/> Members token and be added to a dedicated<br/> channel only available to.
-                </>}
-            />
-            <ButtonWithDescription
-                onClick={()=>purchaseToken(TOKEN_TYPE_ID.GENERAL)}
-                src={generalCoin.src}
-                title={"100 Tokens"}
-                subTitle={<>Subsequent cohorts will mint General Member<br/> tokens until the community grows to 1,100<br/> members.</>}
-            />
-        </div>
-      </article>
-  );
+	return (
+		<article className="p-section lg:py-32 overflow-x-hidden join-community">
+			<H1 className="mb-10">Join the Community</H1>
+			<p className="description size-sm">
+				The NF10x community is built with a hands-on approach to onboarding. Every two weeks, we welcome a new cohort of<br /> members into the fold. These smaller groups foster an environment that is more conducive to building<br /> genuine relationships while integrating into the broader community.
+			</p>
+			<div className="tokken-section">
+				<div className="card">
+					<div className="content">
+						<h2 className="title2">General Token</h2>
+						<h4 className="title4 font-mono">Lorem ipsum dolorem</h4>
+						<p className="description font-mono">Subsequent cohorts will mint General Member<br /> tokens until the community grows to 1,100<br /> members</p>
+					</div>
+					<button className="img-button with-gradient" onClick={()=>purchaseToken(TOKEN_TYPE_ID.GENERAL)}>
+						<img src={generalCoin.src} alt="" className="img" />
+					</button>
+				</div>
+
+				<div className="divider"></div>
+
+				<div className="card">
+					<button className="img-button" onClick={()=>purchaseToken(TOKEN_TYPE_ID.FOUNDER)}>
+						<img src={founderCoin.src} alt="" className="img" />
+					</button>
+					<div className="content">
+						<h2 className="title2 founder">Founder Token</h2>
+						<h4 className="title4 font-mono">Lorem ipsum dolorem</h4>
+						<p className="description font-mono">Our first cohort will receive our Founding<br /> Members token and be added to a dedicated<br /> channel only available to.</p>
+					</div>
+				</div>
+			</div>
+		</article>
+	);
 };

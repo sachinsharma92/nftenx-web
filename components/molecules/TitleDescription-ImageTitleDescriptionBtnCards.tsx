@@ -36,24 +36,27 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
 
   const getOneCard = (element: Record<string, any>) => {
     return (
+      <div className="get-one-card">
       <div className="shrink-0 w-72 lg:w-72 3xl:w-96 bg-[#bbc3da] bg-opacity-5 backdrop-blur-md p-5 border-secondary-1 border-opacity-10 border-[1px] rounded-3xl flex flex-col gap-2 items-center">
         {element.eventImage && (
+          <div className="img-circle">
           <img
             src={element.eventImage.mediaUrl as string}
             alt={(element.title as string) ?? "NF10X event"}
             className="w-full h-auto  max-h-[200px] object-contain"
           />
+          </div>
         )}
         {element.title && (
           <>
-          <p className="font-mono text-primary-light text-center min-h-[74px]">
+          <p className="font-mono text-primary-light text-center text-style">
             <>
               {element.title} by
               <br />
               {element.hostedBy}
             </>
           </p>
-          <p className="text-primary-light-2">
+          <p className="text-primary-light text-date">
               {moment(element.eventDate).format("DD MMM")}
           </p>
           </>
@@ -66,6 +69,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
             {element.buttonTitle}
           </button>
         )}
+      </div>
       </div>
     );
   };
@@ -92,7 +96,7 @@ export const TitleDescription_ImageTitleDescriptionBtnCards = (
       <img src={leftBlob.src} alt="blob" className="absolute -top-[100px] lg:-top-[500px] left-0 -px-section" />
       <img src={rightBlob.src} alt="blob" className="absolute top-[100px] lg:-top-[300px] right-0 -px-section" />
 
-      <div className="lg:w-3/5">
+      <div className="lg:w-4/6 mb-10">
         {props.title && <H1 className="text-center">{props.title}</H1>}
         {props.description && (
           <p className="font-mono text-primary-light text-center pt-4">

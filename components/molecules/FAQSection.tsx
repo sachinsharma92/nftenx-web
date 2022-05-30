@@ -39,18 +39,18 @@ const FAQCard = ({element, index}: {element: Record<string, JSX.Element | string
   }
   return (
     <div
-      className="w-full rounded-3xl bg-[#757FBD] bg-opacity-10 border-secondary-1 border-[1px] border-opacity-10 p-4 lg:py-6 lg:px-16 flex flex-row gap-6"
+      className="w-full rounded-3xl bg-[#757FBD] bg-opacity-10 border-secondary-1 border-[1px] border-opacity-10 p-4 lg:py-4 lg:px-10 flex flex-row gap-6 faq-card-item"
     >
       <div className="">
         <H4 className="opacity-30">
           <span className=" text-primary-light-2">{(index + 1 < 10 ? `0${index + 1}` : index + 1).toString()}</span>
         </H4>
       </div>
-      <div className="flex flex-col gap-2" onClick={handleClick}>
+      <div className="flex flex-col cursor-pointer" onClick={handleClick}>
         <H4 className="relative">
           <>{element.title} <button onClick={handleClick} className="absolute top-1/2 right-0 -translate-y-1/2 -mt-1 text-secondary-2 opacity-30">+</button></>
         </H4>
-        <p className={`text-primary-light-2 opacity-60 overflow-hidden transition-all ${!active ? 'h-0' : 'h-auto'}`}>{element.description}</p>
+        <p className={`text-primary-light-2 opacity-60 mt-3 overflow-hidden transition-all ${!active ? 'h-0' : 'h-auto'}`}>{element.description}</p>
       </div>
     </div>
   );

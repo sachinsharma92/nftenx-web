@@ -76,6 +76,7 @@ const Home: NextPage = (props: any) => {
           items={mentors}
         />
         <InfiniteScroller items={section8} />
+        
         <TitleDescription_ImageTitleDescriptionBtnCards
           title={section9.title}
           description={section9.description}
@@ -88,6 +89,7 @@ const Home: NextPage = (props: any) => {
           linkHref={section10.linkHref}
         />
         <JoinTheCommunity />
+
         <FAQSection
           title={section11.title}
           items={section11.items}

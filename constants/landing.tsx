@@ -7,7 +7,8 @@ import insightImg from "/assets/icons/insight.svg";
 import accessImg from "/assets/icons/access.svg";
 import immersionImg from "/assets/icons/immersion.svg";
 
-import logo3d from "/assets/images/nf10x-3d.png";
+import logo3d from "/assets/images/nf10x-logo-3d.png";
+import logo3dNew from "/assets/images/nf10x-3d.png";
 import square3dTranslucent from "/assets/images/sqiares-3d-translucent.png";
 import sphereSqTranslucent from "/assets/images/shperes-square-translucent.png";
 
@@ -495,7 +496,7 @@ export const section11 = {
 
 export const section12 = {
   title: "Join the next wave of web3",
-  image: logo3d.src,
+  image: logo3dNew.src,
   description:
     "Subscribe to our newsletter to receive weekly updates. We usually start with some updates from the community, what has been going on the inside.",
   linkHref: "/join",
