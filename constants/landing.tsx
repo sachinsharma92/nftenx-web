@@ -7,7 +7,7 @@ import insightImg from "/assets/icons/insight.svg";
 import accessImg from "/assets/icons/access.svg";
 import immersionImg from "/assets/icons/immersion.svg";
 
-import logo3d from "/assets/images/nf10x-logo-3d.png";
+import logo3d from "/assets/images/nf10x-3d.png";
 import square3dTranslucent from "/assets/images/sqiares-3d-translucent.png";
 import sphereSqTranslucent from "/assets/images/shperes-square-translucent.png";
 

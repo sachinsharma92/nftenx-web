@@ -11,7 +11,7 @@ type PropTypes = {
 
 export const ImageTitleDescriptionLinkHero = (props: PropTypes) => {
   return (
-    <article className="relative p-section lg:py-32 w-full flex flex-col items-center text-secondary-1 bg-primary-4">
+    <article className="relative p-section lg:py-22 w-full flex flex-col items-center text-secondary-1 bg-primary-4">
       {props.image && (
         // remove this pl-16 from bellow when changing the image
         <div className=" pl-16 relative h-[500px] overflow-y-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-2/3 after:w-full after:p-1 after:bg-gradient-to-b from-transparent to-primary-4">
@@ -26,7 +26,7 @@ export const ImageTitleDescriptionLinkHero = (props: PropTypes) => {
           </p>
         )}
         {props.linkTitle && (
-          <A href={props.linkHref ?? "javascript:void(0)"}>{props.linkTitle}</A>
+          <A href={props.linkHref ?? "javascript:void(0)"} className="py-3">{props.linkTitle}</A>
         )}
       </div>
     </article>

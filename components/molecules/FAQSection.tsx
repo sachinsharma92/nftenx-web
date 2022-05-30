@@ -19,11 +19,11 @@ export const FAQSection = (props: PropTypes) => {
   };
 
   return (
-    <article className="relative p-section lg:py-32 w-full text-secondary-1 flex flex-col lg:flex-row gap-10 lg:gap-4">
+    <article className="relative p-section lg:py-32 w-full text-secondary-1 flex flex-col lg:flex-row gap-10 lg:gap-4 faq-page-section">
       {props.gradient && <img src={leftBlob.src} alt="blob" className="absolute -top-[100px] lg:-top-[500px] left-0 -px-section pointer-events-none" />}
 
       {props.title && (
-        <div className="lg:w-2/5 shrink-0">
+        <div className="lg:w-2/5 shrink-0 text-gradient-style">
           <H1>{props.title}</H1>
         </div>
       )}
@@ -41,16 +41,16 @@ const FAQCard = ({element, index}: {element: Record<string, JSX.Element | string
     <div
       className="w-full rounded-3xl bg-[#757FBD] bg-opacity-10 border-secondary-1 border-[1px] border-opacity-10 p-4 lg:py-6 lg:px-16 flex flex-row gap-6"
     >
-      <div className="font-mono">
+      <div className="">
         <H4 className="opacity-30">
-          <span className="font-mono text-primary-light-2">{(index + 1 < 10 ? `0${index + 1}` : index + 1).toString()}</span>
+          <span className=" text-primary-light-2">{(index + 1 < 10 ? `0${index + 1}` : index + 1).toString()}</span>
         </H4>
       </div>
       <div className="flex flex-col gap-2" onClick={handleClick}>
         <H4 className="relative">
           <>{element.title} <button onClick={handleClick} className="absolute top-1/2 right-0 -translate-y-1/2 -mt-1 text-secondary-2 opacity-30">+</button></>
         </H4>
-        <p className={`font-mono text-primary-light-2 opacity-60 overflow-hidden transition-all ${!active ? 'h-0' : 'h-auto'}`}>{element.description}</p>
+        <p className={`text-primary-light-2 opacity-60 overflow-hidden transition-all ${!active ? 'h-0' : 'h-auto'}`}>{element.description}</p>
       </div>
     </div>
   );

@@ -26,14 +26,16 @@ export const MultipleImgTitleDescriptionSection = (props: PropType) => {
               />
             </div>
           )}
-          <div className="-mt-32 lg:pl-32">
+          <div className="-mt-28 lg:pl-12">
+            <div className="join-text">
             {props.mainSection?.title && (
               <H1 className="text-center lg:text-left">
                 {props.mainSection?.title}
               </H1>
             )}
+            </div>
             {props.mainSection?.description && (
-              <p className="relative font-mono text-lg text-center lg:text-left text-primary-light-2 text-opacity-70 lg:pt-3 font-[400]">
+              <p className="relative text-lg text-center lg:text-left text-primary-light-2 text-opacity-70 lg:pt-3 font-[400]">
                 {props.mainSection?.description}
               </p>
             )}
@@ -58,7 +60,7 @@ export const MultipleImgTitleDescriptionSection = (props: PropType) => {
                 )}
                 {element.title && <H3>{element.title}</H3>}
                 {element.description && (
-                  <p className="font-mono text-primary-light-2 text-opacity-70 pt-4 text-sm">
+                  <p className="text-primary-light-2 text-opacity-70 pt-4 text-sm list-section">
                      {/* <div
                       dangerouslySetInnerHTML={{__html: element.description}}
                     /> */}

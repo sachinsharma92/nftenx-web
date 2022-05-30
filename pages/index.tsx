@@ -99,7 +99,7 @@ const Home: NextPage = (props: any) => {
           image={section12.image}
           linkHref={section12.linkHref}
           linkTitle={
-            <span className="group text-secondary-1 text-mono whitespace-nowrap flex items-center text-lg">
+            <span className="group text-secondary-1 whitespace-nowrap flex items-center text-lg">
               Join the waitlist
               <span role="img" className="transition-all pl-2 group-hover:pl-5">
                 <RightArrowSecondary className="h-10 w-auto" />
