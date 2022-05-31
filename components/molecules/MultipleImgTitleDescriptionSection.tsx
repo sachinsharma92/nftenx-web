@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { H1, H2, H3 } from "components/atoms";
+import { H1, H3 } from "components/atoms";
 // import gsap from "gsap";
 // import { useEffect } from "react";
 import blobImg from 'assets/images/illustrations/green-blue-blob-to-right.png';

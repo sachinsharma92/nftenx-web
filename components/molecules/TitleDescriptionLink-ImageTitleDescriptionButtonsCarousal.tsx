@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { GlobePrimary, InstaPrimary, TwitterPrimary } from "assets/icons";
-import { A, H1, H2, H3, H4 } from "components/atoms";
+import { A, H1,} from "components/atoms";
 
 type PropTypes = {
   title?: string | JSX.Element;

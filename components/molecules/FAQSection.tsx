@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { H1, H3, H4 } from "components/atoms";
+import { H1, H4 } from "components/atoms";
 import { useState } from "react";
 import leftBlob from 'assets/images/illustrations/green-blue-light-blob-to-bottom-right.png';
 

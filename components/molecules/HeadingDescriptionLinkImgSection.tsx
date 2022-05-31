@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { RightArrowSecondary } from "assets/icons";
 import { A, H1 } from "components/atoms";
 
 type PropTypes = {

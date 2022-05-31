@@ -1,4 +1,4 @@
-import { H1, P } from "components/atoms";
+import { H1 } from "components/atoms";
 import generalCoin from "../../assets/images/general-token.png";
 import founderCoin from "../../assets/images/founder-token.png";
 import { purchaseToken } from "utils/tokenMint";
