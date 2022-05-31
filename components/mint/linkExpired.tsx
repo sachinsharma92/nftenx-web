@@ -1,12 +1,13 @@
 import { LogoGradient } from "components/common/logoGradient";
 import { JoinWaitlistForm } from "components/molecules";
 import Image from "next/image";
+import Link from "next/link";
 import AlertIcon from "../../assets/icons/warning.svg"
 
 const LinkExpiredComponent = (props: Record<string, any>) => {
   return (
     <section className="link-expired-component">
-          <LogoGradient/>
+      <LogoGradient />
       <div className="flex-sec">
         <div className="image-style" />
         <div className="content-section">
@@ -17,14 +18,13 @@ const LinkExpiredComponent = (props: Record<string, any>) => {
                 <span></span>
                 <span></span>
               </div>
-
-              <Image src={AlertIcon} alt="warning icon"/>
+              <Image src={AlertIcon} alt="warning icon" />
               <p className="live-text mt-3">The Link You Have Followed <br /> Has Expired</p>
               <div className="divider"></div>
-              <JoinWaitlistForm type="secondary" layout="vertical"/>
+              <JoinWaitlistForm type="secondary" layout="vertical" />
             </div>
           </div>
-          <p className="click-here font-mono mt-5">Already have a pass? <a href='/member'>Click here</a></p>
+          <p className="click-here font-mono mt-5">Already have a pass? <Link href='/member'>Click here</Link></p>
         </div>
       </div>
     </section>

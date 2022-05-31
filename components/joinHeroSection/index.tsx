@@ -39,7 +39,7 @@ const JoinHeroSection = (props: Record<string, any>) => {
         <div className="content-section">
           <h1 className="title1">Join our tight-knit community of</h1>
           <h2 className="title1 text-gradient">Founders and Operators</h2>
-          <p className="description mt-3">Enter the NF10x general token waitlist by sharing your email below, and we'll <br /> be in touch when your turn arrives.</p>
+          <p className="description mt-3">Enter the NF10x general token waitlist by sharing your email below, and we will <br /> be in touch when your turn arrives.</p>
             <form onSubmit={joinWaitlist} className="flex mt-5">
               <div className="input-main-style">
                 <input className="input-style" type="email" name={'email'} placeholder={"Enter your email"} />

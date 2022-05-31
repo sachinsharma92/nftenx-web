@@ -1,5 +1,6 @@
 import { ButtonOutline } from "components/atoms/ButtonOutline";
 import { LogoGradient } from "components/common/logoGradient";
+import Link from "next/link";
 
 type MintLiveProps = {
   type?: string;
@@ -32,7 +33,7 @@ const MintLiveComponent = (props: MintLiveProps) => {
             </div>
             <p className="text-read mt-3">.01 ETH/Pass | 01 Pass/Account | Read FAQs</p>
           </div>
-          <p className="click-here mt-3">Already have a pass? <a href='/member'>Click here</a></p>
+          <p className="click-here mt-3">Already have a pass? <Link href='/member'>Click here</Link></p>
         </div>
       </div>
     </section>

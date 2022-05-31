@@ -1,5 +1,6 @@
 import { LogoGradient } from "components/common/logoGradient";
 import { JoinWaitlistForm } from "components/molecules";
+import Link from "next/link";
 
 type MintSoldOutProps = {
   name?: string;
@@ -30,7 +31,7 @@ const SoldOutComponent = (props: MintSoldOutProps) => {
               <JoinWaitlistForm type="secondary" layout="vertical"/>
             </div>
           </div>
-          <p className="click-here font-mono mt-5">Already have a pass? <a href='/member'>Click here</a></p>
+          <p className="click-here font-mono mt-5">Already have a pass? <Link href='/member'>Click here</Link></p>
         </div>
       </div>
     </section>
