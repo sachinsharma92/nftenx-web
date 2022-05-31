@@ -53,7 +53,7 @@ const Home: NextPage = (props: any) => {
           linkTitle={section2.linkTitle}
           href={section2.href}
         />
-        <TitleDescriptionComparisonSection
+        {/* <TitleDescriptionComparisonSection
           image={section3.image}
           imageSide="right"
           title={section3.title}
@@ -108,7 +108,7 @@ const Home: NextPage = (props: any) => {
               </span>
             </span>
           }
-        />
+        /> */}
       </WithSidebar>
     </main>
   );
