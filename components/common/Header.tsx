@@ -17,15 +17,15 @@ export const Header = () => {
   const accounts = useAccounts();
   const context = useWeb3Context();
 
-  if (typeof window !== "undefined") {
-    const windowObj:any = window;
-    windowObj.ethereum.on('accountsChanged', async (accounts: any) => {
-      if(!accounts.length) {
-        storage.del(METAMASK_CONSTANTS.ADDRESS);
-        setAccount('');
-      }
-    });
-  }
+  // if (typeof window !== "undefined") {
+  //   const windowObj:any = window;
+  //   windowObj.ethereum.on('accountsChanged', async (accounts: any) => {
+  //     if(!accounts.length) {
+  //       storage.del(METAMASK_CONSTANTS.ADDRESS);
+  //       setAccount('');
+  //     }
+  //   });
+  // }
 
 
   const connectWalletHandler = () => {

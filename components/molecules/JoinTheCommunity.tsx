@@ -12,10 +12,10 @@ import { TOKEN_TYPE_ID } from "constants/globalConstants";
 // };
 
 export const JoinTheCommunity = (props: any) => {
-	const TOKEN_TYPE = {
-		'FOUNDER': 1,
-		'MEMBER': 2
-	}
+	// const TOKEN_TYPE = {
+	// 	'FOUNDER': 1,
+	// 	'MEMBER': 2
+	// }
 
 	return (
 		<article className="p-section lg:py-32 overflow-x-hidden join-community">
